@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0">
+    <channel>
+        <lastBuildDate>Mon, 20 Oct 2025 10:31:51 +0200</lastBuildDate>
+        <title>
+            <![CDATA[Vatican News - Македонски]]>
+        </title>
+        <description>
+            <![CDATA[Вести од Ватикан - Сите вести од Црквата]]>
+        </description>
+        <link>https://www.vaticannews.va/mk.html</link>
+        <atom:link href="https://www.vaticannews.va/mk.rss.xml" rel="self"/>
+        <language>mk</language>
+        <copyright>
+            <![CDATA[© 2017-2025 Dicasterium pro Communicatione]]>
+        </copyright>
+
+        </channel>
+</rss>

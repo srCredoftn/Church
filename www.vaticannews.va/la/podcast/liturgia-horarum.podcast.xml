@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+        <rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0" xml:lang="la" xmlns:atom="http://www.w3.org/2005/Atom">
+            <channel>
+                <title>Liturgia Horarum</title>
+                <description> - Podcast - Radio Vaticana - Vatican News</description>
+                <link>https://www.vaticannews.va/la/podcast/liturgia-horarum.html</link>
+                <atom:link href="https://www.vaticannews.va/la/podcast/liturgia-horarum.podcast.xml" rel="self" type="application/rss+xml" />
+                <language>la</language>
+                <image>
+                        <url>https://www.vaticannews.va/content/dam/vaticannews/web/podcast/vespri.jpg/_jcr_content/renditions/cq5dam.thumbnail.cropped.750.422.jpeg</url>
+                        <title>Liturgia Horarum</title>
+                        <link>https://www.vaticannews.va/la/podcast/liturgia-horarum.html</link>
+                    </image>
+                <pubDate>Mon, 20 Oct 2025 06:00:00 +0200</pubDate>
+                <lastBuildDate>Mon, 20 Oct 2025 06:00:00 +0200</lastBuildDate>
+                <copyright>
+                    <![CDATA[© 2017-2025 Dicasterium pro Communicatione]]>
+                </copyright>
+                <itunes:owner>
+                    <itunes:name>Radio Vaticana - Vatican News</itunes:name>
+                    <itunes:email>webmaster@vaticannews.va</itunes:email>
+                </itunes:owner>
+
+                    <itunes:category text="News"></itunes:category><itunes:image href="https://www.vaticannews.va/content/dam/vaticannews/web/podcast/vespri.jpg/_jcr_content/renditions/cq5dam.thumbnail.cropped.750.422.jpeg" />
+                <itunes:explicit>false</itunes:explicit>
+
+                <itunes:author>Radio Vaticana - Vatican News</itunes:author>
+                <itunes:summary></itunes:summary>
+                <itunes:subtitle></itunes:subtitle>
+
+
+                <item>
+                        <title>Vesperae</title>
+                        <itunes:title>Vesperae</itunes:title>
+                        <description>
+                            </description>
+                        <guid>https://media.vaticannews.va/media2/audio/program/1130/vespri_lat_191025.mp3</guid>
+                            <link>https://www.vaticannews.va/la/podcast/liturgia-horarum/vesperae.html</link>
+                        <enclosure url="https://media.vaticannews.va/media2/audio/program/1130/vespri_lat_191025.mp3" type="audio/mp3" length="13916647"/>
+
+
+                        <itunes:duration>00:28:59</itunes:duration>
+
+                        <itunes:explicit>false</itunes:explicit>
+                        <pubDate>Sun, 19 Oct 2025 17:00:00 +0200</pubDate>
+                    </item>
+                <item>
+                        <title>Completorium</title>
+                        <itunes:title>Completorium</itunes:title>
+                        <description>
+                            </description>
+                        <guid>https://media.vaticannews.va/media2/audio/program/1131/compieta_191025.mp3</guid>
+                            <link>https://www.vaticannews.va/la/podcast/liturgia-horarum/completorium.html</link>
+                        <enclosure url="https://media.vaticannews.va/media2/audio/program/1131/compieta_191025.mp3" type="audio/mp3" length="11996752"/>
+
+
+                        <itunes:duration>00:24:59</itunes:duration>
+
+                        <itunes:explicit>false</itunes:explicit>
+                        <pubDate>Sun, 19 Oct 2025 22:35:00 +0200</pubDate>
+                    </item>
+                <item>
+                        <title>Laudes</title>
+                        <itunes:title>Laudes</itunes:title>
+                        <description>
+                            </description>
+                        <guid>https://media.vaticannews.va/media2/audio/program/1128/lodi_201025.mp3</guid>
+                            <link>https://www.vaticannews.va/la/podcast/liturgia-horarum/laudes.html</link>
+                        <enclosure url="https://media.vaticannews.va/media2/audio/program/1128/lodi_201025.mp3" type="audio/mp3" length="14396674"/>
+
+
+                        <itunes:duration>00:29:59</itunes:duration>
+
+                        <itunes:explicit>false</itunes:explicit>
+                        <pubDate>Mon, 20 Oct 2025 06:00:00 +0200</pubDate>
+                    </item>
+                </channel>
+        </rss>
+    

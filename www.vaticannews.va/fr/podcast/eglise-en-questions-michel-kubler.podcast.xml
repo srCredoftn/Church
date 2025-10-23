@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+        <rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0" xml:lang="fr" xmlns:atom="http://www.w3.org/2005/Atom">
+            <channel>
+                <title>Radio Vatican - L&#39;Église en questions</title>
+                <description>Avec le p&amp;egrave;re Michel Kubler, secr&amp;eacute;taire g&amp;eacute;n&amp;eacute;ral des Assomptionistes, partez &amp;agrave; la d&amp;eacute;couverte du fonctionnement de l&#39;&amp;Eacute;glise et de ses institutions. 
+Un podcast de Radio Vatican - Vatican News - Podcast - Radio Vaticana - Vatican News</description>
+                <link>https://www.vaticannews.va/fr/podcast/eglise-en-questions-michel-kubler.html</link>
+                <atom:link href="https://www.vaticannews.va/fr/podcast/eglise-en-questions-michel-kubler.podcast.xml" rel="self" type="application/rss+xml" />
+                <language>fr</language>
+                <image>
+                        <url>https://www.vaticannews.va/content/dam/vaticannews/cem/podcast/eglise-en-questions.jpg/_jcr_content/renditions/cq5dam.thumbnail.cropped.1500.1500.jpeg</url>
+                        <title>L&#39;Église en questions</title>
+                        <link>https://www.vaticannews.va/fr/podcast/eglise-en-questions-michel-kubler.html</link>
+                    </image>
+                <pubDate>Wed, 30 Nov 2022 08:09:00 +0100</pubDate>
+                <lastBuildDate>Wed, 30 Nov 2022 08:09:00 +0100</lastBuildDate>
+                <copyright>
+                    <![CDATA[© 2017-2025 Dicasterium pro Communicatione]]>
+                </copyright>
+                <itunes:owner>
+                    <itunes:name>Radio Vaticana - Vatican News</itunes:name>
+                    <itunes:email>webmaster@vaticannews.va</itunes:email>
+                </itunes:owner>
+
+                    <itunes:category text="News"></itunes:category><itunes:image href="https://www.vaticannews.va/content/dam/vaticannews/cem/podcast/eglise-en-questions.jpg/_jcr_content/renditions/cq5dam.thumbnail.cropped.1500.1500.jpeg" />
+                <itunes:explicit>false</itunes:explicit>
+
+                <itunes:author>Radio Vaticana - Vatican News</itunes:author>
+                <itunes:summary>Avec le p&amp;egrave;re Michel Kubler, secr&amp;eacute;taire g&amp;eacute;n&amp;eacute;ral des Assomptionistes, partez &amp;agrave; la d&amp;eacute;couverte du fonctionnement de l&#039;&amp;Eacute;glise et de ses institutions. 
+Un podcast de Radio Vatican - Vatican News</itunes:summary>
+                <itunes:subtitle></itunes:subtitle>
+
+
+                <item>
+                        <title>01 - Le Pape</title>
+                        <itunes:title>01 - Le Pape</itunes:title>
+                        <description>
+                            <![CDATA[
+                                        L'&Eacute;glise en questions -&nbsp;Premier &eacute;pisode: le Pape. Un podcast de Radio Vatican,&nbsp;avec le p&egrave;re Michel Kubler.
+                                    ]]>
+                                </description>
+                        <guid>https://www.vaticannews.va/fr/podcast/eglise-en-questions-michel-kubler/2022/02/eglise-en-questions-le-pape.html</guid>
+                            <link>https://www.vaticannews.va/fr/podcast/eglise-en-questions-michel-kubler/2022/02/eglise-en-questions-le-pape.html</link>
+                        <enclosure url="https://media.vaticannews.va/media/audio/s1/2022/03/21/15/136482297_F136482297.mp3" type="audio/mp3" length="9601152"/>
+
+
+                        <itunes:duration>00:10:00</itunes:duration>
+
+                        <itunes:explicit>false</itunes:explicit>
+                        <pubDate>Tue, 01 Feb 2022 16:04:00 +0100</pubDate>
+                    </item>
+                <item>
+                        <title>02 - Les cardinaux</title>
+                        <itunes:title>02 - Les cardinaux</itunes:title>
+                        <description>
+                            <![CDATA[
+                                        L'&Eacute;glise en questions - Deuxi&egrave;me &eacute;pisode: les cardinaux. Un podcast de Radio Vatican, avec le p&egrave;re Michel Kubler.
+                                    ]]>
+                                </description>
+                        <guid>https://www.vaticannews.va/fr/podcast/eglise-en-questions-michel-kubler/2022/03/eglise-en-questions-les-cardinaux.html</guid>
+                            <link>https://www.vaticannews.va/fr/podcast/eglise-en-questions-michel-kubler/2022/03/eglise-en-questions-les-cardinaux.html</link>
+                        <enclosure url="https://media.vaticannews.va/media/audio/s1/2022/03/21/15/136482300_F136482300.mp3" type="audio/mp3" length="9601152"/>
+
+
+                        <itunes:duration>00:10:00</itunes:duration>
+
+                        <itunes:explicit>false</itunes:explicit>
+                        <pubDate>Tue, 01 Mar 2022 16:09:00 +0100</pubDate>
+                    </item>
+                <item>
+                        <title>03 - La Curie Romaine</title>
+                        <itunes:title>03 - La Curie Romaine</itunes:title>
+                        <description>
+                            <![CDATA[
+                                        L'&Eacute;glise en questions - Troisi&egrave;me &eacute;pisode: la Curie Romaine. Un podcast de Radio Vatican, avec le p&egrave;re Michel Kubler.
+                                    ]]>
+                                </description>
+                        <guid>https://www.vaticannews.va/fr/podcast/eglise-en-questions-michel-kubler/2022/04/eglise-en-questions-la-curie.html</guid>
+                            <link>https://www.vaticannews.va/fr/podcast/eglise-en-questions-michel-kubler/2022/04/eglise-en-questions-la-curie.html</link>
+                        <enclosure url="https://media.vaticannews.va/media/audio/s1/2022/04/13/09/136511667_F136511667.mp3" type="audio/mp3" length="9600768"/>
+
+
+                        <itunes:duration>00:10:00</itunes:duration>
+
+                        <itunes:explicit>false</itunes:explicit>
+                        <pubDate>Wed, 13 Apr 2022 09:52:00 +0200</pubDate>
+                    </item>
+                <item>
+                        <title>04 - Le Vatican</title>
+                        <itunes:title>04 - Le Vatican</itunes:title>
+                        <description>
+                            <![CDATA[
+                                        L'&Eacute;glise en questions - Quatri&egrave;me &eacute;pisode: le Vatican. Un podcast de Radio Vatican, avec le p&egrave;re Michel Kubler.
+                                    ]]>
+                                </description>
+                        <guid>https://www.vaticannews.va/fr/podcast/eglise-en-questions-michel-kubler/2022/04/04-le-vatican.html</guid>
+                            <link>https://www.vaticannews.va/fr/podcast/eglise-en-questions-michel-kubler/2022/04/04-le-vatican.html</link>
+                        <enclosure url="https://media.vaticannews.va/media/audio/s1/2022/04/29/13/136546929_F136546929.mp3" type="audio/mp3" length="9601152"/>
+
+
+                        <itunes:duration>00:10:00</itunes:duration>
+
+                        <itunes:explicit>false</itunes:explicit>
+                        <pubDate>Fri, 29 Apr 2022 13:33:00 +0200</pubDate>
+                    </item>
+                <item>
+                        <title>05 - Les institutions collégiales</title>
+                        <itunes:title>05 - Les institutions collégiales</itunes:title>
+                        <description>
+                            <![CDATA[
+                                        L'&Eacute;glise en questions - Cinqui&egrave;me &eacute;pisode: les institutions coll&eacute;giales Un podcast de Radio Vatican, avec le p&egrave;re Michel Kubler.
+                                    ]]>
+                                </description>
+                        <guid>https://www.vaticannews.va/fr/podcast/eglise-en-questions-michel-kubler/2022/05/05-les-institutions-collegiales.html</guid>
+                            <link>https://www.vaticannews.va/fr/podcast/eglise-en-questions-michel-kubler/2022/05/05-les-institutions-collegiales.html</link>
+                        <enclosure url="https://media.vaticannews.va/media/audio/s1/2022/05/17/17/136570056_F136570056.mp3" type="audio/mp3" length="9601152"/>
+
+
+                        <itunes:duration>00:10:00</itunes:duration>
+
+                        <itunes:explicit>false</itunes:explicit>
+                        <pubDate>Tue, 24 May 2022 07:00:00 +0200</pubDate>
+                    </item>
+                <item>
+                        <title>06 - Les diocèses</title>
+                        <itunes:title>06 - Les diocèses</itunes:title>
+                        <description>
+                            <![CDATA[
+                                        L'&Eacute;glise en questions - Sixi&egrave;me &eacute;pisode: les dioc&egrave;ses Un podcast de Radio Vatican, avec le p&egrave;re Michel Kubler.
+                                    ]]>
+                                </description>
+                        <guid>https://www.vaticannews.va/fr/podcast/eglise-en-questions-michel-kubler/2022/09/06-les-dioceses.html</guid>
+                            <link>https://www.vaticannews.va/fr/podcast/eglise-en-questions-michel-kubler/2022/09/06-les-dioceses.html</link>
+                        <enclosure url="https://media.vaticannews.va/media/audio/s1/2022/07/09/16/136637547_F136637547.mp3" type="audio/mp3" length="9600768"/>
+
+
+                        <itunes:duration>00:10:00</itunes:duration>
+
+                        <itunes:explicit>false</itunes:explicit>
+                        <pubDate>Thu, 08 Sep 2022 16:01:00 +0200</pubDate>
+                    </item>
+                <item>
+                        <title>07 - Les paroisses</title>
+                        <itunes:title>07 - Les paroisses</itunes:title>
+                        <description>
+                            <![CDATA[
+                                        L'&Eacute;glise en questions - Septi&egrave;me &eacute;pisode: les paroisses Un podcast de Radio Vatican, avec le p&egrave;re Michel Kubler.
+                                    ]]>
+                                </description>
+                        <guid>https://www.vaticannews.va/fr/podcast/eglise-en-questions-michel-kubler/2022/10/07-les-paroisses.html</guid>
+                            <link>https://www.vaticannews.va/fr/podcast/eglise-en-questions-michel-kubler/2022/10/07-les-paroisses.html</link>
+                        <enclosure url="https://media.vaticannews.va/media/audio/s1/2022/10/01/13/136733969_F136733969.mp3" type="audio/mp3" length="9600768"/>
+
+
+                        <itunes:duration>00:10:00</itunes:duration>
+
+                        <itunes:explicit>false</itunes:explicit>
+                        <pubDate>Sat, 01 Oct 2022 13:12:00 +0200</pubDate>
+                    </item>
+                <item>
+                        <title>08 - Le laïcat</title>
+                        <itunes:title>08 - Le laïcat</itunes:title>
+                        <description>
+                            <![CDATA[
+                                        L'&Eacute;glise en questions - huiti&egrave;me &eacute;pisode: le la&iuml;cat Un podcast de Radio Vatican, avec le p&egrave;re Michel Kubler.
+                                    ]]>
+                                </description>
+                        <guid>https://www.vaticannews.va/fr/podcast/eglise-en-questions-michel-kubler/2022/10/08-le-laicat.html</guid>
+                            <link>https://www.vaticannews.va/fr/podcast/eglise-en-questions-michel-kubler/2022/10/08-le-laicat.html</link>
+                        <enclosure url="https://media.vaticannews.va/media/audio/s1/2022/10/27/07/136767019_F136767019.mp3" type="audio/mp3" length="9600000"/>
+
+
+                        <itunes:duration>00:10:00</itunes:duration>
+
+                        <itunes:explicit>false</itunes:explicit>
+                        <pubDate>Thu, 27 Oct 2022 07:23:00 +0200</pubDate>
+                    </item>
+                <item>
+                        <title>09 - La vie consacrée</title>
+                        <itunes:title>09 - La vie consacrée</itunes:title>
+                        <description>
+                            <![CDATA[
+                                        L'&Eacute;glise en questions - neuvi&egrave;me (et dernier) &eacute;pisode: la vie consacr&eacute;e Un podcast de Radio Vatican, avec le p&egrave;re Michel Kubler.
+                                    ]]>
+                                </description>
+                        <guid>https://www.vaticannews.va/fr/podcast/eglise-en-questions-michel-kubler/2022/11/09-la-vie-consacree.html</guid>
+                            <link>https://www.vaticannews.va/fr/podcast/eglise-en-questions-michel-kubler/2022/11/09-la-vie-consacree.html</link>
+                        <enclosure url="https://media.vaticannews.va/media/audio/s1/2022/11/30/08/136810746_F136810746.mp3" type="audio/mp3" length="9600000"/>
+
+
+                        <itunes:duration>00:10:00</itunes:duration>
+
+                        <itunes:explicit>false</itunes:explicit>
+                        <pubDate>Wed, 30 Nov 2022 08:09:00 +0100</pubDate>
+                    </item>
+                </channel>
+        </rss>
+    

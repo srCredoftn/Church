@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="UTF-8"?>
+        <rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0" xml:lang="fr" xmlns:atom="http://www.w3.org/2005/Atom">
+            <channel>
+                <title>Radio Vatican - Un livre à la foi</title>
+                <description>Soeur Catherine Aubin nous emm&amp;egrave;ne &amp;agrave; la d&amp;eacute;couverte d&#39;auteurs canadiens et de leurs ouvrages sur la religion et la foi. 
+Un podcast de Radio Vatican - Vatican News - Podcast - Radio Vaticana - Vatican News</description>
+                <link>https://www.vaticannews.va/fr/podcast/un-livre-a-la-foi-soeur-catherine-aubin.html</link>
+                <atom:link href="https://www.vaticannews.va/fr/podcast/un-livre-a-la-foi-soeur-catherine-aubin.podcast.xml" rel="self" type="application/rss+xml" />
+                <language>fr</language>
+                <image>
+                        <url>https://www.vaticannews.va/content/dam/vaticannews/cem/podcast/un-livre-a-la-foi.jpg/_jcr_content/renditions/cq5dam.thumbnail.cropped.1500.1500.jpeg</url>
+                        <title>Un livre à la foi</title>
+                        <link>https://www.vaticannews.va/fr/podcast/un-livre-a-la-foi-soeur-catherine-aubin.html</link>
+                    </image>
+                <pubDate>Thu, 14 Nov 2024 17:54:00 +0100</pubDate>
+                <lastBuildDate>Thu, 14 Nov 2024 17:54:00 +0100</lastBuildDate>
+                <copyright>
+                    <![CDATA[© 2017-2025 Dicasterium pro Communicatione]]>
+                </copyright>
+                <itunes:owner>
+                    <itunes:name>Radio Vaticana - Vatican News</itunes:name>
+                    <itunes:email>webmaster@vaticannews.va</itunes:email>
+                </itunes:owner>
+
+                    <itunes:category text="News"></itunes:category><itunes:image href="https://www.vaticannews.va/content/dam/vaticannews/cem/podcast/un-livre-a-la-foi.jpg/_jcr_content/renditions/cq5dam.thumbnail.cropped.1500.1500.jpeg" />
+                <itunes:explicit>false</itunes:explicit>
+
+                <itunes:author>Radio Vaticana - Vatican News</itunes:author>
+                <itunes:summary>Soeur Catherine Aubin nous emm&amp;egrave;ne &amp;agrave; la d&amp;eacute;couverte d&#039;auteurs canadiens et de leurs ouvrages sur la religion et la foi. 
+Un podcast de Radio Vatican - Vatican News</itunes:summary>
+                <itunes:subtitle></itunes:subtitle>
+
+
+                <item>
+                        <title>17 - Yves Beriault: Seul l&#39;amour a de l&#39;avenir</title>
+                        <itunes:title>17 - Yves Beriault: Seul l&#39;amour a de l&#39;avenir</itunes:title>
+                        <description>
+                            <![CDATA[
+                                        Sœur Catherine Aubin s’entretient avec Yves Beriault, prieur provincial de la Province Saint-Dominique du Canada, pour son livre &laquo;Seul l'amour a de l'avenir&raquo;, recueillant les t&eacute;moignages d'Etty Hillesum, jeune Juive disparue dans la nuit de la Shoah, et de Christian de Cherg&eacute;, moine cistercien ex&eacute;cut&eacute; avec six confr&egrave;res de Tibhirine, en Alg&eacute;rie, en 1996. 
+&Eacute;ditions M&eacute;diaspaul
+                                    ]]>
+                                </description>
+                        <guid>https://www.vaticannews.va/fr/podcast/un-livre-a-la-foi-soeur-catherine-aubin/2024/11/17-yves-beriault-seul-l-amour-a-de-l-avenir.html</guid>
+                            <link>https://www.vaticannews.va/fr/podcast/un-livre-a-la-foi-soeur-catherine-aubin/2024/11/17-yves-beriault-seul-l-amour-a-de-l-avenir.html</link>
+                        <enclosure url="https://media.vaticannews.va/media/audio/s1/2024/11/14/17/138427813_F138427813.mp3" type="audio/mp3" length="9600768"/>
+
+
+                        <itunes:duration>00:10:00</itunes:duration>
+
+                        <itunes:image href="https://www.vaticannews.va/content/dam/vaticannews/cem/2024/Yves-Beriault.jpg/_jcr_content/renditions/cq5dam.thumbnail.cropped.1500.844.jpeg" />
+                        <itunes:explicit>false</itunes:explicit>
+                        <pubDate>Thu, 14 Nov 2024 17:54:00 +0100</pubDate>
+                    </item>
+                <item>
+                        <title>16 - Jean-François Gosselin: L&#39;éternité, rêve ou réalité ?</title>
+                        <itunes:title>16 - Jean-François Gosselin: L&#39;éternité, rêve ou réalité ?</itunes:title>
+                        <description>
+                            <![CDATA[
+                                        Sœur Catherine Aubin s’entretient avec Jean-Fran&ccedil;ois Gosselin pour son livre: L'&eacute;ternit&eacute;, r&ecirc;ve ou r&eacute;alit&eacute;? &Eacute;ditions M&eacute;diaspaul.
+                                    ]]>
+                                </description>
+                        <guid>https://www.vaticannews.va/fr/podcast/un-livre-a-la-foi-soeur-catherine-aubin/2024/10/16-jean-francois-gosselin-l-eternite-reve-ou-realite.html</guid>
+                            <link>https://www.vaticannews.va/fr/podcast/un-livre-a-la-foi-soeur-catherine-aubin/2024/10/16-jean-francois-gosselin-l-eternite-reve-ou-realite.html</link>
+                        <enclosure url="https://media.vaticannews.va/media/audio/s1/2024/09/19/18/138265353_F138265353.mp3" type="audio/mp3" length="9600768"/>
+
+
+                        <itunes:duration>00:10:00</itunes:duration>
+
+                        <itunes:image href="https://www.vaticannews.va/content/dam/vaticannews/cem/2024/Cover-Jean-Francois-Gosselin.jpg/_jcr_content/renditions/cq5dam.thumbnail.cropped.1500.844.jpeg" />
+                        <itunes:explicit>false</itunes:explicit>
+                        <pubDate>Tue, 01 Oct 2024 08:00:00 +0200</pubDate>
+                    </item>
+                <item>
+                        <title>15 - Pierrot Lambert: Au seuil du silence</title>
+                        <itunes:title>15 - Pierrot Lambert: Au seuil du silence</itunes:title>
+                        <description>
+                            <![CDATA[
+                                        Sœur Catherine Aubin s’entretient avec Pierrot Lambert, pour son livre: Au seuil du silence, publi&eacute; aux &eacute;ditions Novalis.
+                                    ]]>
+                                </description>
+                        <guid>https://www.vaticannews.va/fr/podcast/un-livre-a-la-foi-soeur-catherine-aubin/2024/09/15-pierrot-lambert-au-seuil-du-silence.html</guid>
+                            <link>https://www.vaticannews.va/fr/podcast/un-livre-a-la-foi-soeur-catherine-aubin/2024/09/15-pierrot-lambert-au-seuil-du-silence.html</link>
+                        <enclosure url="https://media.vaticannews.va/media/audio/s1/2024/09/18/17/138263862_F138263862.mp3" type="audio/mp3" length="9600768"/>
+
+
+                        <itunes:duration>00:10:00</itunes:duration>
+
+                        <itunes:image href="https://www.vaticannews.va/content/dam/vaticannews/cem/2024/pierrot-Lambert.jpg/_jcr_content/renditions/cq5dam.thumbnail.cropped.1500.844.jpeg" />
+                        <itunes:explicit>false</itunes:explicit>
+                        <pubDate>Wed, 18 Sep 2024 17:26:00 +0200</pubDate>
+                    </item>
+                <item>
+                        <title>14 - Montréal de clocher en clocher, par François Guillet</title>
+                        <itunes:title>14 - Montréal de clocher en clocher, par François Guillet</itunes:title>
+                        <description>
+                            <![CDATA[
+                                        Sœur Catherine Aubin s’entretient avec Fran&ccedil;ois Guillet, pour son livre: Montr&eacute;al de clocher en clocher, publi&eacute; aux &eacute;ditions Mediapaul
+                                    ]]>
+                                </description>
+                        <guid>https://www.vaticannews.va/fr/podcast/un-livre-a-la-foi-soeur-catherine-aubin/2023/12/14-montreal-de-clocher-en-clocher-francois-guillet.html</guid>
+                            <link>https://www.vaticannews.va/fr/podcast/un-livre-a-la-foi-soeur-catherine-aubin/2023/12/14-montreal-de-clocher-en-clocher-francois-guillet.html</link>
+                        <enclosure url="https://media.vaticannews.va/media/audio/s1/2023/12/15/18/137545698_F137545698.mp3" type="audio/mp3" length="9600768"/>
+
+
+                        <itunes:duration>00:10:00</itunes:duration>
+
+                        <itunes:image href="https://www.vaticannews.va/content/dam/vaticannews/cem/2023/cover-livre-a-la-foi-14.jpg/_jcr_content/renditions/cq5dam.thumbnail.cropped.1500.844.jpeg" />
+                        <itunes:explicit>false</itunes:explicit>
+                        <pubDate>Fri, 15 Dec 2023 18:54:00 +0100</pubDate>
+                    </item>
+                <item>
+                        <title>13 - Azadah, de Jacques Goldstyn</title>
+                        <itunes:title>13 - Azadah, de Jacques Goldstyn</itunes:title>
+                        <description>
+                            <![CDATA[
+                                        Sœur Catherine Aubin s’entretient avec&nbsp;Jacques Goldstyn, auteur de livres pour la jeunesse. Il nous pr&eacute;sente son dernier ouvrage, Azadah.
+                                    ]]>
+                                </description>
+                        <guid>https://www.vaticannews.va/fr/podcast/un-livre-a-la-foi-soeur-catherine-aubin/2023/09/13-azadah-de-jacques-goldstyn.html</guid>
+                            <link>https://www.vaticannews.va/fr/podcast/un-livre-a-la-foi-soeur-catherine-aubin/2023/09/13-azadah-de-jacques-goldstyn.html</link>
+                        <enclosure url="https://media.vaticannews.va/media/audio/s1/2023/09/22/07/137316723_F137316723.mp3" type="audio/mp3" length="9600768"/>
+
+
+                        <itunes:duration>00:10:00</itunes:duration>
+
+                        <itunes:image href="https://www.vaticannews.va/content/dam/vaticannews/cem/2023/COVER-AZADAH.jpg/_jcr_content/renditions/cq5dam.thumbnail.cropped.1500.844.jpeg" />
+                        <itunes:explicit>false</itunes:explicit>
+                        <pubDate>Fri, 22 Sep 2023 07:09:00 +0200</pubDate>
+                    </item>
+                <item>
+                        <title>12 - Sabrina Di Matteo: Pas pratiquants les Québécois?</title>
+                        <itunes:title>12 - Sabrina Di Matteo: Pas pratiquants les Québécois?</itunes:title>
+                        <description>
+                            <![CDATA[
+                                        Sœur Catherine Aubin s’entretient avec Sabrina Di Matteo, pour sa participation &agrave; l'ouvrage collectif &laquo;Pas pratiquants, les Qu&eacute;b&eacute;cois ?&raquo;, aux &Eacute;ditions Novalis.
+                                    ]]>
+                                </description>
+                        <guid>https://www.vaticannews.va/fr/podcast/un-livre-a-la-foi-soeur-catherine-aubin/2023/06/12-sabrina-di-matteo-pas-pratiquants-les-quebecois.html</guid>
+                            <link>https://www.vaticannews.va/fr/podcast/un-livre-a-la-foi-soeur-catherine-aubin/2023/06/12-sabrina-di-matteo-pas-pratiquants-les-quebecois.html</link>
+                        <enclosure url="https://media.vaticannews.va/media/audio/s1/2023/06/13/08/137142499_F137142499.mp3" type="audio/mp3" length="9600768"/>
+
+
+                        <itunes:duration>00:10:00</itunes:duration>
+
+                        <itunes:image href="https://www.vaticannews.va/content/dam/vaticannews/cem/2023/PasPratiquantLesQuebecois_300-RGB.jpg/_jcr_content/renditions/cq5dam.thumbnail.cropped.1500.844.jpeg" />
+                        <itunes:explicit>false</itunes:explicit>
+                        <pubDate>Tue, 13 Jun 2023 08:29:00 +0200</pubDate>
+                    </item>
+                <item>
+                        <title>11 - Jean Philippe Trottier, les illusions dangereuses</title>
+                        <itunes:title>11 - Jean Philippe Trottier, les illusions dangereuses</itunes:title>
+                        <description>
+                            <![CDATA[
+                                        Sœur Catherine Aubin s’entretient avec Jean Philippe Trottier pour son livre &laquo;Les illusions dangereuses. Comment les id&eacute;ologies nouvelles asservissent l'homme&raquo;, aux &Eacute;ditions Art&egrave;ge.
+                                    ]]>
+                                </description>
+                        <guid>https://www.vaticannews.va/fr/podcast/un-livre-a-la-foi-soeur-catherine-aubin/2023/03/11-jean-philippe-trottier-les-illusions-dangereuses.html</guid>
+                            <link>https://www.vaticannews.va/fr/podcast/un-livre-a-la-foi-soeur-catherine-aubin/2023/03/11-jean-philippe-trottier-les-illusions-dangereuses.html</link>
+                        <enclosure url="https://media.vaticannews.va/media/audio/s1/2023/03/25/10/137004465_F137004465.mp3" type="audio/mp3" length="9600768"/>
+
+
+                        <itunes:duration>00:10:00</itunes:duration>
+
+                        <itunes:image href="https://www.vaticannews.va/content/dam/vaticannews/cem/2023/cover-un-livre-a-la-foi-11.jpg/_jcr_content/renditions/cq5dam.thumbnail.cropped.1500.844.jpeg" />
+                        <itunes:explicit>false</itunes:explicit>
+                        <pubDate>Sat, 25 Mar 2023 10:18:00 +0100</pubDate>
+                    </item>
+                <item>
+                        <title>10 - Anne Hébert, vivre pour écrire (2/2)</title>
+                        <itunes:title>10 - Anne Hébert, vivre pour écrire (2/2)</itunes:title>
+                        <description>
+                            <![CDATA[
+                                        Sœur Catherine Aubin s’entretient avec Marie Andr&eacute;e Lamontagne pour son livre &laquo;Anne H&eacute;bert, vivre pour &eacute;crire&raquo;, une biographie &eacute;dit&eacute;e par Les &Eacute;ditions du Bor&eacute;al.
+                                    ]]>
+                                </description>
+                        <guid>https://www.vaticannews.va/fr/podcast/un-livre-a-la-foi-soeur-catherine-aubin/2023/01/10-anne-hebert-vivre-pour-ecrire-2-2.html</guid>
+                            <link>https://www.vaticannews.va/fr/podcast/un-livre-a-la-foi-soeur-catherine-aubin/2023/01/10-anne-hebert-vivre-pour-ecrire-2-2.html</link>
+                        <enclosure url="https://media.vaticannews.va/media/audio/s1/2022/12/24/07/136847242_F136847242.mp3" type="audio/mp3" length="9601920"/>
+
+
+                        <itunes:duration>00:10:00</itunes:duration>
+
+                        <itunes:explicit>false</itunes:explicit>
+                        <pubDate>Mon, 09 Jan 2023 06:56:00 +0100</pubDate>
+                    </item>
+                <item>
+                        <title>09 - Anne Hébert, vivre pour écrire (1/2)</title>
+                        <itunes:title>09 - Anne Hébert, vivre pour écrire (1/2)</itunes:title>
+                        <description>
+                            <![CDATA[
+                                        Sœur Catherine Aubin s’entretient avec Marie Andr&eacute;e Lamontagne pour son livre &laquo;Anne H&eacute;bert, vivre pour &eacute;crire&raquo;, une biographie &eacute;dit&eacute;e par Les &Eacute;ditions du Bor&eacute;al.
+                                    ]]>
+                                </description>
+                        <guid>https://www.vaticannews.va/fr/podcast/un-livre-a-la-foi-soeur-catherine-aubin/2022/12/09-anne-hebert-vivre-pour-ecrire.html</guid>
+                            <link>https://www.vaticannews.va/fr/podcast/un-livre-a-la-foi-soeur-catherine-aubin/2022/12/09-anne-hebert-vivre-pour-ecrire.html</link>
+                        <enclosure url="https://media.vaticannews.va/media/audio/s1/2022/12/18/11/136835884_F136835884.mp3" type="audio/mp3" length="9600768"/>
+
+
+                        <itunes:duration>00:10:00</itunes:duration>
+
+                        <itunes:explicit>false</itunes:explicit>
+                        <pubDate>Sun, 18 Dec 2022 11:29:00 +0100</pubDate>
+                    </item>
+                <item>
+                        <title>08 - Une initiative de Dieu</title>
+                        <itunes:title>08 - Une initiative de Dieu</itunes:title>
+                        <description>
+                            <![CDATA[
+                                        Sœur Catherine Aubin s’entretient avec Marie Claude Lalonde pour son livre &laquo;Une Initiative de Dieu – Histoire de religieuses exceptionnelles&raquo; &eacute;dit&eacute;par AED, Aide &agrave; l'&Eacute;glise en d&eacute;tresse.
+                                    ]]>
+                                </description>
+                        <guid>https://www.vaticannews.va/fr/podcast/un-livre-a-la-foi-soeur-catherine-aubin/2022/11/08-une-initiative-de-dieu.html</guid>
+                            <link>https://www.vaticannews.va/fr/podcast/un-livre-a-la-foi-soeur-catherine-aubin/2022/11/08-une-initiative-de-dieu.html</link>
+                        <enclosure url="https://media.vaticannews.va/media/audio/s1/2022/11/26/16/136807421_F136807421.mp3" type="audio/mp3" length="9601920"/>
+
+
+                        <itunes:duration>00:10:00</itunes:duration>
+
+                        <itunes:explicit>false</itunes:explicit>
+                        <pubDate>Sat, 26 Nov 2022 16:16:00 +0100</pubDate>
+                    </item>
+                <item>
+                        <title>07 - Une profonde blessure</title>
+                        <itunes:title>07 - Une profonde blessure</itunes:title>
+                        <description>
+                            <![CDATA[
+                                        Sœur Catherine Aubin s’entretient avec Jean Guy Nadeau pour son livre &laquo;Une profonde blessure, les abus sexuels dans l'&Eacute;glise catholique&raquo; aux &eacute;ditions Mediaspaul 
+                                    ]]>
+                                </description>
+                        <guid>https://www.vaticannews.va/fr/podcast/un-livre-a-la-foi-soeur-catherine-aubin/2022/10/07-une-profonde-blessure.html</guid>
+                            <link>https://www.vaticannews.va/fr/podcast/un-livre-a-la-foi-soeur-catherine-aubin/2022/10/07-une-profonde-blessure.html</link>
+                        <enclosure url="https://media.vaticannews.va/media/audio/s1/2022/10/29/07/136772415_F136772415.mp3" type="audio/mp3" length="9601920"/>
+
+
+                        <itunes:duration>00:10:00</itunes:duration>
+
+                        <itunes:explicit>false</itunes:explicit>
+                        <pubDate>Sat, 29 Oct 2022 07:35:00 +0200</pubDate>
+                    </item>
+                <item>
+                        <title>06 - Kateri Tekahkwitha</title>
+                        <itunes:title>06 - Kateri Tekahkwitha</itunes:title>
+                        <description>
+                            <![CDATA[
+                                        Sœur Catherine Aubin s’entretient avec Jean Fran&ccedil;ois Roussel de la sainte autochtone canadienne Kateri Tekahkwitha, canonis&eacute;e en 2012. Jean Fran&ccedil;ois Roussel a publi&eacute; en ao&ucirc;t 2022 aux Presses de l’Universit&eacute; de Montr&eacute;al &laquo;Kateri Tekahkwitha, traverser le miroir colonial&raquo;.
+                                    ]]>
+                                </description>
+                        <guid>https://www.vaticannews.va/fr/podcast/un-livre-a-la-foi-soeur-catherine-aubin/2022/10/06-kateri-tekahkwitha.html</guid>
+                            <link>https://www.vaticannews.va/fr/podcast/un-livre-a-la-foi-soeur-catherine-aubin/2022/10/06-kateri-tekahkwitha.html</link>
+                        <enclosure url="https://media.vaticannews.va/media/audio/s1/2022/10/01/16/136734339_F136734339.mp3" type="audio/mp3" length="9601536"/>
+
+
+                        <itunes:duration>00:10:00</itunes:duration>
+
+                        <itunes:explicit>false</itunes:explicit>
+                        <pubDate>Tue, 25 Oct 2022 15:56:00 +0200</pubDate>
+                    </item>
+                <item>
+                        <title>05 - Théophile</title>
+                        <itunes:title>05 - Théophile</itunes:title>
+                        <description>
+                            <![CDATA[
+                                        Soeur Catherine Aubin nous plonge dans la po&eacute;sie de Beno&icirc;t Miller au travers de son dernier ouvrage &laquo;Th&eacute;ophile&raquo;, publi&eacute; aux &eacute;ditions Synoptiques.
+                                    ]]>
+                                </description>
+                        <guid>https://www.vaticannews.va/fr/podcast/un-livre-a-la-foi-soeur-catherine-aubin/2022/10/05-theophile.html</guid>
+                            <link>https://www.vaticannews.va/fr/podcast/un-livre-a-la-foi-soeur-catherine-aubin/2022/10/05-theophile.html</link>
+                        <enclosure url="https://media.vaticannews.va/media/audio/s1/2022/10/01/15/136734269_F136734269.mp3" type="audio/mp3" length="9601536"/>
+
+
+                        <itunes:duration>00:10:00</itunes:duration>
+
+                        <itunes:explicit>false</itunes:explicit>
+                        <pubDate>Sat, 01 Oct 2022 15:14:00 +0200</pubDate>
+                    </item>
+                <item>
+                        <title>04 - La grande Marie ou le luxe de sainteté</title>
+                        <itunes:title>04 - La grande Marie ou le luxe de sainteté</itunes:title>
+                        <description>
+                            <![CDATA[
+                                        Un livre &agrave; la foi - Quatri&egrave;me &eacute;pisode Soeur Catherine Aubin re&ccedil;oit&nbsp;Carl Bergeron pour son livre &laquo;La grande Marie ou le luxe de saintet&eacute;&raquo;
+                                    ]]>
+                                </description>
+                        <guid>https://www.vaticannews.va/fr/podcast/un-livre-a-la-foi-soeur-catherine-aubin/2022/05/04-la-grande-marie-ou-le-luxe-de-saintete.html</guid>
+                            <link>https://www.vaticannews.va/fr/podcast/un-livre-a-la-foi-soeur-catherine-aubin/2022/05/04-la-grande-marie-ou-le-luxe-de-saintete.html</link>
+                        <enclosure url="https://media.vaticannews.va/media/audio/s1/2022/05/27/06/136581041_F136581041.mp3" type="audio/mp3" length="9601536"/>
+
+
+                        <itunes:duration>00:10:00</itunes:duration>
+
+                        <itunes:explicit>false</itunes:explicit>
+                        <pubDate>Fri, 27 May 2022 06:40:00 +0200</pubDate>
+                    </item>
+                <item>
+                        <title>03 - Une fleur derrière les barreaux</title>
+                        <itunes:title>03 - Une fleur derrière les barreaux</itunes:title>
+                        <description>
+                            <![CDATA[
+                                        Un livre &agrave; la foi - Troisi&egrave;me &eacute;pisode Soeur Catherine Aubin re&ccedil;oit&nbsp;Sr Marguerite Rivard et Mathieu Lavigne pour le livre &laquo;une fleur derri&egrave;re les barreaux&raquo;
+                                    ]]>
+                                </description>
+                        <guid>https://www.vaticannews.va/fr/podcast/un-livre-a-la-foi-soeur-catherine-aubin/2022/05/03-une-fleur-derriere-les-barreaux.html</guid>
+                            <link>https://www.vaticannews.va/fr/podcast/un-livre-a-la-foi-soeur-catherine-aubin/2022/05/03-une-fleur-derriere-les-barreaux.html</link>
+                        <enclosure url="https://media.vaticannews.va/media/audio/s1/2022/05/14/06/136565657_F136565657.mp3" type="audio/mp3" length="9601920"/>
+
+
+                        <itunes:duration>00:10:00</itunes:duration>
+
+                        <itunes:explicit>false</itunes:explicit>
+                        <pubDate>Sat, 14 May 2022 06:01:00 +0200</pubDate>
+                    </item>
+                <item>
+                        <title>02 - Pas de chicane dans ma cabane</title>
+                        <itunes:title>02 - Pas de chicane dans ma cabane</itunes:title>
+                        <description>
+                            <![CDATA[
+                                        Un livre &agrave; la foi - Deuxi&egrave;me &eacute;pisode. Soeur Catherine Aubin re&ccedil;oit Rashida Azdouz pour son livre &laquo;pas de chicane dans ma cabane&raquo;
+                                    ]]>
+                                </description>
+                        <guid>https://www.vaticannews.va/fr/podcast/un-livre-a-la-foi-soeur-catherine-aubin/2022/04/02-pas-de-chicane-dans-ma-cabane-rashida-azdouz.html</guid>
+                            <link>https://www.vaticannews.va/fr/podcast/un-livre-a-la-foi-soeur-catherine-aubin/2022/04/02-pas-de-chicane-dans-ma-cabane-rashida-azdouz.html</link>
+                        <enclosure url="https://media.vaticannews.va/media/audio/s1/2022/04/13/11/136511812_F136511812.mp3" type="audio/mp3" length="9601920"/>
+
+
+                        <itunes:duration>00:10:00</itunes:duration>
+
+                        <itunes:explicit>false</itunes:explicit>
+                        <pubDate>Wed, 13 Apr 2022 11:17:00 +0200</pubDate>
+                    </item>
+                <item>
+                        <title>01 - Sortir la Bible du placard</title>
+                        <itunes:title>01 - Sortir la Bible du placard</itunes:title>
+                        <description>
+                            <![CDATA[
+                                        Un livre &agrave; la foi - Premier &eacute;pisode. Soeur Catherine Aubin re&ccedil;oit S&eacute;bastien Doane pour son livre &laquo;Sortir la Bible du placard&raquo;
+                                    ]]>
+                                </description>
+                        <guid>https://www.vaticannews.va/fr/podcast/un-livre-a-la-foi-soeur-catherine-aubin/2022/03/catherine-aubin-sebastien-doane-sortir-bible-placard.html</guid>
+                            <link>https://www.vaticannews.va/fr/podcast/un-livre-a-la-foi-soeur-catherine-aubin/2022/03/catherine-aubin-sebastien-doane-sortir-bible-placard.html</link>
+                        <enclosure url="https://media.vaticannews.va/media/audio/s1/2022/03/21/16/136482311_F136482311.mp3" type="audio/mp3" length="9601920"/>
+
+
+                        <itunes:duration>00:10:00</itunes:duration>
+
+                        <itunes:explicit>false</itunes:explicit>
+                        <pubDate>Tue, 15 Mar 2022 00:00:00 +0100</pubDate>
+                    </item>
+                </channel>
+        </rss>
+    

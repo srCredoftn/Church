@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+        <rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0" xml:lang="fr" xmlns:atom="http://www.w3.org/2005/Atom">
+            <channel>
+                <title>Radio Vatican - Temoins de l&#39;Esperance</title>
+                <description>Radio Vatican - Temoins de l&#39;Esperance</description>
+                <link>https://www.vaticannews.va/fr/podcast/temoins-de-l-espeance.html</link>
+                <atom:link href="https://www.vaticannews.va/fr/podcast/temoins-de-l-espeance.podcast.xml" rel="self" type="application/rss+xml" />
+                <language>fr</language>
+                <image>
+                        <url>https://www.vaticannews.va/content/dam/vaticannews/cem/2025/Cover-temoins-esperance-podcast.jpg/_jcr_content/renditions/cq5dam.thumbnail.cropped.750.422.jpeg</url>
+                        <title>Témoins de l&#39;Espérance</title>
+                        <link>https://www.vaticannews.va/fr/podcast/temoins-de-l-espeance.html</link>
+                    </image>
+                <pubDate>Wed, 15 Oct 2025 08:00:00 +0200</pubDate>
+                <lastBuildDate>Wed, 15 Oct 2025 08:00:00 +0200</lastBuildDate>
+                <copyright>
+                    <![CDATA[© 2017-2025 Dicasterium pro Communicatione]]>
+                </copyright>
+                <itunes:owner>
+                    <itunes:name>Radio Vaticana - Vatican News</itunes:name>
+                    <itunes:email>webmaster@vaticannews.va</itunes:email>
+                </itunes:owner>
+
+                    <itunes:category text="News"></itunes:category><itunes:image href="https://www.vaticannews.va/content/dam/vaticannews/cem/2025/Cover-temoins-esperance-podcast.jpg/_jcr_content/renditions/cq5dam.thumbnail.cropped.750.422.jpeg" />
+                <itunes:explicit>false</itunes:explicit>
+
+                <itunes:author>Radio Vaticana - Vatican News</itunes:author>
+                <itunes:summary>Un podcast r&amp;eacute;alis&amp;eacute; en partenariat avec la Fondation Aide &amp;agrave; l&#039;&amp;Eacute;glise en D&amp;eacute;tresse</itunes:summary>
+                <itunes:subtitle></itunes:subtitle>
+
+
+                <item>
+                        <title>Minoritaire mais en pleine croissance, les promesses de l&#39;Église catholique en Finlande</title>
+                        <itunes:title>Minoritaire mais en pleine croissance, les promesses de l&#39;Église catholique en Finlande</itunes:title>
+                        <description>
+                            <![CDATA[
+                                        Terre luthérienne presque aussi étendue que l'Allemagne, mais presque vingt fois moins peuplée, la Finlande ne compte qu'un seul diocèse catholique, celui de la capitale Helsinki. Forts d'une immigration et de conversions, les fidèles catholiques y sont en croissance, estimés aujourd'hui à plus de 25 000. Entretien avec frère Marie-Augustin Laurent-Huyghues-Beaufond, supérieur des dominicains d'Helsinki. Un podcast réalisé en partenariat avec la fondation Aide à l'Église en détresse (AED).
+                                    ]]>
+                                </description>
+                        <guid>https://www.vaticannews.va/fr/podcast/temoins-de-l-espeance/2025/10/aed-finlande-europe-nord-temoins-esperance-eglise-catholique.html</guid>
+                            <link>https://www.vaticannews.va/fr/podcast/temoins-de-l-espeance/2025/10/aed-finlande-europe-nord-temoins-esperance-eglise-catholique.html</link>
+                        <enclosure url="https://media.vaticannews.va/media2/audio/s1/2025/10/12/05/138839709_F138839709.mp3" type="audio/mp3" length="9599232"/>
+
+
+                        <itunes:duration>00:09:59</itunes:duration>
+
+                        <itunes:image href="https://www.vaticannews.va/content/dam/vaticannews/multimedia/2023/07/18/IMG_20230714_175552.jpeg/_jcr_content/renditions/cq5dam.thumbnail.cropped.1500.844.jpeg" />
+                        <itunes:explicit>false</itunes:explicit>
+                        <pubDate>Wed, 15 Oct 2025 08:00:00 +0200</pubDate>
+                    </item>
+                <item>
+                        <title>Mgr Profittlich, martyr de l&#39;Estonie soviétique</title>
+                        <itunes:title>Mgr Profittlich, martyr de l&#39;Estonie soviétique</itunes:title>
+                        <description>
+                            <![CDATA[
+                                        Eduard Profittlich, administrateur apostolique à Tallinn de 1931 à 1942 deviendra ce samedi 6 septembre, à l’issue d’une cérémonie présidée par le cardinal Christophe Schönborn, le premier bienheureux d’Estonie. Le prêtre jésuite fût une figure de la résistance durant l'occupation soviétique. Entretien avec Mgr Jourdan, l'actuel évêque de la capitale estonienne. Un podcast réalisé en partenariat avec la Fondation Aide à l'Église en Détresse.
+                                    ]]>
+                                </description>
+                        <guid>https://www.vaticannews.va/fr/podcast/temoins-de-l-espeance/2025/09/martyr-estonie-union-sovietique-podcast.html</guid>
+                            <link>https://www.vaticannews.va/fr/podcast/temoins-de-l-espeance/2025/09/martyr-estonie-union-sovietique-podcast.html</link>
+                        <enclosure url="https://media.vaticannews.va/media2/audio/s1/2025/09/05/19/138789325_F138789325.mp3" type="audio/mp3" length="9599616"/>
+
+
+                        <itunes:duration>00:09:59</itunes:duration>
+
+                        <itunes:image href="https://www.vaticannews.va/content/dam/vaticannews/multimedia/2018/09/19/Profittlich%20memoriale%20e%20in%20colore%20AEM.jpg/_jcr_content/renditions/cq5dam.thumbnail.cropped.1500.844.jpeg" />
+                        <itunes:explicit>false</itunes:explicit>
+                        <pubDate>Fri, 05 Sep 2025 18:42:00 +0200</pubDate>
+                    </item>
+                <item>
+                        <title>Soudan: développer une pastorale dans un pays en guerre</title>
+                        <itunes:title>Soudan: développer une pastorale dans un pays en guerre</itunes:title>
+                        <description>
+                            <![CDATA[
+                                        Témoins de l'espérance, un podcast réalisé en partenariat avec la Fondation Aide à l'Église en Détresse.
+                                    ]]>
+                                </description>
+                        <guid>https://www.vaticannews.va/fr/podcast/temoins-de-l-espeance/2025/06/soudan-developper-une-pastorale-dans-un-pays-en-guerre.html</guid>
+                            <link>https://www.vaticannews.va/fr/podcast/temoins-de-l-espeance/2025/06/soudan-developper-une-pastorale-dans-un-pays-en-guerre.html</link>
+                        <enclosure url="https://media.vaticannews.va/media/audio/s1/2025/06/11/10/138697913_F138697913.mp3" type="audio/mp3" length="9599616"/>
+
+
+                        <itunes:duration>00:09:59</itunes:duration>
+
+                        <itunes:image href="https://www.vaticannews.va/content/dam/vaticannews/cem/2025/Alexandre-bedin.jpeg/_jcr_content/renditions/cq5dam.thumbnail.cropped.1500.844.jpeg" />
+                        <itunes:explicit>false</itunes:explicit>
+                        <pubDate>Sun, 15 Jun 2025 08:00:00 +0200</pubDate>
+                    </item>
+                <item>
+                        <title>L&#39;Église catholique du Pérou face au défi des sectes</title>
+                        <itunes:title>L&#39;Église catholique du Pérou face au défi des sectes</itunes:title>
+                        <description>
+                            <![CDATA[
+                                        Témoins de l'espérance, un podcast réalisé en partenariat avec la Fondation Aide à l'Église en Détresse.
+                                    ]]>
+                                </description>
+                        <guid>https://www.vaticannews.va/fr/podcast/temoins-de-l-espeance/2025/05/l-eglise-au-perou-descritpion-pere-hubert-boulange.html</guid>
+                            <link>https://www.vaticannews.va/fr/podcast/temoins-de-l-espeance/2025/05/l-eglise-au-perou-descritpion-pere-hubert-boulange.html</link>
+                        <enclosure url="https://media.vaticannews.va/media/audio/s1/2025/05/13/07/138662038_F138662038.mp3" type="audio/mp3" length="9603840"/>
+
+
+                        <itunes:duration>00:10:00</itunes:duration>
+
+                        <itunes:image href="https://www.vaticannews.va/content/dam/vaticannews/agenzie/images/ansa/2025/05/09/10/1746778084471.jpg/_jcr_content/renditions/cq5dam.thumbnail.cropped.1500.844.jpeg" />
+                        <itunes:explicit>false</itunes:explicit>
+                        <pubDate>Thu, 15 May 2025 08:00:00 +0200</pubDate>
+                    </item>
+                <item>
+                        <title>Le Chemin de Croix du peuple haïtien pris dans la spirale de la violence</title>
+                        <itunes:title>Le Chemin de Croix du peuple haïtien pris dans la spirale de la violence</itunes:title>
+                        <description>
+                            <![CDATA[
+                                        Témoins de l'espérance, un podcast réalisé en partenariat avec la Fondation Aide à l'Église en Détresse.
+                                    ]]>
+                                </description>
+                        <guid>https://www.vaticannews.va/fr/podcast/temoins-de-l-espeance/2025/04/le-chemin-de-croix-du-peuple-haitien-dans-la-violence-des-gangs.html</guid>
+                            <link>https://www.vaticannews.va/fr/podcast/temoins-de-l-espeance/2025/04/le-chemin-de-croix-du-peuple-haitien-dans-la-violence-des-gangs.html</link>
+                        <enclosure url="https://media.vaticannews.va/media/audio/s1/2025/04/10/08/138619314_F138619314.mp3" type="audio/mp3" length="9566208"/>
+
+
+                        <itunes:duration>00:09:57</itunes:duration>
+
+                        <itunes:image href="https://www.vaticannews.va/content/dam/vaticannews/agenzie/images/reuters/2025/02/17/22/1739828678542.JPG/_jcr_content/renditions/cq5dam.thumbnail.cropped.1500.844.jpeg" />
+                        <itunes:explicit>false</itunes:explicit>
+                        <pubDate>Tue, 15 Apr 2025 08:21:00 +0200</pubDate>
+                    </item>
+                <item>
+                        <title>L&#39;espérance de paix des Ukrainiens</title>
+                        <itunes:title>L&#39;espérance de paix des Ukrainiens</itunes:title>
+                        <description>
+                            <![CDATA[
+                                        Témoins de l'espérance, un podcast réalisé en partenariat avec la Fondation Aide à l'Église en Détresse.
+                                    ]]>
+                                </description>
+                        <guid>https://www.vaticannews.va/fr/podcast/temoins-de-l-espeance/2025/03/l-esperance-de-paix-des-ukrainiens.html</guid>
+                            <link>https://www.vaticannews.va/fr/podcast/temoins-de-l-espeance/2025/03/l-esperance-de-paix-des-ukrainiens.html</link>
+                        <enclosure url="https://media.vaticannews.va/media/audio/s1/2025/03/01/13/138558849_F138558849.mp3" type="audio/mp3" length="9654144"/>
+
+
+                        <itunes:duration>00:10:03</itunes:duration>
+
+                        <itunes:image href="https://www.vaticannews.va/content/dam/vaticannews/agenzie/images/afp/2022/03/19/21/1647720539330.jpg/_jcr_content/renditions/cq5dam.thumbnail.cropped.1500.844.jpeg" />
+                        <itunes:explicit>false</itunes:explicit>
+                        <pubDate>Fri, 14 Mar 2025 08:00:00 +0100</pubDate>
+                    </item>
+                <item>
+                        <title>L&#39;Église catholique de Gaza restera toujours une lumière d&#39;espérance</title>
+                        <itunes:title>L&#39;Église catholique de Gaza restera toujours une lumière d&#39;espérance</itunes:title>
+                        <description>
+                            <![CDATA[
+                                        Témoins de l'espérance, un podcast réalisé en partenariat avec la Fondation Aide à l'Église en Détresse.
+                                    ]]>
+                                </description>
+                        <guid>https://www.vaticannews.va/fr/podcast/temoins-de-l-espeance/2025/02/l-eglise-a-gaza-restera-toujours-une-lumiere-d-esperance.html</guid>
+                            <link>https://www.vaticannews.va/fr/podcast/temoins-de-l-espeance/2025/02/l-eglise-a-gaza-restera-toujours-une-lumiere-d-esperance.html</link>
+                        <enclosure url="https://media.vaticannews.va/media/audio/s1/2025/01/30/07/138520509_F138520509.mp3" type="audio/mp3" length="9599616"/>
+
+
+                        <itunes:duration>00:09:59</itunes:duration>
+
+                        <itunes:image href="https://www.vaticannews.va/content/dam/vaticannews/cem/2025/romanelli-ok.jpg/_jcr_content/renditions/cq5dam.thumbnail.cropped.1500.844.jpeg" />
+                        <itunes:explicit>false</itunes:explicit>
+                        <pubDate>Fri, 14 Feb 2025 06:00:00 +0100</pubDate>
+                    </item>
+                <item>
+                        <title>Paix, environnement, migrants: l’Église de Colombie en première ligne</title>
+                        <itunes:title>Paix, environnement, migrants: l’Église de Colombie en première ligne</itunes:title>
+                        <description>
+                            <![CDATA[
+                                        Témoins de l'espérance, un podcast réalisé en partenariat avec la Fondation Aide à l'Église en Détresse.
+                                    ]]>
+                                </description>
+                        <guid>https://www.vaticannews.va/fr/podcast/temoins-de-l-espeance/2025/01/l-eglise-de-colombie-en-premiere-ligne-pour-relever-les-defis.html</guid>
+                            <link>https://www.vaticannews.va/fr/podcast/temoins-de-l-espeance/2025/01/l-eglise-de-colombie-en-premiere-ligne-pour-relever-les-defis.html</link>
+                        <enclosure url="https://media.vaticannews.va/media/audio/s1/2025/01/12/09/138498721_F138498721.mp3" type="audio/mp3" length="9599616"/>
+
+
+                        <itunes:duration>00:09:59</itunes:duration>
+
+                        <itunes:image href="https://www.vaticannews.va/content/dam/vaticannews/multimedia/2022/11/24/c.jpg/_jcr_content/renditions/cq5dam.thumbnail.cropped.1500.844.jpeg" />
+                        <itunes:explicit>false</itunes:explicit>
+                        <pubDate>Wed, 15 Jan 2025 08:00:00 +0100</pubDate>
+                    </item>
+                <item>
+                        <title>Syrie: faire renaître l&#39;espérance</title>
+                        <itunes:title>Syrie: faire renaître l&#39;espérance</itunes:title>
+                        <description>
+                            <![CDATA[
+                                        Témoins de l'espérance, un podcast réalisé en partenariat avec la Fondation Aide à l'Église en Détresse.
+                                    ]]>
+                                </description>
+                        <guid>https://www.vaticannews.va/fr/podcast/temoins-de-l-espeance/2024/12/podcast-syrie-temoignage-damas-esperance.html</guid>
+                            <link>https://www.vaticannews.va/fr/podcast/temoins-de-l-espeance/2024/12/podcast-syrie-temoignage-damas-esperance.html</link>
+                        <enclosure url="https://media.vaticannews.va/media/audio/s1/2024/12/13/07/138465792_F138465792.mp3" type="audio/mp3" length="9624576"/>
+
+
+                        <itunes:duration>00:10:01</itunes:duration>
+
+                        <itunes:image href="https://www.vaticannews.va/content/dam/vaticannews/multimedia/2021/11/26/IMG_20211121_174504--rsz.jpg/_jcr_content/renditions/cq5dam.thumbnail.cropped.1500.844.jpeg" />
+                        <itunes:explicit>false</itunes:explicit>
+                        <pubDate>Mon, 16 Dec 2024 08:00:00 +0100</pubDate>
+                    </item>
+                <item>
+                        <title>Père Philippe Blot: En Corée du Nord, «ils ont mis Dieu dehors»</title>
+                        <itunes:title>Père Philippe Blot: En Corée du Nord, «ils ont mis Dieu dehors»</itunes:title>
+                        <description>
+                            <![CDATA[
+                                        Témoins de l'espérance, un podcast réalisé en partenariat avec la Fondation Aide à l'Église en Détresse.
+                                    ]]>
+                                </description>
+                        <guid>https://www.vaticannews.va/fr/podcast/temoins-de-l-espeance/2024/11/pere-philippe-blot-en-coree-du-nord-ils-ont-mis-dieu-dehors.html</guid>
+                            <link>https://www.vaticannews.va/fr/podcast/temoins-de-l-espeance/2024/11/pere-philippe-blot-en-coree-du-nord-ils-ont-mis-dieu-dehors.html</link>
+                        <enclosure url="https://media.vaticannews.va/media/audio/s1/2024/11/15/15/138429016_F138429016.mp3" type="audio/mp3" length="9599616"/>
+
+
+                        <itunes:duration>00:09:59</itunes:duration>
+
+                        <itunes:image href="https://www.vaticannews.va/content/dam/vaticannews/agenzie/images/afp/2024/03/20/09/1710924489629.jpg/_jcr_content/renditions/cq5dam.thumbnail.cropped.1500.844.jpeg" />
+                        <itunes:explicit>false</itunes:explicit>
+                        <pubDate>Fri, 15 Nov 2024 15:13:00 +0100</pubDate>
+                    </item>
+                <item>
+                        <title>Jean-Pierre Keita: «Le terrorisme empêche l’exercice normal du ministère»</title>
+                        <itunes:title>Jean-Pierre Keita: «Le terrorisme empêche l’exercice normal du ministère»</itunes:title>
+                        <description>
+                            <![CDATA[
+                                        Témoins de l'espérance, un podcast réalisé en partenariat avec la Fondation Aide à l'Église en Détresse.
+                                    ]]>
+                                </description>
+                        <guid>https://www.vaticannews.va/fr/podcast/temoins-de-l-espeance/2024/10/jean-pierre-keita-burkina-faso-terrorisme-et-foi.html</guid>
+                            <link>https://www.vaticannews.va/fr/podcast/temoins-de-l-espeance/2024/10/jean-pierre-keita-burkina-faso-terrorisme-et-foi.html</link>
+                        <enclosure url="https://media.vaticannews.va/media/audio/s1/2024/10/10/16/138377897_F138377897.mp3" type="audio/mp3" length="9601152"/>
+
+
+                        <itunes:duration>00:10:00</itunes:duration>
+
+                        <itunes:image href="https://www.vaticannews.va/content/dam/vaticannews/agenzie/images/reuters/2019/05/17/22/a-cross-is-pictured-at-the-cathedral-of-our-l-1558126166889.JPG/_jcr_content/renditions/cq5dam.thumbnail.cropped.1500.844.jpeg" />
+                        <itunes:explicit>false</itunes:explicit>
+                        <pubDate>Fri, 18 Oct 2024 09:00:00 +0200</pubDate>
+                    </item>
+                <item>
+                        <title>Marielle Boutros: «J&#39;ai choisi de ne pas quitter le Liban»</title>
+                        <itunes:title>Marielle Boutros: «J&#39;ai choisi de ne pas quitter le Liban»</itunes:title>
+                        <description>
+                            <![CDATA[
+                                        Témoins de l'espérance, un podcast réalisé en partenariat avec la Fondation Aide à l'Église en Détresse.
+                                    ]]>
+                                </description>
+                        <guid>https://www.vaticannews.va/fr/podcast/temoins-de-l-espeance/2024/10/marielle-boutros-j-ai-choisi-de-ne-pas-quitter-le-liban.html</guid>
+                            <link>https://www.vaticannews.va/fr/podcast/temoins-de-l-espeance/2024/10/marielle-boutros-j-ai-choisi-de-ne-pas-quitter-le-liban.html</link>
+                        <enclosure url="https://media.vaticannews.va/media/audio/s1/2024/10/03/06/138368366_F138368366.mp3" type="audio/mp3" length="9600000"/>
+
+
+                        <itunes:duration>00:10:00</itunes:duration>
+
+                        <itunes:image href="https://www.vaticannews.va/content/dam/vaticannews/cem/2024/marielle-Boutros-AED.jpg/_jcr_content/renditions/cq5dam.thumbnail.cropped.1500.844.jpeg" />
+                        <itunes:explicit>false</itunes:explicit>
+                        <pubDate>Thu, 03 Oct 2024 17:14:00 +0200</pubDate>
+                    </item>
+                </channel>
+        </rss>
+    
