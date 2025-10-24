@@ -364,9 +364,86 @@ Formulaire complet avec:
   - Email newsletter (optionnel)
 - Backup et restauration (accessible archidiocèse)
 
-### 4.13 Gestion de la Communauté/Réseau Social
+### 4.13 Gestion du Ticker/Bande de Contenu Déroulante
 
-#### 4.13.1 Configuration de la Communauté
+#### 4.13.1 Configuration du Ticker (Admin Paroisse)
+
+- **Activation/Désactivation du ticker**
+  - Toggle on/off (afficher ou masquer le ticker)
+  - Paramètres visibilité: toujours, heures spécifiques, jours spécifiques
+
+- **Option 1: Contenu Libre Custom**
+  - Formulaire d'ajout d'items:
+    - Texte riche (éditeur avec formatting toolbar)
+      - Gras, Italique, Souligné
+      - Taille texte
+      - Couleur texte
+      - Alignement
+    - Insertion images (upload ou URL)
+    - Insertion emojis (picker intégré)
+    - Insertion liens (URL + texte lien)
+    - Durée affichage (secondes)
+    - Date/heure programmation (optionnel)
+    - Statut: Brouillon, Actif, Archivé
+
+  - Gestion liste items:
+    - Lister tous les items du ticker
+    - Réordonner (drag-drop)
+    - Éditer item
+    - Supprimer item
+    - Dupliquer item
+    - Preview en temps réel
+    - Statistiques: Nombre affichages, clicks
+
+- **Option 2: Articles Automatiques**
+  - Configuration:
+    - Sélectionner catégories à afficher (multi-select)
+    - Nombre d'articles à afficher en boucle (ex: 5)
+    - Durée affichage article (secondes)
+    - Ordre: Récent, Populaire, Aléatoire
+    - Mise à jour: Automatique (quotidienne), Manuel
+    - Afficher seulement articles publiés
+
+  - Affichage:
+    - Titre article (auto généré du contenu)
+    - Lien click → va vers article
+    - Format: "[📰] Titre Article"
+
+- **Paramètres Généraux Ticker:**
+  - Vitesse défilement (slow, normal, fast)
+  - Direction: RTL (droite vers gauche) défaut
+  - Hauteur ticker
+  - Fond: couleur, opacité, image
+  - Texte: couleur par défaut si non spécifiée
+  - Pause au survol (hover effect)
+  - Animation: slide, fade, typewriter (options)
+
+#### 4.13.2 Configuration du Ticker (Admin Archidiocèse)
+
+- **Accès à tous les tickers paroisses:**
+  - Vue liste paroisses avec ticker status
+  - Éditer ticker paroisse (si permission)
+  - Voir préview ticker
+  - Désactiver ticker paroisse (si nécessaire)
+
+- **Ticker Archidiocèse Global:**
+  - Créer ticker "dicastère" ou "diocèse"
+  - Contenu: articles diocésains, annonces officielles
+  - Option: Broadcaster à toutes les paroisses
+    - Activation: "Afficher cet item sur tous les tickers paroisses"
+    - Item apparaît haut du ticker de chaque paroisse (avant contenu local)
+    - Peut être surpassé par paroisse (masquable localement)
+
+- **Modération:**
+  - Approuver/rejeter content tickers
+  - Modération automatique (filtres mots-clés)
+  - Historique modifications tickers
+
+---
+
+### 4.14 Gestion de la Communauté/Réseau Social
+
+#### 4.14.1 Configuration de la Communauté
 - **Portée de la communauté:** Choisir entre:
   - Paroisse uniquement (discussions locales)
   - Globale (discussions entre toutes les paroisses)
