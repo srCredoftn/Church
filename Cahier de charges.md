@@ -1017,18 +1017,51 @@ project/
 ### 8.3 Base de Données (Schéma Simplifié)
 
 Entités principales:
-- `users` (id, email, password, role, archdiocese_id)
-- `archdioceses` (id, name, address, phone, email)
-- `parishes` (id, name, address, phone, email, archdiocese_id)
-- `categories` (id, name, type, parish_id ou NULL pour global)
-- `articles` (id, title, content, author_id, parish_id, category_id, created_at, published_at, status)
+
+**Utilisateurs & Authentification:**
+- `users` (id, email, password_hash, username, avatar_url, bio, parish_id, role, status, created_at)
+- `user_roles` (user_id, role) - "Admin Archdiocèse", "Admin Paroisse", "Contributeur", "Modérateur", "Membre"
+- `user_blocked` (blocker_id, blocked_id) - Blocage utilisateurs
+
+**Entités Paroissiales:**
+- `archdioceses` (id, name, address, phone, email, logo_url)
+- `parishes` (id, name, address, phone, email, archdiocese_id, logo_url, location_gps, created_at)
+- `mass_schedules` (id, parish_id, day_of_week, time, type, location)
+- `parish_settings` (parish_id, setting_key, setting_value) - pour configs (modes paiement, montants, etc.)
+
+**Contenu Éditorial:**
+- `categories` (id, name, type, description, parish_id ou NULL pour global)
+- `articles` (id, title, slug, content, author_id, parish_id, category_id, created_at, published_at, status, views)
 - `articles_tags` (article_id, tag_id)
-- `events` (id, title, description, date_start, date_end, parish_id)
-- `groups` (id, name, description, parish_id, leader_id)
-- `mass_requests` (id, name, email, intention, date_requested, parish_id, status)
-- `donations` (id, amount, donor_email, parish_id, date, transaction_id, status)
-- `meditations` (id, title, content, biblical_reference, audio_url, parish_id)
-- `media` (id, type, url, parish_id, article_id ou autre)
+- `tags` (id, name)
+- `events` (id, title, description, date_start, date_end, location, parish_id, organizer_id)
+- `groups` (id, name, description, parish_id, leader_id, logo_url, member_count)
+- `meditations` (id, title, content, biblical_reference, audio_url, author_id, parish_id, published_at)
+- `media` (id, type, url, parish_id, article_id, uploaded_by_id, created_at)
+
+**Communauté / Réseau Social:**
+- `community_topics` (id, title, content, author_id, parish_id, scope ['local', 'global'], category, pinned, locked, created_at, updated_at, views)
+- `community_comments` (id, topic_id, parent_comment_id, author_id, content, created_at, updated_at, status ['approved', 'pending', 'deleted'], reported_count)
+- `community_reactions` (id, user_id, target_type ['topic', 'comment'], target_id, emoji, created_at)
+- `community_reports` (id, reported_by_id, target_type, target_id, reason, status ['pending', 'resolved'], reviewed_by_id, created_at)
+- `community_notifications` (id, user_id, actor_id, notification_type ['reply', 'mention', 'reaction'], target_id, read_at, created_at)
+
+**Demandes de Messe & Paiements:**
+- `mass_requests` (id, requester_name, requester_email, intention, date_requested, parish_id, amount, payment_id, status ['pending', 'confirmed', 'completed'], created_at)
+- `mass_request_types` (id, parish_id, name, price) - pour types de messes configurables
+- `donations` (id, donor_email, donor_name, amount, intention_type, intention_id, parish_id, payment_id, status, anonymous, public_gratitude, created_at)
+- `donation_intentions` (id, parish_id, name, min_amount, max_amount, suggested_amount, description)
+
+**Paiements & Transactions:**
+- `payments` (id, parish_id, amount, currency, status ['pending', 'completed', 'failed', 'refunded'], payment_method, transaction_id, related_to_table, related_to_id, created_at, processed_at)
+- `payment_methods` (id, parish_id, method_type ['stripe', 'paypal', 'momo', 'mtn', 'moov', 'bank_transfer'], config_json, active)
+- `mobile_money_config` (id, parish_id, provider ['momo', 'mtn', 'moov'], account_number, api_key, test_mode, created_at)
+- `payment_logs` (id, payment_id, event, status_before, status_after, created_at) - audit trail
+
+**Audit & Modération:**
+- `audit_logs` (id, user_id, action, entity_type, entity_id, parish_id, changes_json, ip_address, created_at)
+- `moderation_logs` (id, moderator_id, action, target_type, target_id, reason, parish_id, archdiocese_id, created_at)
+- `user_activity` (id, user_id, action_type, parish_id, created_at) - pour déterminer membres actifs
 
 ### 8.4 Authentification & Autorisation
 
