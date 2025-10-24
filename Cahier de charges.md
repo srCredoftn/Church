@@ -41,7 +41,7 @@ Archidiocèse (Admin Principal)
         ↓
     Paroisse 2 (Admin Paroisse)
     │   ...
-    ��
+    │
     Fidèles / Visiteurs (Publique en lecture seule)
     └── Accès aux pages paroisses
 ```
@@ -103,7 +103,7 @@ Archidiocèse (Admin Principal)
 
 #### 3.2.1 Créer une Catégorie
 - Formulaire:
-  - Nom de la catégorie (ex: "Méditations", "Événements", "Communiqués")
+  - Nom de la catégorie (ex: "M��ditations", "Événements", "Communiqués")
   - Description
   - Type de contenu associé (Images, Vidéos, Articles, Audios, Texte)
   - Icône/couleur de représentation
@@ -286,7 +286,7 @@ Formulaire complet avec:
   - Partager
   - Signaler problème
 
-**Détails Complets Événement (Modal ou Page dédiée):**
+**Détails Complets Événement (Modal ou Page d��diée):**
 - Titre + description longue
 - Image couverture
 - **Informations temporelles:**
@@ -508,7 +508,7 @@ Formulaire complet avec:
 ### 4.12 Gestion des Utilisateurs de la Paroisse
 
 - Lister les collaborateurs (contributeurs, modérateurs)
-- Assigner les rôles: Administrateur, R��dacteur, Modérateur
+- Assigner les rôles: Administrateur, Rédacteur, Modérateur
 - Permissions granulaires (qui peut créer/modifier/publier)
 - Réinitialiser les mots de passe
 - Désactiver des comptes
@@ -1033,64 +1033,121 @@ Sections (dans l'ordre):
 - Message post-don avec reçu
 - Transparence: mention destination des dons
 
-### 5.9 Textes Liturgiques du Jour
+### 5.9 Section "Notre Foi" (Accueil Paroisse)
 
-**Widget/Section dans Accueil Paroisse:**
-- Affichage **lecture du jour** en évidence
-- Intégration API AELF (gratuit, français)
+**Structure adoptée du site Vatican News existant:**
+Bande horizontale avec 4 sections cliquables (responsive: grid desktop, stack mobile)
+
+#### 5.9.1 Section 1: Parole du Jour
+- **Source:** API AELF gratuite (https://api.aelf.org/)
 - **Contenu:**
-  - Titre de la messe (ex: "2ème dimanche du temps ordinaire")
-  - Introït / Psaume responsorial
-  - Épître (lecture 1)
-  - Évangile (lecture 2)
-  - Alléluia/Trait
-  - Homélie optionnelle (si contenu paroisse)
-- **Actions:**
-  - Lien "Lire texte complet" → Page dédiée
-  - Partager lecture (réseaux sociaux)
-  - Télécharger PDF
-  - Ajouter à mes favoris
-- **Personnalisation:**
-  - Sélectionner langue (français, latin, etc.)
-  - Sélectionner traduction biblique (si options)
-  - Afficher notes liturgiques
+  - Titre: "Parole du jour"
+  - Icône: 📖
+  - Affichage rapide: Extrait évangile/lecture principale du jour
+  - Lien "Lire lecture complète"
+- **Design:**
+  - Fond couleur distinctif (ex: bleu)
+  - Texte blanc/clair
+  - Padding interne
+  - Hover: zoom léger + curseur pointer
 
-**Page Dédiée "Liturgie du Jour":**
-- Page complète textes liturgiques quotidiens
-- Structure:
-  - En-tête: date, saint(s) du jour, temps liturgique
-  - Lectures complètes avec références bibliques
-  - Psaume responsorial (format responsorial)
-  - Alléluia ou Trait
-  - Verset de l'Évangile
-  - Évangile complet
-  - Oraisons (collecte, secrète, postcommunion) - optionnel
-  - Antienne d'ouverture/communion - optionnel
+#### 5.9.2 Section 2: Saint du Jour
+- **Source:** API AELF ou données custom paroisse
+- **Contenu:**
+  - Titre: "Saint du jour"
+  - Icône: ⛪
+  - Nom saint célébré
+  - Courte biographie (2-3 lignes)
+  - Photo saint (optionnel)
+  - Lien "En savoir plus"
+- **Design:** Fond couleur différente (ex: rose/mauve)
+
+#### 5.9.3 Section 3: Fêtes Liturgiques
+- **Source:** Calendrier liturgique AELF
+- **Contenu:**
+  - Titre: "Fêtes Liturgiques"
+  - Icône: 🎉
+  - Fête/temps liturgique actuel (ex: "Carême", "Pentecôte", "Temps ordinaire")
+  - Couleur liturgique (violet, blanc, rouge, vert)
+  - Dates période (ex: "3-29 octobre")
+  - Lien "Voir calendrier complet"
+- **Design:** Fond couleur code liturgique (violet=Carême, blanc=Noël/Pâques, etc.)
+
+#### 5.9.4 Section 4: Prières
+- **Source:** Contenu paroisse ou ressource prédéfinie
+- **Contenu:**
+  - Titre: "Prières"
+  - Icône: 🙏
+  - Prière du jour (courte: Pater, Ave, Gloria)
+  - Intention du jour (optionnel)
+  - Lien "Toutes les prières"
+- **Design:** Fond couleur inspiration (ex: or/jaune)
+
+**Responsive Mobile:**
+- Format desktop: 4 colonnes égales
+- Format mobile (< 768px): Stack vertical (1 colonne)
+- Hauteur adaptée mobile (moins tall)
+- Texte tronqué avec "..." si trop long
+- Tap pour explorer
+
+**Configuration Admin Paroisse:**
+- Afficher/masquer chaque section
+- Couleurs personnalisées pour chaque section
+- Sélection contenu (AELF auto vs custom texte paroisse)
+- Ordonner sections (drag-drop)
+- Texte secondaire (description courte)
+
+**Configuration Admin Archidiocèse:**
+- Couleurs standards par diocèse
+- Template par défaut pour nouvelles paroisses
+- Sync automatique AELF pour tous (calendrier)
+
+---
+
+### 5.10 Page Dédiée "Textes Liturgiques Complets du Jour"
+
+**Structure complète:**
+- **En-tête:**
+  - Date complète + jour semaine
+  - Saint(s) célébré(s)
+  - Temps liturgique + couleur
+  - Infos liturgiques (rang, temps ordinaire, etc.)
+
+- **Contenu structuré:**
+  - Antienne d'ouverture
+  - Kyrie eleison
+  - Gloria (si applicable)
+  - Collecte
+  - Lectures (1ère, Psaume, 2ème, Alléluia, Évangile)
+  - Chaque lecture avec:
+    - Référence biblique
+    - Texte complet
+    - Notes liturgiques (optionnel)
+  - Préface
+  - Sanctus
+  - Agnus Dei
+  - Communion
+  - Post-communion
 
 - **Fonctionnalités:**
-  - Toggle traductions multiples (si disponibles)
-  - Afficher/masquer notes liturgiques
-  - Format: lecture simple ou format missale
+  - Navigation next/previous day (flèches)
+  - Sélecteur date (date picker)
+  - Imprimer (mise en forme missale)
+  - Télécharger PDF
+  - Partager (lien social media)
   - Copier texte
-  - Partager section spécifique
-  - Imprimer
+  - Ajouter favoris
+  - Audio (si disponible) avec player
 
-- **Lien vers ressources:**
-  - Lien AELF complet
-  - Commentaire biblique (optionnel)
-  - Méditation du jour paroisse (si existe)
+**Intégration Méditations Paroisse:**
+- Section "Méditation du jour" si existe pour paroisse
+- Lien vers page méditation complète
+- "Méditer sur la parole du jour"
 
-**Intégration Méditations Paroissiales:**
-- Lier méditation paroisse à lectionnaire du jour
-- Affichage automati: "Méditation sur la lecture du jour"
-- Suggestion: créer méditation en fonction lecture AELF
-
-**Configuration Admin:**
-- Activer/désactiver section liturgie
-- Choix source textes (AELF, autre API, contenu custom)
-- Fuseau horaire pour changement minuit
-- Traductions disponibles
-- Affichage notes/commentaires liturgiques (oui/non)
+**Lien Archidiocèse:**
+- Widget: "Textes liturgiques archidiocèse"
+- Liens vers pages liturgiques diocésaines
+- Homélie évêque (si publiée)
 
 ### 5.10 Page À Propos / Qui Sommes-Nous
 
@@ -1282,7 +1339,7 @@ Sections (dans l'ordre):
 - Suivi des pages visitées
 - Suivi des articles les plus lus
 - Suivi conversions (dons, demandes messe)
-- Rapports mensuels archidioc��se
+- Rapports mensuels archidiocèse
 - Alertes erreurs/bugs
 
 ---
