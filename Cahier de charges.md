@@ -30,7 +30,7 @@ Vatican News (Administrateur Principal)
 Archidiocèse (Admin Principal)
     ├── Supervision des paroisses
     ├── Création des pages paroisses
-    ├── Approbation des contenus (optionnel)
+    ├���─ Approbation des contenus (optionnel)
     └── Gestion des catégories globales
         ↓
     Paroisse 1 (Admin Paroisse)
@@ -363,6 +363,243 @@ Formulaire complet avec:
   - Flux RSS custom
   - Email newsletter (optionnel)
 - Backup et restauration (accessible archidiocèse)
+
+### 4.13 Gestion de la Communauté/Réseau Social
+
+#### 4.13.1 Configuration de la Communauté
+- **Portée de la communauté:** Choisir entre:
+  - Paroisse uniquement (discussions locales)
+  - Globale (discussions entre toutes les paroisses)
+  - Hybride: deux sections (Locale + Globale)
+
+- **Modération:**
+  - Modérateurs: Admin paroisse + Admin archidiocèse
+  - Automatisation: Filtrage spam, mots interdits, détection contenus offensants
+  - Mode modération: Approbation avant publication ou a posteriori
+
+- **Règles communauté:** Charte de bonne conduite, politique de respect
+
+#### 4.13.2 Sujets de Discussion (Community Topics)
+- Créer un sujet:
+  - Titre
+  - Description/Contenu initial
+  - Catégorie (Spiritualité, Questions pratiques, Événements, Partages, Prières, etc.)
+  - Image optionnelle
+  - Épingle (important = affiché en haut)
+  - Verrouillé (fermé au nouvelles réponses)
+
+- Lister les sujets:
+  - Tri: Récents, Populaires (réactions), Plus de réponses, Tendance
+  - Filtres: Par catégorie, date, auteur
+  - Recherche
+  - Affichage: Titre + extrait + nombre réponses + dernier commentaire
+
+#### 4.13.3 Commentaires et Réactions
+- **Commentaires:**
+  - Répondre à un sujet ou à un autre commentaire
+  - Texte riche (gras, italique, listes, liens)
+  - Système d'emojis (picker emoji intégré)
+  - Modifier/supprimer son propre commentaire (délai limité)
+  - Signaler commentaire (abus, spam, contenu offensant)
+  - Profondeur: Max 2 niveaux (réponse à réponse)
+
+- **Réactions à emojis:**
+  - Réactions sur sujets et commentaires
+  - Sélectionner emoji (😂, 👍, ❤️, 😮, 😢, 🙏, etc.)
+  - Affichage nombre réactions par type
+  - Possibilité retirer sa réaction
+
+#### 4.13.4 Profils Utilisateurs
+- **Création profil:**
+  - Email (authentification)
+  - Mot de passe sécurisé
+  - Nom d'affichage (pseudonyme)
+  - Avatar / Image profil (upload ou Gravatar)
+  - Bio courte (optionnel)
+  - Localisation (optionnel: choisir paroisse de rattachement)
+  - Paroisse(s) d'intérêt (pour filtrer contenu)
+
+- **Profil public:**
+  - Affichage name, avatar, bio
+  - Nombre de messages postés
+  - Date de membre
+  - Badges (ex: "Membre actif", "Modérateur")
+  - Historique messages (optionnel, public ou privé)
+
+- **Paramètres profil:**
+  - Email notifications (sujets répondus, mentions)
+  - Préférences données (partager paroisse, afficher comme modérateur, etc.)
+  - Blocage utilisateurs
+
+#### 4.13.5 Notifications
+- Quelqu'un répond à mon sujet/commentaire
+- Quelqu'un me mentionne (@username)
+- Sujet épinglé / Nouvelles discussions importantes
+- Email digest optionnel (quotidien, hebdomadaire)
+
+---
+
+### 4.14 Gestion des Demandes de Messe via Communauté
+
+#### 4.14.1 Section Demandes de Messe (dans Communauté)
+- Formulaire simple intégré:
+  - Type de messe (sélection): Funéraire, Intention spéciale, Action de grâces, Guérison, etc.
+  - Intention (texte libre - optionnel)
+  - Montant (optionnel):
+    - Montants prédéfinis configurés par paroisse
+    - Ou montant personnalisé (entre min/max définis par admin)
+  - Demandeur: Prenom + Nom (anonyme ou publique selon préférence)
+  - Email de confirmation
+  - Date souhaitée (optionnel)
+
+- **Paiement intégré:**
+  - Si montant > 0: Redirigible vers passerelle paiement
+  - Peut être gratuit (configuré par admin)
+
+- **Suivi:**
+  - Historique des demandes utilisateur
+  - Statut: En attente, Confirmée, Complétée
+  - Admin paroisse: Liste des demandes avec statut, paiement
+
+#### 4.14.2 Configuration Demandes par Admin Paroisse
+- **Prix des messes:**
+  - Montant prédéfini par type (ex: Funéraire = 5€, Intention = 3€)
+  - Montant libre customisé par fidèle (avec min/max)
+  - Gratuit (optionnel)
+
+- **Modes paiement:**
+  - Paiement optionnel (demande gratuite)
+  - Paiement obligatoire
+  - Paiement selon intention
+
+- **Notification:**
+  - Email admin quand demande reçue
+  - Email confirmation demandeur
+
+---
+
+### 4.15 Gestion des Paiements et Intentions (Dimes/Offrandes)
+
+#### 4.15.1 Configuration Paiements par Admin Paroisse
+- **Montants (Intentions/Dimes):**
+  - Montants prédéfinis (ex: Dime 2€, Offrande 5€, Libre = custom)
+  - Montant minimum
+  - Montant maximum (limite haute)
+  - Montant suggéré
+
+- **Types d'intentions:**
+  - Messe d'intention
+  - Dime paroissiale
+  - Quête/Offrande
+  - Projet spécial (ex: "Rénovation église")
+  - Intention libre
+  - Charité/Entraide
+
+- **Modes de paiement:** (configuration paroisse)
+  - Stripe (cartes bancaires)
+  - PayPal
+  - APIs mobiles (Momo, MTN, Moov) pour Afrique
+  - Virement bancaire (via IBAN affiché)
+  - Chèque (adresse postale)
+
+#### 4.15.2 Formulaire Paiement/Intention (Public)
+- Sélection type d'intention
+- Montant (prédéfini ou libre)
+- Email demandeur
+- Nom demandeur (optionnel, pour anonyme)
+- Message/note (optionnel)
+- Visibilité: Anonyme ou Publique (remercier le donateur)
+- Paiement sécurisé
+- Reçu automatique (email)
+
+#### 4.15.3 Suivi Finances (Admin Paroisse)
+- **Dashboard Revenus:**
+  - Total revenus (tous les mois)
+  - Graphique revenus par mois
+  - Répartition par type (messes, dimes, offrandes, projets)
+  - Nombre de transactions
+
+- **Liste transactions:**
+  - Date, montant, type d'intention, statut paiement
+  - Donnateur (anonyme/publique)
+  - Moyen paiement
+  - Filtres: par date, montant, type, moyen
+  - Export CSV/PDF
+
+- **Rapports:**
+  - Rapport mensuel / annuel
+  - Tendances (augmentation/diminution)
+  - Export comptabilité
+
+#### 4.15.4 Suivi Finances (Admin Archdiocèse)
+- **Vue globale:**
+  - Total revenus toutes paroisses
+  - Comparaison paroisses (revenus, transactions)
+  - Répartition par paroisse (graphique pie)
+  - Tendances diocésaines
+
+- **Liste paroisses + revenus:**
+  - Chaque paroisse: total, moyenne, transactions
+  - Actions: Voir détails, exporter rapport
+  - Audit: Date premier/dernier paiement
+
+- **Rapports archdiocèse:**
+  - Répartition des revenus (quelle paroisse reçoit quoi)
+  - Analyse comparée
+  - Détection anomalies
+
+#### 4.15.5 Traçabilité et Droits Paroissiaux
+- **Principe:** Chaque paroisse a droit à 100% des revenus générés pour sa paroisse
+- **Traçabilité complète:**
+  - Chaque transaction: lié paroisse (identifiant, timestamp)
+  - Moyens paiement: tracé vers paroisse
+  - Intention: associée paroisse
+
+- **Audit Trail:**
+  - Log tous les paiements reçus
+  - Log transferts vers comptes paroisses
+  - Archival: conservation minimale 7 ans
+
+- **Rapports de droit:**
+  - Admin archdiocèse: voir ce qui revient à chaque paroisse
+  - Montants à transférer par mois
+  - Vérifications fraudes/anomalies
+
+- **Paramètres Transfert:**
+  - Fréquence transfert: Quotidien, Hebdo, Mensuel, Manuel
+  - Seuil minimum avant transfert (ex: minimum 10€)
+  - RIB paroisse (où verser les fonds)
+  - Frais de plateforme (% à retenir si applicable)
+
+#### 4.15.6 Intégrations Paiement Mobile (Afrique)
+- **Momo (Orange Money):**
+  - Intégration API Momo
+  - Numéro téléphone destinataire
+  - Code PIN Momo
+
+- **MTN Mobile Money:**
+  - Intégration API MTN
+  - Numéro téléphone
+  - Frais (si applicable)
+
+- **Moov Africa:**
+  - Intégration API Moov
+  - Configuration pays
+  - Numéro téléphone
+
+- **Configuration par paroisse:**
+  - Activer/désactiver par provider
+  - Paramètres spécifiques (numéro récepteur, frais)
+  - Test mode vs mode production
+  - Rapports par provider
+
+#### 4.15.7 Sécurité Paiements
+- HTTPS obligatoire
+- Chiffrement données sensibles
+- Conformité PCI DSS
+- Pas de stockage numéro carte
+- Audit paiements réguliers
+- Alertes fraudes
 
 ---
 
