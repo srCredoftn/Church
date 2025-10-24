@@ -41,7 +41,7 @@ Archidiocèse (Admin Principal)
         ↓
     Paroisse 2 (Admin Paroisse)
     │   ...
-    │
+    ��
     Fidèles / Visiteurs (Publique en lecture seule)
     └── Accès aux pages paroisses
 ```
@@ -428,28 +428,28 @@ Formulaire complet avec:
   - Envoi de notifications au demandeur
   - Historique des demandes
 
-### 4.7 Gestion des Dons
+### 4.8 Gestion des Dons
 
-#### 4.7.1 Configuration des Dons
+#### 4.8.1 Configuration des Dons
 - Montants prédéfinis (optionnel)
 - Montant personnalisé (optionnel)
 - Mentions légales/politique de confidentialité
 - Email de confirmation
 
-#### 4.7.2 Intégration de Paiement
+#### 4.8.2 Intégration de Paiement
 - Intégration Stripe, PayPal, ou autre (à définir)
 - Gestion sécurisée des transactions
 - Reçus de don automatisés
 - Rapports mensuels/annuels des dons
 
-#### 4.7.3 Lister les Dons
+#### 4.8.3 Lister les Dons
 - Vue anonymisée (respect confidentialité)
 - Filtres par date, montant
 - Statistiques: total du mois, moyenne, tendances
 
-### 4.8 Méditations
+### 4.9 Méditations
 
-#### 4.8.1 Créer une Méditation
+#### 4.9.1 Créer une Méditation
 - Formulaire:
   - Titre
   - Lecture biblique (référence + extrait)
@@ -460,14 +460,14 @@ Formulaire complet avec:
   - Image d'illustration
   - Tags
 
-#### 4.8.2 Lister/Modifier les Méditations
+#### 4.9.2 Lister/Modifier les Méditations
 - Vue calendrier ou liste
 - Édition rapide
 - Duplication (pour créer une routine quotidienne/hebdomadaire)
 
-### 4.9 Communiqués
+### 4.10 Communiqués
 
-#### 4.9.1 Créer un Communiqué
+#### 4.10.1 Créer un Communiqué
 - Formulaire simplifié:
   - Titre
   - Contenu (éditeur riche)
@@ -475,13 +475,13 @@ Formulaire complet avec:
   - Statut: Brouillon, Publié, Archivé
   - Destinataire (tous, contributeurs, comité, etc.)
 
-#### 4.9.2 Lister/Modifier les Communiqués
+#### 4.10.2 Lister/Modifier les Communiqués
 - Liste antéchronologique
 - Actions: Éditer, Supprimer, Archiver
 
-### 4.10 Gestion du Profil Paroisse
+### 4.11 Gestion du Profil Paroisse
 
-#### 4.10.1 Informations Paroisse
+#### 4.11.1 Informations Paroisse
 - Logo
 - Bannière/Image de couverture
 - Nom complet
@@ -491,7 +491,7 @@ Formulaire complet avec:
 - Site web (optionnel)
 - Réseaux sociaux (Facebook, Instagram, YouTube, etc.)
 
-#### 4.10.2 Horaires de Messes
+#### 4.11.2 Horaires de Messes
 - Formulaire tabulaire:
   - Jour de la semaine
   - Heure(s) de messes
@@ -499,22 +499,22 @@ Formulaire complet avec:
   - Lieu (église principale ou chapelle)
   - Notes (ex: "vacances", "spécial")
 
-#### 4.10.3 Personnel Paroisse
+#### 4.11.3 Personnel Paroisse
 - Liste des prêtres/diacres
 - Coordonnées
 - Responsabilités
 - Photo (optionnel)
 
-### 4.11 Gestion des Utilisateurs de la Paroisse
+### 4.12 Gestion des Utilisateurs de la Paroisse
 
 - Lister les collaborateurs (contributeurs, modérateurs)
-- Assigner les rôles: Administrateur, Rédacteur, Modérateur
+- Assigner les rôles: Administrateur, R��dacteur, Modérateur
 - Permissions granulaires (qui peut créer/modifier/publier)
 - Réinitialiser les mots de passe
 - Désactiver des comptes
 - Historique d'activité par utilisateur
 
-### 4.12 Paramètres et Intégrations
+### 4.13 Paramètres et Intégrations
 
 - Langue préférée de la paroisse
 - Fuseau horaire
@@ -526,9 +526,9 @@ Formulaire complet avec:
   - Email newsletter (optionnel)
 - Backup et restauration (accessible archidiocèse)
 
-### 4.13 Gestion du Ticker/Bande de Contenu Déroulante
+### 4.14 Gestion du Ticker/Bande de Contenu Déroulante
 
-#### 4.13.1 Configuration du Ticker (Admin Paroisse)
+#### 4.14.1 Configuration du Ticker (Admin Paroisse)
 
 - **Activation/Désactivation du ticker**
   - Toggle on/off (afficher ou masquer le ticker)
@@ -580,7 +580,7 @@ Formulaire complet avec:
   - Pause au survol (hover effect)
   - Animation: slide, fade, typewriter (options)
 
-#### 4.13.2 Configuration du Ticker (Admin Archidiocèse)
+#### 4.14.2 Configuration du Ticker (Admin Archidiocèse)
 
 - **Accès à tous les tickers paroisses:**
   - Vue liste paroisses avec ticker status
@@ -603,9 +603,9 @@ Formulaire complet avec:
 
 ---
 
-### 4.14 Gestion de la Communauté/Réseau Social
+### 4.15 Gestion de la Communauté/Réseau Social
 
-#### 4.14.1 Configuration de la Communauté
+#### 4.15.1 Configuration de la Communauté
 - **Portée de la communauté:** Choisir entre:
   - Paroisse uniquement (discussions locales)
   - Globale (discussions entre toutes les paroisses)
@@ -618,7 +618,7 @@ Formulaire complet avec:
 
 - **Règles communauté:** Charte de bonne conduite, politique de respect
 
-#### 4.14.2 Sujets de Discussion (Community Topics)
+#### 4.15.2 Sujets de Discussion (Community Topics)
 - Créer un sujet:
   - Titre
   - Description/Contenu initial
@@ -633,7 +633,7 @@ Formulaire complet avec:
   - Recherche
   - Affichage: Titre + extrait + nombre réponses + dernier commentaire
 
-#### 4.14.3 Commentaires et Réactions
+#### 4.15.3 Commentaires et Réactions
 - **Commentaires:**
   - Répondre à un sujet ou à un autre commentaire
   - Texte riche (gras, italique, listes, liens)
@@ -648,7 +648,7 @@ Formulaire complet avec:
   - Affichage nombre réactions par type
   - Possibilité retirer sa réaction
 
-#### 4.14.4 Profils Utilisateurs
+#### 4.15.4 Profils Utilisateurs
 - **Création profil:**
   - Email (authentification)
   - Mot de passe sécurisé
@@ -670,7 +670,7 @@ Formulaire complet avec:
   - Préférences données (partager paroisse, afficher comme modérateur, etc.)
   - Blocage utilisateurs
 
-#### 4.14.5 Notifications
+#### 4.15.5 Notifications
 - Quelqu'un répond à mon sujet/commentaire
 - Quelqu'un me mentionne (@username)
 - Sujet épinglé / Nouvelles discussions importantes
@@ -678,9 +678,9 @@ Formulaire complet avec:
 
 ---
 
-### 4.16 Gestion des Demandes de Messe via Communauté
+### 4.17 Gestion des Demandes de Messe via Communauté
 
-#### 4.16.1 Section Demandes de Messe (dans Communauté)
+#### 4.17.1 Section Demandes de Messe (dans Communauté)
 - Formulaire simple intégré:
   - Type de messe (sélection): Funéraire, Intention spéciale, Action de grâces, Guérison, etc.
   - Intention (texte libre - optionnel)
@@ -700,7 +700,7 @@ Formulaire complet avec:
   - Statut: En attente, Confirmée, Complétée
   - Admin paroisse: Liste des demandes avec statut, paiement
 
-#### 4.16.2 Configuration Demandes par Admin Paroisse
+#### 4.17.2 Configuration Demandes par Admin Paroisse
 - **Prix des messes:**
   - Montant prédéfini par type (ex: Funéraire = 5€, Intention = 3€)
   - Montant libre customisé par fidèle (avec min/max)
@@ -717,9 +717,9 @@ Formulaire complet avec:
 
 ---
 
-### 4.17 Gestion des Paiements et Intentions (Dimes/Offrandes)
+### 4.18 Gestion des Paiements et Intentions (Dimes/Offrandes)
 
-#### 4.17.1 Configuration Paiements par Admin Paroisse
+#### 4.18.1 Configuration Paiements par Admin Paroisse
 - **Montants (Intentions/Dimes):**
   - Montants prédéfinis (ex: Dime 2€, Offrande 5€, Libre = custom)
   - Montant minimum
@@ -741,7 +741,7 @@ Formulaire complet avec:
   - Virement bancaire (via IBAN affiché)
   - Chèque (adresse postale)
 
-#### 4.17.2 Formulaire Paiement/Intention (Public)
+#### 4.18.2 Formulaire Paiement/Intention (Public)
 - Sélection type d'intention
 - Montant (prédéfini ou libre)
 - Email demandeur
@@ -751,7 +751,7 @@ Formulaire complet avec:
 - Paiement sécurisé
 - Reçu automatique (email)
 
-#### 4.17.3 Suivi Finances (Admin Paroisse)
+#### 4.18.3 Suivi Finances (Admin Paroisse)
 - **Dashboard Revenus:**
   - Total revenus (tous les mois)
   - Graphique revenus par mois
@@ -770,7 +770,7 @@ Formulaire complet avec:
   - Tendances (augmentation/diminution)
   - Export comptabilité
 
-#### 4.17.4 Suivi Finances (Admin Archdiocèse)
+#### 4.18.4 Suivi Finances (Admin Archdiocèse)
 - **Vue globale:**
   - Total revenus toutes paroisses
   - Comparaison paroisses (revenus, transactions)
@@ -787,7 +787,7 @@ Formulaire complet avec:
   - Analyse comparée
   - Détection anomalies
 
-#### 4.17.5 Traçabilité et Droits Paroissiaux
+#### 4.18.5 Traçabilité et Droits Paroissiaux
 - **Principe:** Chaque paroisse a droit à 100% des revenus générés pour sa paroisse
 - **Traçabilité complète:**
   - Chaque transaction: lié paroisse (identifiant, timestamp)
@@ -810,7 +810,7 @@ Formulaire complet avec:
   - RIB paroisse (où verser les fonds)
   - Frais de plateforme (% à retenir si applicable)
 
-#### 4.17.6 Intégrations Paiement Mobile (Afrique)
+#### 4.18.6 Intégrations Paiement Mobile (Afrique)
 - **Momo (Orange Money):**
   - Intégration API Momo
   - Numéro téléphone destinataire
@@ -832,7 +832,7 @@ Formulaire complet avec:
   - Test mode vs mode production
   - Rapports par provider
 
-#### 4.17.7 Sécurité Paiements
+#### 4.18.7 Sécurité Paiements
 - HTTPS obligatoire
 - Chiffrement données sensibles
 - Conformité PCI DSS
@@ -1282,7 +1282,7 @@ Sections (dans l'ordre):
 - Suivi des pages visitées
 - Suivi des articles les plus lus
 - Suivi conversions (dons, demandes messe)
-- Rapports mensuels archidiocèse
+- Rapports mensuels archidioc��se
 - Alertes erreurs/bugs
 
 ---
