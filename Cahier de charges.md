@@ -493,7 +493,7 @@ Formulaire complet avec:
 
   - Affichage:
     - Titre article (auto généré du contenu)
-    - Lien click → va vers article
+    - Lien click ��� va vers article
     - Format: "[📰] Titre Article"
 
 - **Paramètres Généraux Ticker:**
@@ -558,7 +558,7 @@ Formulaire complet avec:
   - Recherche
   - Affichage: Titre + extrait + nombre réponses + dernier commentaire
 
-#### 4.14.3 Commentaires et R��actions
+#### 4.14.3 Commentaires et Réactions
 - **Commentaires:**
   - Répondre à un sujet ou à un autre commentaire
   - Texte riche (gras, italique, listes, liens)
@@ -958,7 +958,66 @@ Sections (dans l'ordre):
 - Message post-don avec reçu
 - Transparence: mention destination des dons
 
-### 5.9 Page À Propos / Qui Sommes-Nous
+### 5.9 Textes Liturgiques du Jour
+
+**Widget/Section dans Accueil Paroisse:**
+- Affichage **lecture du jour** en évidence
+- Intégration API AELF (gratuit, français)
+- **Contenu:**
+  - Titre de la messe (ex: "2ème dimanche du temps ordinaire")
+  - Introït / Psaume responsorial
+  - Épître (lecture 1)
+  - Évangile (lecture 2)
+  - Alléluia/Trait
+  - Homélie optionnelle (si contenu paroisse)
+- **Actions:**
+  - Lien "Lire texte complet" → Page dédiée
+  - Partager lecture (réseaux sociaux)
+  - Télécharger PDF
+  - Ajouter à mes favoris
+- **Personnalisation:**
+  - Sélectionner langue (français, latin, etc.)
+  - Sélectionner traduction biblique (si options)
+  - Afficher notes liturgiques
+
+**Page Dédiée "Liturgie du Jour":**
+- Page complète textes liturgiques quotidiens
+- Structure:
+  - En-tête: date, saint(s) du jour, temps liturgique
+  - Lectures complètes avec références bibliques
+  - Psaume responsorial (format responsorial)
+  - Alléluia ou Trait
+  - Verset de l'Évangile
+  - Évangile complet
+  - Oraisons (collecte, secrète, postcommunion) - optionnel
+  - Antienne d'ouverture/communion - optionnel
+
+- **Fonctionnalités:**
+  - Toggle traductions multiples (si disponibles)
+  - Afficher/masquer notes liturgiques
+  - Format: lecture simple ou format missale
+  - Copier texte
+  - Partager section spécifique
+  - Imprimer
+
+- **Lien vers ressources:**
+  - Lien AELF complet
+  - Commentaire biblique (optionnel)
+  - Méditation du jour paroisse (si existe)
+
+**Intégration Méditations Paroissiales:**
+- Lier méditation paroisse à lectionnaire du jour
+- Affichage automati: "Méditation sur la lecture du jour"
+- Suggestion: créer méditation en fonction lecture AELF
+
+**Configuration Admin:**
+- Activer/désactiver section liturgie
+- Choix source textes (AELF, autre API, contenu custom)
+- Fuseau horaire pour changement minuit
+- Traductions disponibles
+- Affichage notes/commentaires liturgiques (oui/non)
+
+### 5.10 Page À Propos / Qui Sommes-Nous
 
 - Historique de la paroisse
 - Équipe pastorale (photos, noms, rôles)
@@ -1221,7 +1280,7 @@ project/
     └── schema.sql
 ```
 
-### 8.3 Base de Données (Sch��ma Simplifié)
+### 8.3 Base de Données (Schéma Simplifié)
 
 Entités principales:
 
