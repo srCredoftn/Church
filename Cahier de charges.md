@@ -456,7 +456,7 @@ Formulaire complet avec:
 
 - **Règles communauté:** Charte de bonne conduite, politique de respect
 
-#### 4.13.2 Sujets de Discussion (Community Topics)
+#### 4.14.2 Sujets de Discussion (Community Topics)
 - Créer un sujet:
   - Titre
   - Description/Contenu initial
@@ -471,7 +471,7 @@ Formulaire complet avec:
   - Recherche
   - Affichage: Titre + extrait + nombre réponses + dernier commentaire
 
-#### 4.13.3 Commentaires et Réactions
+#### 4.14.3 Commentaires et Réactions
 - **Commentaires:**
   - Répondre à un sujet ou à un autre commentaire
   - Texte riche (gras, italique, listes, liens)
@@ -486,7 +486,7 @@ Formulaire complet avec:
   - Affichage nombre réactions par type
   - Possibilité retirer sa réaction
 
-#### 4.13.4 Profils Utilisateurs
+#### 4.14.4 Profils Utilisateurs
 - **Création profil:**
   - Email (authentification)
   - Mot de passe sécurisé
@@ -508,7 +508,7 @@ Formulaire complet avec:
   - Préférences données (partager paroisse, afficher comme modérateur, etc.)
   - Blocage utilisateurs
 
-#### 4.15.5 Notifications
+#### 4.14.5 Notifications
 - Quelqu'un répond à mon sujet/commentaire
 - Quelqu'un me mentionne (@username)
 - Sujet épinglé / Nouvelles discussions importantes
@@ -1122,7 +1122,7 @@ Si politique de modération activée:
 **Monorepo possible:**
 ```
 project/
-├── apps/
+├��─ apps/
 │   ├── admin-archdiocese/    (React)
 │   ├── admin-paroisse/       (React)
 │   └── website-public/       (React/Next.js)
