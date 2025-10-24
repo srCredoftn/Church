@@ -123,7 +123,7 @@ Archidiocèse (Admin Principal)
 ### 3.4 Utilisateurs et Permissions
 
 - Créer/Gérer les comptes admin paroisses
-- Assigner les rôles: Admin Paroisse, Contributeur Paroisse
+- Assigner les r��les: Admin Paroisse, Contributeur Paroisse
 - Réinitialiser les mots de passe
 - Désactiver des comptes
 - Journal d'accès (logs)
@@ -545,7 +545,7 @@ Formulaire complet avec:
 
 - **Rapports archdiocèse:**
   - Répartition des revenus (quelle paroisse reçoit quoi)
-  - Analyse compar��e
+  - Analyse comparée
   - Détection anomalies
 
 #### 4.15.5 Traçabilité et Droits Paroissiaux
@@ -1165,21 +1165,40 @@ Entités principales:
 - Panel admin paroisse: gérer articles, événements, horaires
 - Pages publiques: accueil, articles, événements
 - Formulaires: demande messe et dons basiques
+- Authentification utilisateurs communauté
 
-### 9.2 Phase 2
-- Système de commentaires modérés
-- Newsletter abonnés
-- Intégration réseaux sociaux automatisée
-- Méditations quotidiennes
-- Analytics avancées
+### 9.2 Phase 2 - Communauté & Paiements
+- **Communauté (Local + Global):**
+  - Sujets de discussion
+  - Commentaires avec emojis et réactions
+  - Système de modération (paroisse + archdiocèse)
+  - Signalements et modération
+  - Profils utilisateurs simples
+
+- **Paiements intégrés:**
+  - Paiements Stripe/PayPal
+  - Montants configurables par paroisse
+  - Traçabilité complète per paroisse
+  - Dashboard revenus
+
+- **Mobile Money (Afrique):**
+  - Intégration Momo/MTN/Moov
+  - Configuration par paroisse
+  - Callbacks webhook
+
+- **Autres:**
+  - Méditations quotidiennes
+  - Newsletter abonnés
+  - Analytics avancées
 
 ### 9.3 Phase 3
 - Mobile app native (iOS/Android)
-- Notifications push
+- Notifications push communauté
 - Groupes privés (accès restreint)
 - E-learning / catéchèse
 - Intégration livestream messes
 - Gestion bénévoles/équipes
+- Amélioration système paiements (recurring, abonnements)
 
 ### 9.4 Améliorations UX/Design
 
