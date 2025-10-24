@@ -37,7 +37,7 @@ Archidiocèse (Admin Principal)
     ├── Gestion du contenu
     ├── Articles
     ├── Événements
-    └── Pages publiques
+    └���─ Pages publiques
         ↓
     Paroisse 2 (Admin Paroisse)
     │   ...
@@ -516,9 +516,9 @@ Formulaire complet avec:
 
 ---
 
-### 4.14 Gestion des Demandes de Messe via Communauté
+### 4.16 Gestion des Demandes de Messe via Communauté
 
-#### 4.14.1 Section Demandes de Messe (dans Communauté)
+#### 4.16.1 Section Demandes de Messe (dans Communauté)
 - Formulaire simple intégré:
   - Type de messe (sélection): Funéraire, Intention spéciale, Action de grâces, Guérison, etc.
   - Intention (texte libre - optionnel)
@@ -538,7 +538,7 @@ Formulaire complet avec:
   - Statut: En attente, Confirmée, Complétée
   - Admin paroisse: Liste des demandes avec statut, paiement
 
-#### 4.14.2 Configuration Demandes par Admin Paroisse
+#### 4.16.2 Configuration Demandes par Admin Paroisse
 - **Prix des messes:**
   - Montant prédéfini par type (ex: Funéraire = 5€, Intention = 3€)
   - Montant libre customisé par fidèle (avec min/max)
@@ -555,9 +555,9 @@ Formulaire complet avec:
 
 ---
 
-### 4.15 Gestion des Paiements et Intentions (Dimes/Offrandes)
+### 4.17 Gestion des Paiements et Intentions (Dimes/Offrandes)
 
-#### 4.15.1 Configuration Paiements par Admin Paroisse
+#### 4.17.1 Configuration Paiements par Admin Paroisse
 - **Montants (Intentions/Dimes):**
   - Montants prédéfinis (ex: Dime 2€, Offrande 5€, Libre = custom)
   - Montant minimum
@@ -579,7 +579,7 @@ Formulaire complet avec:
   - Virement bancaire (via IBAN affiché)
   - Chèque (adresse postale)
 
-#### 4.15.2 Formulaire Paiement/Intention (Public)
+#### 4.17.2 Formulaire Paiement/Intention (Public)
 - Sélection type d'intention
 - Montant (prédéfini ou libre)
 - Email demandeur
@@ -589,7 +589,7 @@ Formulaire complet avec:
 - Paiement sécurisé
 - Reçu automatique (email)
 
-#### 4.15.3 Suivi Finances (Admin Paroisse)
+#### 4.17.3 Suivi Finances (Admin Paroisse)
 - **Dashboard Revenus:**
   - Total revenus (tous les mois)
   - Graphique revenus par mois
@@ -608,7 +608,7 @@ Formulaire complet avec:
   - Tendances (augmentation/diminution)
   - Export comptabilité
 
-#### 4.15.4 Suivi Finances (Admin Archdiocèse)
+#### 4.17.4 Suivi Finances (Admin Archdiocèse)
 - **Vue globale:**
   - Total revenus toutes paroisses
   - Comparaison paroisses (revenus, transactions)
@@ -625,7 +625,7 @@ Formulaire complet avec:
   - Analyse comparée
   - Détection anomalies
 
-#### 4.15.5 Traçabilité et Droits Paroissiaux
+#### 4.17.5 Traçabilité et Droits Paroissiaux
 - **Principe:** Chaque paroisse a droit à 100% des revenus générés pour sa paroisse
 - **Traçabilité complète:**
   - Chaque transaction: lié paroisse (identifiant, timestamp)
@@ -648,7 +648,7 @@ Formulaire complet avec:
   - RIB paroisse (où verser les fonds)
   - Frais de plateforme (% à retenir si applicable)
 
-#### 4.15.6 Intégrations Paiement Mobile (Afrique)
+#### 4.17.6 Intégrations Paiement Mobile (Afrique)
 - **Momo (Orange Money):**
   - Intégration API Momo
   - Numéro téléphone destinataire
@@ -670,7 +670,7 @@ Formulaire complet avec:
   - Test mode vs mode production
   - Rapports par provider
 
-#### 4.15.7 Sécurité Paiements
+#### 4.17.7 Sécurité Paiements
 - HTTPS obligatoire
 - Chiffrement données sensibles
 - Conformité PCI DSS
