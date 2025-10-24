@@ -222,12 +222,99 @@ Formulaire complet avec:
   - Catégorie (ex: "Messe", "Retraite", "Formation")
   - Récurrence (une fois, hebdomadaire, mensuel, etc.)
 
-#### 4.4.2 Calendrier des Événements
-- Vue calendrier mensuelle
-- Drag-and-drop pour modifier les dates
-- Color coding par catégorie
-- Filtres par type
-- Export (Google Calendar, iCal, PDF)
+#### 4.4.2 Calendrier des Événements (Détaillé)
+
+**Vue Calendrier Mensuelle Interactive:**
+- Grille calendrier avec jours cliquables
+- Color coding par catégorie d'événement (Messe=rouge, Retraite=bleu, Formation=vert, etc.)
+- Indicateurs visuels: nombre d'événements par jour, points colorés
+- Navigation mois précédent/suivant
+- Bouton "Aujourd'hui" pour revenir à la date actuelle
+- Affichage mini événements dans cellules jour (si place)
+
+**Click sur un Jour = Vue Détails du Jour:**
+- Date sélectionnée en évidence
+- **Liste tous les événements du jour:**
+  - Chaque événement affiche:
+    - Heure de début / Plage horaire (HH:MM - HH:MM)
+    - Titre événement
+    - Catégorie (badge couleur)
+    - Lieu (adresse + icône GPS)
+    - Organisateur(s): groupe ou personne
+    - Responsable/Superviseur (celui qui encadre/supervise)
+    - Nombre participants inscrits
+    - Image/icône
+
+- **Actions événement:**
+  - Voir détails complets (modal/page)
+  - S'inscrire/participer
+  - Ajouter au calendrier personnel
+  - Partager
+  - Signaler problème
+
+**Détails Complets Événement (Modal ou Page dédiée):**
+- Titre + description longue
+- Image couverture
+- **Informations temporelles:**
+  - Date complète
+  - Heure début / Heure fin
+  - Durée estimée
+  - Fuseau horaire (si applicable)
+  - Récurrence (une fois, chaque semaine, chaque mois, etc.)
+- **Informations localisation:**
+  - Adresse complète
+  - Carte interactive (Google Maps)
+  - Coordonnées GPS
+  - Parking/transport informations
+- **Organisateurs & Responsables:**
+  - Groupe/Mouvement organisateur (logo, lien vers groupe)
+  - Responsable principal (nom, photo, email, téléphone)
+  - Superviseurs/Encadrants (liste avec rôles)
+  - Contact en cas de question
+- **Logistique:**
+  - Nombre places disponibles
+  - Nombre inscrits / Places restantes
+  - Public cible (adultes, jeunes, enfants, famille, etc.)
+  - Coût/tarif (gratuit ou payant)
+  - Inscription obligatoire ou libre
+- **Documents:**
+  - Télécharger flyer/affiche
+  - Règlement/conditions
+  - Itinéraire détaillé
+- **Partage:**
+  - QR code événement
+  - Lien d'invitation (email, SMS)
+  - Partage réseaux sociaux
+- **Gestion pour admin:**
+  - Boutons éditer/supprimer (si propriétaire)
+  - Voir inscrits
+  - Envoyer notification aux participants
+
+**Filtres & Recherche:**
+- Filtrer par catégorie (Messe, Retraite, Formation, etc.)
+- Filtrer par groupe/mouvement organisateur
+- Filtrer par lieu/église
+- Recherche texte libre (titre, description)
+- Filtrer par plage de dates (semaine, mois, période custom)
+- Filtrer par public cible (enfants, jeunes, adultes, famille)
+- Filtrer par tarif (gratuit, payant)
+
+**Affichage Alternatif: Vue Liste/Semaine:**
+- Affichage calendrier semaine (7 jours d'affilée)
+- Format timeline: heure en colonne gauche, événements décalés par heure
+- Drag-and-drop pour redéplacer événement (admin only)
+
+**Export & Partage:**
+- Export Google Calendar (ajouter à mon calendrier)
+- Export iCal (.ics) pour importation Outlook/Apple Calendar
+- Export PDF (affiche/liste événements)
+- Flux RSS événements (une pour chaque paroisse, une globale)
+
+**Notifications Événements:**
+- Rappel jour avant (email optionnel)
+- Rappel 1 heure avant (notification push si user accepte)
+- Mise à jour si événement modifié
+- Confirmation inscription
 
 ### 4.5 Gestion des Groupes/Mouvements
 
@@ -471,7 +558,7 @@ Formulaire complet avec:
   - Recherche
   - Affichage: Titre + extrait + nombre réponses + dernier commentaire
 
-#### 4.14.3 Commentaires et Réactions
+#### 4.14.3 Commentaires et R��actions
 - **Commentaires:**
   - Répondre à un sujet ou à un autre commentaire
   - Texte riche (gras, italique, listes, liens)
@@ -1134,7 +1221,7 @@ project/
     └── schema.sql
 ```
 
-### 8.3 Base de Données (Schéma Simplifié)
+### 8.3 Base de Données (Sch��ma Simplifié)
 
 Entités principales:
 
