@@ -30,7 +30,7 @@ Vatican News (Administrateur Principal)
 Archidiocèse (Admin Principal)
     ├── Supervision des paroisses
     ├── Création des pages paroisses
-    ├���─ Approbation des contenus (optionnel)
+    ├── Approbation des contenus (optionnel)
     └── Gestion des catégories globales
         ↓
     Paroisse 1 (Admin Paroisse)
@@ -757,6 +757,146 @@ Sections (dans l'ordre):
 - Équipe pastorale (photos, noms, rôles)
 - Mission et valeurs
 - Localisation et accès
+
+### 5.10 Page Communauté / Réseau Social
+
+#### 5.10.1 Vue Générale Communauté
+- **Deux portées possibles:**
+  1. **Communauté Paroisse:** Discussions locales à la paroisse
+  2. **Communauté Globale:** Discussions entre fidèles de toutes les paroisses
+  3. **Combiné:** Onglets "Ma paroisse" + "Globale"
+
+#### 5.10.2 Fil de Discussion Principal
+- **En-tête section:**
+  - Titre "Communauté" ou "Forum"
+  - Affichage portée (Local / Global)
+  - Nombre de sujets et participants actifs
+
+- **Barre d'action:**
+  - Bouton "+ Nouveau sujet" (si authentifié)
+  - Recherche par titre/mots-clés
+  - Filtres: Catégorie, Date, Trending
+  - Tri: Récents, Popular, Réponses
+
+- **Liste sujets:**
+  - Format carte ou liste
+  - Chaque sujet affiche:
+    - Titre (avec épingle 📌 si important)
+    - Avatar + Nom auteur
+    - Extrait contenu (100 car)
+    - Catégorie (badge couleur)
+    - Nombre de réponses
+    - Nombre réactions (emojis)
+    - Dernier message (user + date relative)
+    - Badge "Verrouillé 🔒" si fermé
+  - Pagination ou infinite scroll
+
+#### 5.10.3 Page Sujet Individuel
+- **En-tête:**
+  - Titre sujet
+  - Catégorie (badge)
+  - Avatar + Nom auteur
+  - Date création
+  - Nombre vues / Nombre réponses / Réactions totales
+
+- **Corps du sujet:**
+  - Contenu texte (formatage riche)
+  - Image intégrée (si présente)
+  - Emoji réactions (cliquables)
+  - Compteur réactions par emoji
+
+- **Section Réponses/Commentaires:**
+  - Affichage chronologique (anciens en haut)
+  - Chaque commentaire affiche:
+    - Avatar + Nom + Badge (ex: "Modérateur")
+    - Date/heure relative
+    - Contenu (texte riche, emojis)
+    - Bouton "Répondre" (fil de réponse)
+    - Bouton "Signaler" (abus)
+    - Emoji réactions (cliquables)
+    - Actions auteur: Éditer (délai limité), Supprimer
+
+  - **Réponses imbriquées:**
+    - Affichage indentation ou "Répondre à [user]"
+    - Max 2 niveaux
+
+  - **Pagination:**
+    - Afficher X commentaires par page
+    - "Charger plus" ou pagination numérotée
+
+- **Formulaire Répondre:**
+  - Éditeur texte avec emojis
+  - Preview avant envoi
+  - Boutons: Envoyer, Annuler
+  - Authentification requise (redirectionner sinon)
+
+- **Actions Sujet:**
+  - Signaler sujet (abus/spam)
+  - Favoris / Marquer comme lu
+  - Partager (copier lien, réseaux sociaux)
+  - S'abonner aux mises à jour
+
+#### 5.10.4 Authentification Communauté
+- **Connexion/Inscription:**
+  - Formulaire accessible
+  - Champs: Email, Mot de passe
+  - Inscription: Email + Nom affichage + Accepter Charte
+  - Confirmation email pour activer compte
+  - Lien "Mot de passe oublié"
+
+- **Profil Utilisateur (visible publiquement):**
+  - Avatar / Pseudonyme
+  - Bio courte
+  - Date membre
+  - Nombre messages
+  - Badges (Modérateur, Membre actif, etc.)
+
+#### 5.10.5 Modération Communauté
+- **Signalement:**
+  - Bouton "Signaler" sur chaque contenu
+  - Catégories: Spam, Offensant, Contenu inapproprié, Hors sujet
+  - Notes supplémentaires
+
+- **Affichage Admin/Modérateur:**
+  - Dashboard modération (signalements en attente)
+  - Actions: Approuver, Masquer, Supprimer, Bloquer utilisateur
+  - Historique modérations
+
+- **Contenu masqué:**
+  - "[Ce contenu a été supprimé par un modérateur]"
+  - Raison visible au signaleur (optionnel)
+
+#### 5.10.6 Sections Intégrées à la Communauté
+
+**Demandes de Messe (Quick Shortcut):**
+- Bouton prominent "Demander une messe"
+- Modal / Page dédiée avec formulaire simple
+- Montant optionnel (selon config paroisse)
+- Intégration paiement si applicable
+
+**Intentions / Offrandes:**
+- Bouton "Faire une offrande / Don"
+- Modal avec sélection type (Dime, Messe, etc.)
+- Montant libre ou prédéfini
+- Paiement sécurisé (Stripe, Mobile Money, etc.)
+
+#### 5.10.7 Notifications Communauté
+- **In-app:**
+  - Badge compteur messages non lus
+  - Notification toast "quelqu'un a répondu à votre sujet"
+  - Mention: "@username notifie"
+
+- **Email (optionnel):**
+  - Digest quotidien/hebdo
+  - Notifications réponse directes
+  - Unsubscribe facile
+
+#### 5.10.8 Emoji Picker
+- Picker d'emoji accessible
+- Catégories: Smileys, Gestes, Cœurs, Nourriture, etc.
+- Recherche emoji par texte
+- Emojis récents
+- Intégration champ texte (click + select)
 
 ---
 
