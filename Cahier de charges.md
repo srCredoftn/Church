@@ -409,9 +409,9 @@ Formulaire complet avec:
 - Édition des détails
 - Activation/désactivation du groupe
 
-### 4.6 Gestion des Demandes de Messe
+### 4.7 Gestion des Demandes de Messe
 
-#### 4.6.1 Configurer le Formulaire de Demande
+#### 4.7.1 Configurer le Formulaire de Demande
 - Champs du formulaire:
   - Nom du demandeur
   - Email
@@ -421,7 +421,7 @@ Formulaire complet avec:
   - Type de messe (funéraire, action de grâces, intention spéciale, etc.)
   - Notes additionnelles
 
-#### 4.6.2 Traiter les Demandes
+#### 4.7.2 Traiter les Demandes
 - Liste des demandes reçues avec:
   - Statut: Nouvelle, En cours, Complétée, Refusée
   - Actions: Accepter, Rejeter, Archiver
