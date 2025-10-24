@@ -729,7 +729,7 @@ Formulaire complet avec:
 - **Types d'intentions:**
   - Messe d'intention
   - Dime paroissiale
-  - Quête/Offrande
+  - Qu��te/Offrande
   - Projet spécial (ex: "Rénovation église")
   - Intention libre
   - Charité/Entraide
@@ -970,19 +970,182 @@ Sections (dans l'ordre):
   
 - Breadcrumbs de navigation
 
-### 5.4 Page Événements/Calendrier
+### 5.4 Page Événements/Calendrier (Détaillée)
 
-- Calendrier interactif (vue mois)
-- Click sur date = détails
-- Liste événements à côté du calendrier
-- Filtres par type
-- Affichage carte/liste toggle
-- Détails événement:
-  - Titre, description
-  - Date/heure, lieu avec GPS
-  - Organisateur
-  - Lien inscriptions
-  - Partage
+#### 5.4.1 Layout Principal
+
+**Format Desktop:**
+- Colonne gauche (60%): Calendrier interactif
+- Colonne droite (40%): Liste événements / Détails jour sélectionné
+
+**Format Mobile:**
+- Calendrier minimaliste (petite grille)
+- Ou: Affichage liste événements par défaut
+
+#### 5.4.2 Calendrier Interactif
+
+**Vue Mois:**
+- Grille 7 colonnes (lun-dim)
+- En-tête mois/année avec navigation (< Mois >)
+- Bouton "Aujourd'hui" pour revenir à jour actuel
+- Style:
+  - Jour actuel: bordure/fond distinctif
+  - Jour sélectionné: surlignage
+  - Jour avec événements: indicateur visuel (point, nombre, couleur)
+  - Jour passé: texte grisé optionnel
+
+**Événements dans cellule jour:**
+- Affichage compact: up to 2-3 événements abrégés
+- Format: heure + titre truncated (ex: "10:00 Messe matinale")
+- Couleur code par catégorie
+- Click cellule = voir tous événements jour
+
+**Click sur un Jour = Vue Détails du Jour Sélectionné:**
+- Date en gras en haut
+- Tous les événements du jour listés chronologiquement:
+  - Pour chaque événement (carte):
+    - Heure (HH:MM - HH:MM)
+    - Catégorie (badge couleur)
+    - Titre événement (clickable → détails complets)
+    - Lieu (icône + adresse courte)
+    - Organisateur/groupe (logo + nom)
+    - Responsable (nom, optionnel photo thumbnail)
+    - Nombre inscrits / Places (ex: "15/30 inscrits")
+    - Bouton "S'inscrire" ou "Détails"
+    - Icône partage/ajouter favoris
+
+**Affichage "Pas d'événements":**
+- Message amical: "Aucun événement ce jour"
+- Suggestion: "Voir prochains jours" ou "Créer événement"
+
+#### 5.4.3 Filtres & Recherche
+
+**Barre filtres (responsive: collapse sur mobile):**
+- Texte recherche (titre, description, lieu)
+- Select Catégorie (multi-select: Messe, Retraite, Formation, Réunion groupe, Event)
+- Select Groupe/Mouvement (multi-select)
+- Select Lieu/Église
+- Select Public cible (Enfants, Jeunes, Adultes, Famille, Tous)
+- Toggle: "Gratuit uniquement"
+- Date range picker (de/à)
+- Bouton "Réinitialiser filtres"
+- Bouton "Appliquer filtres"
+
+**Affichage résultats filtres:**
+- Nombre résultats: "X événements trouvés"
+- Tags actifs affichés (avec X pour retirer)
+
+#### 5.4.4 Vue Alternative: Vue Liste/Semaine
+
+**Toggle Vue:**
+- Boutons radio/toggle: "Mois | Semaine | Liste"
+
+**Vue Semaine:**
+- Timeline horizontal: 7 jours d'affilée
+- Y-axis: heures (08:00-18:00, scrollable)
+- X-axis: jours
+- Événements affichés comme blocs temporels (hauteur = durée)
+- Couleur code par catégorie
+- Drag-drop sur desktop pour redéplacer (admin only)
+- Click bloc = voir détails
+
+**Vue Liste:**
+- Affichage en ligne: Date | Heure | Titre | Lieu | Inscrits
+- Tri: Prochains événements par défaut
+- Pagination: 10/25/50 events par page
+- Colonnes triables
+
+#### 5.4.5 Détails Événement Complets (Modal ou Page Dédiée)
+
+**En-tête événement:**
+- Image couverture (full width ou grande)
+- Titre + Catégorie badge
+- Date complète + jour semaine
+- Heure début/fin (ex: "Samedi 15 novembre 2025, 10:00 - 11:30")
+
+**Colonnes flexibles:**
+
+**Colonne 1: Infos Pratiques**
+- **📍 Lieu:**
+  - Adresse complète
+  - Lien Google Maps (carte intégrée)
+  - Parking infos
+  - Transport/accès public
+
+- **👥 Organisateurs:**
+  - Groupe/Mouvement (logo + lien vers détails groupe)
+  - Responsable principal (nom, photo, email clickable, téléphone)
+  - Superviseurs/Encadrants (liste avec rôles)
+
+- **💰 Tarif:**
+  - Gratuit / Montant fixe / Tarif enfants
+  - Lien paiement si applicable
+
+- **👫 Capacité:**
+  - Places totales
+  - Places restantes
+  - Inscrits (nombre)
+  - "S'inscrire" ou "Complet" bouton
+
+**Colonne 2: Description & Détails**
+- Texte description complet (WYSIWYG)
+- Public cible (Adultes, Enfants, etc.)
+- Récurrence (Une fois / Chaque semaine / Chaque mois, etc.)
+- Documents/Ressources (télécharger flyer, PDF, règlement)
+- Horaire détaillé (program par heure, si multi-événement)
+
+**Colonne 3: Actions & Partage**
+- ❤️ Ajouter favoris
+- 🔗 Copier lien événement
+- 📤 Partager (email, SMS, Facebook, WhatsApp)
+- 🔄 Ajouter à mon calendrier (Google, Outlook, iCal)
+- 🎯 Générer QR code (pour affichage/impression)
+- 📧 S'abonner aux mises à jour événement
+- ⛔ Signaler événement (si problème)
+
+**Section Participants (optionnel):**
+- Affichage anonymisé (ex: "Marie D.", "Jean T.")
+- Badge "Vous êtes inscrit"
+- Historique modifications événement (admin)
+
+**Section Commentaires (optionnel):**
+- Questions/réponses modérées
+- Soumis par participants
+- Admin répond aux questions
+
+#### 5.4.6 Inscription Événement
+
+**Modale/Page inscription:**
+- Confirmation données (nom, email, téléphone)
+- Nombre participants
+- Notes particulières (régime, allergie, besoin accès, etc.)
+- Accepter conditions / Charte
+- Consentement données (RGPD)
+- Email confirmation automatique
+- Ajouter à calendrier option
+- Notification rappel before event (email/SMS)
+
+#### 5.4.7 Export & Intégration
+
+**Export Options:**
+- Google Calendar (ajouter à mon calendrier)
+- Outlook/Apple Calendar (.ics download)
+- PDF: affiche événement, liste événements périodé, planning mural
+- Flux RSS: tous événements, par catégorie, par groupe
+
+**Flux iCal:**
+- URL publique flux (.ics) pour intégration externe
+- Mis à jour automatiquement quand événement change
+
+#### 5.4.8 Mobile Optimizations
+
+- Calendrier compact (grille réduite)
+- Ou: Format liste "Prochains événements" par défaut
+- Événement au tap → fullscreen détails
+- Swipe pour naviguer prev/next mois
+- Filtres: drawer latéral ou modal
+- Inscription: formulaire simplifié
+- Actions: bottom sheet (S'inscrire, Partager, Ajouter calendrier)
 
 ### 5.5 Page Groupes/Mouvements
 
@@ -1212,7 +1375,7 @@ Bande horizontale avec 4 sections cliquables (responsive: grid desktop, stack mo
     - Bouton "Répondre" (fil de réponse)
     - Bouton "Signaler" (abus)
     - Emoji réactions (cliquables)
-    - Actions auteur: Éditer (délai limité), Supprimer
+    - Actions auteur: Éditer (délai limit��), Supprimer
 
   - **Réponses imbriquées:**
     - Affichage indentation ou "Répondre à [user]"
@@ -1403,7 +1566,7 @@ project/
 ├��─ apps/
 │   ├── admin-archdiocese/    (React)
 │   ├── admin-paroisse/       (React)
-│   └── website-public/       (React/Next.js)
+���   └── website-public/       (React/Next.js)
 ├── packages/
 │   ├── api/                  (Express/FastAPI)
 │   ├── shared/               (Types TypeScript, Utils)
