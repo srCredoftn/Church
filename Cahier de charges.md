@@ -545,7 +545,7 @@ Formulaire complet avec:
 
 - **Rapports archdiocèse:**
   - Répartition des revenus (quelle paroisse reçoit quoi)
-  - Analyse comparée
+  - Analyse compar��e
   - Détection anomalies
 
 #### 4.15.5 Traçabilité et Droits Paroissiaux
@@ -1083,13 +1083,78 @@ Entités principales:
 - Rappel messe planifiée (jour avant)
 - Newsletter optionnelle
 
-### 8.6 Déploiement
+### 8.6 API Endpoints Principaux
+
+**Authentification:**
+- `POST /api/auth/register` - Inscription utilisateur
+- `POST /api/auth/login` - Connexion
+- `POST /api/auth/logout` - Déconnexion
+- `POST /api/auth/refresh-token` - Renouvellement token
+- `POST /api/auth/forgot-password` - Réinitialisation mot de passe
+
+**Communauté - Topics:**
+- `GET /api/community/topics` - Lister sujets (filtres, tri, pagination)
+- `POST /api/community/topics` - Créer sujet (auth required)
+- `GET /api/community/topics/:id` - Détail sujet
+- `PUT /api/community/topics/:id` - Éditer sujet (auth owner/mod)
+- `DELETE /api/community/topics/:id` - Supprimer sujet (auth owner/mod)
+- `PUT /api/community/topics/:id/pin` - Épingler sujet (mod only)
+- `PUT /api/community/topics/:id/lock` - Verrouiller sujet (mod only)
+
+**Communauté - Comments:**
+- `GET /api/community/topics/:id/comments` - Lister commentaires (paginated)
+- `POST /api/community/topics/:id/comments` - Créer commentaire (auth required)
+- `PUT /api/community/comments/:id` - Éditer commentaire (auth owner/mod)
+- `DELETE /api/community/comments/:id` - Supprimer commentaire (auth owner/mod)
+- `POST /api/community/comments/:id/report` - Signaler commentaire
+
+**Communauté - Reactions:**
+- `POST /api/community/reactions` - Ajouter réaction emoji (auth required)
+- `DELETE /api/community/reactions/:id` - Retirer réaction (auth owner)
+- `GET /api/community/topics/:id/reactions` - Lister réactions sujet
+
+**Demandes de Messe:**
+- `GET /api/parishes/:parishId/mass-requests` - Lister demandes (admin only)
+- `POST /api/parishes/:parishId/mass-requests` - Créer demande
+- `GET /api/mass-requests/:id` - Détail demande
+- `PUT /api/mass-requests/:id/status` - Changer statut (admin only)
+- `GET /api/parishes/:parishId/mass-request-types` - Types de messes configurés
+
+**Donations/Paiements:**
+- `GET /api/parishes/:parishId/donation-intentions` - Lister intentions
+- `POST /api/parishes/:parishId/donations` - Créer don
+- `GET /api/donations/:id` - Détail don
+- `GET /api/parishes/:parishId/payments` - Lister paiements (admin)
+- `GET /api/parishes/:parishId/payment-report` - Rapport paiements (admin)
+- `GET /api/archdioceses/:id/payment-report` - Rapport globale (archdiocèse)
+
+**Paiements / Mobile Money:**
+- `POST /api/payments` - Créer paiement (Stripe/PayPal/MoMo)
+- `POST /api/payments/:id/confirm` - Confirmer paiement mobile money
+- `GET /api/payments/:id/status` - Vérifier statut paiement
+- `POST /api/parishes/:parishId/payment-methods` - Config méthodes paiement (admin)
+- `POST /api/parishes/:parishId/mobile-money-config` - Config Mobile Money (admin)
+
+**Modération:**
+- `GET /api/moderation/reports` - Lister signalements (mod)
+- `PUT /api/moderation/reports/:id` - Traiter signalement (mod)
+- `POST /api/moderation/hide-content` - Masquer contenu (mod)
+- `GET /api/audit-logs` - Voir logs audit (admin archdiocèse)
+
+**Paroisses (Admin):**
+- `GET /api/parishes` - Lister paroisses (archdiocèse)
+- `POST /api/parishes` - Créer paroisse (archdiocèse)
+- `PUT /api/parishes/:id` - Éditer paroisse
+- `DELETE /api/parishes/:id` - Supprimer paroisse
+
+### 8.7 Déploiement
 
 - Docker + Docker Compose local
 - CI/CD: GitHub Actions / GitLab CI
 - Staging environment de test
 - Versioning API
 - Zero-downtime deployment
+- Intégration mobile money en test/production
 
 ---
 
