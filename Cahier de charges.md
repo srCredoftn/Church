@@ -608,6 +608,49 @@ Formulaire complet avec:
 ### 5.1 Page d'Accueil de la Paroisse
 
 Sections (dans l'ordre):
+
+0. **Ticker/Bande de Contenu Déroulante (sous header)**
+   - **Position:** Immédiatement sous le header principal
+   - **Style:** Ticker/marquee news animé
+   - **Direction:** Défilement droite vers gauche (RTL)
+   - **Animation:** Rotations statiques (X secondes par item, puis change)
+   - **Hauteur:** ~50-60px (design épuré)
+   - **Fond:** Couleur contrastée ou semi-transparent
+
+   - **Configuration Admin Paroisse:**
+     - Option 1: Texte libre custom
+       - Éditeur texte riche (gras, italique, couleur, taille)
+       - Insertion images/emojis
+       - Liens cliquables
+       - Programmation par jour/heure (optionnel)
+       - Durée affichage item (ex: 5 secondes)
+
+     - Option 2: Articles automatiques
+       - Sélection catégories (quels articles afficher)
+       - Afficher titres articles récents en boucle
+       - Lien auto vers article (au click)
+       - Fréquence de mise à jour (automatique/manuel)
+
+   - **Configuration Admin Archidiocèse:**
+     - Accès à tous les tickers des paroisses
+     - Créer ticker "global" archidiocèse (titres articles diocésains)
+     - Possibilité broadcaster message urgent à toutes les paroisses
+     - Affichage simultané sur tous les tickers paroisses (optionnel)
+
+   - **Contenu du Ticker:**
+     - Texte riche (gras, italique, couleur personnalisée)
+     - Emojis et icônes
+     - Images petites (miniatures)
+     - Liens cliquables (vers articles, pages internes, externes)
+     - Multi-ligne possible (format: "[EMOJI] Titre ou Texte [LIEN]")
+
+   - **Responsive Mobile:**
+     - Petite largeur: Format stack vertical au lieu de horizontal
+     - Alternative mobile: Carousel avec dots (swipe/tap pour changer item)
+     - Ou: "Annonces" section collapsible avec items en liste
+     - Durée affichage + longue sur mobile (8-10 secondes vs 5 secondes desktop)
+     - Texte tronqué avec "..." si trop long
+
 1. **En-tête (Hero Section)**
    - Image/vidéo de couverture
    - Logo de la paroisse
@@ -641,7 +684,7 @@ Sections (dans l'ordre):
    - Player audio intégré
    - Lien "Toutes les méditations"
 
-7. **Communiqués/Actualit��s Importantes**
+7. **Communiqués/Actualités Importantes**
    - Banneau ou section collapsible
    - Derniers communiqués
    - Format: Liste ou carrousel
@@ -822,7 +865,7 @@ Sections (dans l'ordre):
 
   - **Pagination:**
     - Afficher X commentaires par page
-    - "Charger plus" ou pagination numérot��e
+    - "Charger plus" ou pagination numérotée
 
 - **Formulaire Répondre:**
   - Éditeur texte avec emojis
