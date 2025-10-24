@@ -508,7 +508,7 @@ Formulaire complet avec:
   - Préférences données (partager paroisse, afficher comme modérateur, etc.)
   - Blocage utilisateurs
 
-#### 4.13.5 Notifications
+#### 4.15.5 Notifications
 - Quelqu'un répond à mon sujet/commentaire
 - Quelqu'un me mentionne (@username)
 - Sujet épinglé / Nouvelles discussions importantes
