@@ -123,7 +123,7 @@ Archidiocèse (Admin Principal)
 ### 3.4 Utilisateurs et Permissions
 
 - Créer/Gérer les comptes admin paroisses
-- Assigner les r��les: Admin Paroisse, Contributeur Paroisse
+- Assigner les rôles: Admin Paroisse, Contributeur Paroisse
 - Réinitialiser les mots de passe
 - Désactiver des comptes
 - Journal d'accès (logs)
@@ -641,7 +641,7 @@ Sections (dans l'ordre):
    - Player audio intégré
    - Lien "Toutes les méditations"
 
-7. **Communiqués/Actualités Importantes**
+7. **Communiqués/Actualit��s Importantes**
    - Banneau ou section collapsible
    - Derniers communiqués
    - Format: Liste ou carrousel
@@ -822,7 +822,7 @@ Sections (dans l'ordre):
 
   - **Pagination:**
     - Afficher X commentaires par page
-    - "Charger plus" ou pagination numérotée
+    - "Charger plus" ou pagination numérot��e
 
 - **Formulaire Répondre:**
   - Éditeur texte avec emojis
@@ -1259,6 +1259,146 @@ Entités principales:
 - [ ] Support post-lancement
 - [ ] Migration données (si besoin)
 - [ ] Monitoring et alertes
+
+---
+
+## 10.5 Traçabilité et Droits Paroissiaux (Détail Complet)
+
+### Principes Fondamentaux
+- **100% des revenus reviennent à la paroisse** qui les a générés
+- Aucune retenue (sauf frais de plateforme configurables)
+- Traçabilité complète et transparence
+- Audit immuable (logs non modifiables)
+
+### Implémentation Technique
+
+**1. Marquage Transaction**
+```
+Chaque transaction inclut:
+- parish_id: identifiant paroisse source
+- created_at: timestamp précis (UTC)
+- payment_method: source (Stripe, Momo, MTN, etc.)
+- external_transaction_id: ID externe du fournisseur paiement
+- revenue_type: "donation", "mass_request", "mobile_money"
+- amount: montant brut
+- fees: frais pris par plateforme (si applicable)
+- net_amount: montant net à verser paroisse
+```
+
+**2. Audit Trail**
+```
+Log immuable pour chaque paiement:
+- created: Transaction créée
+- confirmed: Paiement confirmé fournisseur
+- settled: Argent reçu sur compte
+- recorded: Enregistré en comptabilité
+- transferred: Transféré vers paroisse
+- reconciled: Rapproché (audit)
+```
+
+**3. Dashboard Traçabilité (Admin Archdiocèse)**
+
+Écran dédié montrant:
+- **Vue par Paroisse:**
+  - Total dû à chaque paroisse (mois en cours)
+  - Transactions détaillées (tableau)
+  - Filtres: paroisse, date, type, méthode paiement
+  - Status: Pending, Settled, Transferred, Reconciled
+
+- **Statistiques Détection Fraudes:**
+  - Transactions atypiques (montants anormaux)
+  - Mêmes numéros téléphone/email multiples paroisses
+  - Chargeback ou refund suspect
+  - Alertes automatiques
+
+- **Rapports d'Audit:**
+  - Discordances (transactions manquantes, duplicatas)
+  - Rapprochements mensuels
+  - Certifications (toutes les transactions accountées)
+  - Historique complet exportable
+
+**4. Configuration Frais**
+```
+Options admin archdiocèse:
+- Frais fixes: X% sur chaque transaction (ex: 2%)
+- Ou gratuit (0% frais)
+- Frais paiement mobile money séparé (opérateur reprend)
+- Frais banco/paiement internes (si applicable)
+```
+
+**5. Processus Transfert**
+```
+Workflow:
+1. Paiement reçu → enregistré avec parish_id
+2. Attendre settlement (fonds réellement reçus)
+3. Admin définit fréquence transfert:
+   - Quotidien: tous les jours
+   - Hebdomadaire: chaque lundi
+   - Mensuel: 1er du mois
+   - Manuel: sur demande
+4. Seuil minimum: ne pas transférer si < montant (ex: < 10€)
+5. Virement RIB paroisse (ou autre méthode configurée)
+6. Confirmation transfer + relevé de compte
+7. Historique transferts visible
+
+État Transfert Possible:
+- Ready to Transfer: montant disponible >= seuil
+- Scheduled: programmé pour jour X
+- In Progress: en cours de virement
+- Completed: reçu paroisse (confirmé RIB)
+- Pending Reconciliation: en attente rapprochement
+```
+
+**6. Configuration Paroisse RIB**
+```
+Admin Paroisse peut entrer:
+- Titulaire compte
+- IBAN
+- BIC
+- Banque
+- Monnaie (EUR, USD, XOF pour Afrique, etc.)
+
+Admin Archdiocèse valide avant activation
+```
+
+### Reports Exportables
+
+**Report Mensuel Paroisse (visible admin paroisse):**
+```
+Mois: Janvier 2025
+Paroisse: St-Pierre Paris
+Total Reçu: 4,567.89€
+Montant Frais: 91.36€ (2%)
+Net Transféré: 4,476.53€
+
+Détail Transactions:
+| Date | Intention | Montant | Méthode | Paiement ID | Status |
+| 2025-01-05 | Donation | 100.00 | Stripe | ch_xxx | Transferred |
+| 2025-01-06 | Messe | 50.00 | Stripe | ch_yyy | Transferred |
+...
+
+Solde Transféré: 4,476.53€ le 2025-02-01
+Prochain Transfert: 2025-02-01 si montant > 10€
+```
+
+**Report Archdiocèse (Comparaison Paroisses):**
+```
+Mois: Janvier 2025
+Diocèse: Paris
+
+Total Global: 125,000.00€
+
+Par Paroisse:
+| Paroisse | Total | Frais | Net | Status |
+| St-Pierre | 4,567.89 | 91.36 | 4,476.53 | Transferred 2025-02-01 |
+| Notre-Dame | 8,234.56 | 164.69 | 8,069.87 | Transferred 2025-02-01 |
+| Sacré-Cœur | 5,100.00 | 102.00 | 4,998.00 | Pending Transfer |
+...
+
+Paiements Flaggés:
+- 3 tentatives refund (amounts: 50€, 75€, 150€)
+- 2 numéros téléphone suspects (multiples paroisses)
+```
 
 ---
 
