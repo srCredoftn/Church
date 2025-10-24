@@ -493,7 +493,7 @@ Formulaire complet avec:
 
   - Affichage:
     - Titre article (auto généré du contenu)
-    - Lien click ��� va vers article
+    - Lien click → va vers article
     - Format: "[📰] Titre Article"
 
 - **Paramètres Généraux Ticker:**
@@ -1024,15 +1024,15 @@ Sections (dans l'ordre):
 - Mission et valeurs
 - Localisation et accès
 
-### 5.10 Page Communauté / Réseau Social
+### 5.11 Page Communauté / Réseau Social
 
-#### 5.10.1 Vue Générale Communauté
+#### 5.11.1 Vue Générale Communauté
 - **Deux portées possibles:**
   1. **Communauté Paroisse:** Discussions locales à la paroisse
   2. **Communauté Globale:** Discussions entre fidèles de toutes les paroisses
   3. **Combiné:** Onglets "Ma paroisse" + "Globale"
 
-#### 5.10.2 Fil de Discussion Principal
+#### 5.11.2 Fil de Discussion Principal
 - **En-tête section:**
   - Titre "Communauté" ou "Forum"
   - Affichage portée (Local / Global)
@@ -1057,7 +1057,7 @@ Sections (dans l'ordre):
     - Badge "Verrouillé 🔒" si fermé
   - Pagination ou infinite scroll
 
-#### 5.10.3 Page Sujet Individuel
+#### 5.11.3 Page Sujet Individuel
 - **En-tête:**
   - Titre sujet
   - Catégorie (badge)
@@ -1102,7 +1102,7 @@ Sections (dans l'ordre):
   - Partager (copier lien, réseaux sociaux)
   - S'abonner aux mises à jour
 
-#### 5.10.4 Authentification Communauté
+#### 5.11.4 Authentification Communauté
 - **Connexion/Inscription:**
   - Formulaire accessible
   - Champs: Email, Mot de passe
@@ -1117,7 +1117,7 @@ Sections (dans l'ordre):
   - Nombre messages
   - Badges (Modérateur, Membre actif, etc.)
 
-#### 5.10.5 Modération Communauté
+#### 5.11.5 Modération Communauté
 - **Signalement:**
   - Bouton "Signaler" sur chaque contenu
   - Catégories: Spam, Offensant, Contenu inapproprié, Hors sujet
@@ -1132,7 +1132,7 @@ Sections (dans l'ordre):
   - "[Ce contenu a été supprimé par un modérateur]"
   - Raison visible au signaleur (optionnel)
 
-#### 5.10.6 Sections Intégrées à la Communauté
+#### 5.11.6 Sections Intégrées à la Communauté
 
 **Demandes de Messe (Quick Shortcut):**
 - Bouton prominent "Demander une messe"
@@ -1146,7 +1146,7 @@ Sections (dans l'ordre):
 - Montant libre ou prédéfini
 - Paiement sécurisé (Stripe, Mobile Money, etc.)
 
-#### 5.10.7 Notifications Communauté
+#### 5.11.7 Notifications Communauté
 - **In-app:**
   - Badge compteur messages non lus
   - Notification toast "quelqu'un a répondu à votre sujet"
@@ -1157,7 +1157,7 @@ Sections (dans l'ordre):
   - Notifications réponse directes
   - Unsubscribe facile
 
-#### 5.10.8 Emoji Picker
+#### 5.11.8 Emoji Picker
 - Picker d'emoji accessible
 - Catégories: Smileys, Gestes, Cœurs, Nourriture, etc.
 - Recherche emoji par texte
