@@ -34,7 +34,7 @@ Archidiocèse (Admin Principal)
     └── Gestion des catégories globales
         ↓
     Paroisse 1 (Admin Paroisse)
-    ├── Gestion du contenu
+    ├��─ Gestion du contenu
     ├── Articles
     ├── Événements
     └���─ Pages publiques
@@ -213,14 +213,48 @@ Formulaire complet avec:
 #### 4.4.1 Créer un Événement
 - Formulaire:
   - Titre
-  - Description
-  - Date et heure (début/fin)
-  - Lieu (adresse complète)
-  - Organisateur
-  - Image de couverture
-  - Lien inscriptions (optionnel)
-  - Catégorie (ex: "Messe", "Retraite", "Formation")
-  - Récurrence (une fois, hebdomadaire, mensuel, etc.)
+  - Description (long texte/WYSIWYG)
+  - **Date et heure:**
+    - Date de début
+    - Heure de début (HH:MM)
+    - Heure de fin (HH:MM)
+    - Récurrence (une fois, chaque semaine, chaque mois, custom)
+
+  - **Lieu:**
+    - Adresse complète
+    - Lieu alternatif/salle spécifique
+    - Localisation GPS (latitude/longitude)
+    - Parking/informations accès
+
+  - **Organisateurs & Responsables:**
+    - Groupe/Mouvement organisateur (multi-select)
+    - Responsable principal (select utilisateur paroisse)
+    - Superviseurs/Encadrants (multi-select avec rôle)
+    - Personne de contact (email/téléphone)
+
+  - **Détails Événement:**
+    - Catégorie (ex: "Messe", "Retraite", "Formation", "Réunion groupe", "Événement")
+    - Public cible (Adultes, Jeunes, Enfants, Famille, Tous)
+    - Nombre places/Capacité (optionnel)
+    - Tarif/Coût (gratuit, montant fixe, libre)
+
+  - **Inscription:**
+    - Inscription obligatoire / Optionnelle / Pas inscription
+    - Lien formulaire inscription externe (optionnel)
+    - Email confirmation automatique
+
+  - **Médias:**
+    - Image couverture
+    - Image flyer/affiche
+    - Vidéo teaser (optionnel)
+
+  - **Notifications:**
+    - Envoyer notification participants avant (j-1, j, h+1)
+    - Message personnalisé notification
+
+  - **Autres:**
+    - Statut: Brouillon, Publié, Annulé, Reporté
+    - Notes privées (visible admin uniquement)
 
 #### 4.4.2 Calendrier des Événements (Détaillé)
 
@@ -245,7 +279,7 @@ Formulaire complet avec:
     - Nombre participants inscrits
     - Image/icône
 
-- **Actions événement:**
+- **Actions ��vénement:**
   - Voir détails complets (modal/page)
   - S'inscrire/participer
   - Ajouter au calendrier personnel
@@ -378,7 +412,7 @@ Formulaire complet avec:
 - Formulaire:
   - Titre
   - Lecture biblique (référence + extrait)
-  - Texte de méditation (éditeur riche)
+  - Texte de méditation (��diteur riche)
   - Auteur
   - Date de publication
   - Audio optionnel (enregistrement de la méditation)
@@ -547,7 +581,7 @@ Formulaire complet avec:
 - Créer un sujet:
   - Titre
   - Description/Contenu initial
-  - Catégorie (Spiritualité, Questions pratiques, Événements, Partages, Prières, etc.)
+  - Cat��gorie (Spiritualité, Questions pratiques, Événements, Partages, Prières, etc.)
   - Image optionnelle
   - Épingle (important = affiché en haut)
   - Verrouillé (fermé au nouvelles réponses)
