@@ -34,7 +34,7 @@ Archidiocèse (Admin Principal)
     └── Gestion des catégories globales
         ↓
     Paroisse 1 (Admin Paroisse)
-    ├��─ Gestion du contenu
+    ├── Gestion du contenu
     ├── Articles
     ├── Événements
     └���─ Pages publiques
@@ -279,7 +279,7 @@ Formulaire complet avec:
     - Nombre participants inscrits
     - Image/icône
 
-- **Actions ��vénement:**
+- **Actions événement:**
   - Voir détails complets (modal/page)
   - S'inscrire/participer
   - Ajouter au calendrier personnel
@@ -350,9 +350,50 @@ Formulaire complet avec:
 - Mise à jour si événement modifié
 - Confirmation inscription
 
-### 4.5 Gestion des Groupes/Mouvements
+### 4.5 Gestion des Textes Liturgiques
 
-#### 4.5.1 Créer un Groupe
+#### 4.5.1 Configuration Textes Liturgiques
+
+**Intégration API AELF:**
+- Activation/désactivation de la source AELF
+- Sélection traductions bibliques disponibles
+- Sélection fuseau horaire (pour changement minuit)
+- Cache des textes (stockage local DB pour performance)
+- Fréquence sync automatique AELF (quotidienne à minuit)
+
+**Contenu Custom/Complémentaire:**
+- Homélie paroisse (rédaction custom pour chaque jour)
+  - Rédacteur: prêtre ou rédacteur désigné
+  - Éditeur texte riche
+  - Publication programmée (peut être datée)
+  - Statut: Brouillon, Publié, Archivé
+
+- Commentaire biblique (notes sur la lecture)
+  - Auteur
+  - Longueur courte (quelques lignes)
+  - Lien optionnel vers ressource externe
+
+- Suggestion méditation (relier méditation paroisse à lecture du jour)
+  - Auto-suggestion: créer méditation basée sur lecture AELF
+  - Associer méditation existante
+
+**Gestion Contenu Liturgique:**
+- Lister textes by date (calendrier)
+- Voir aperçu textes AELF pour jour spécifique
+- Ajouter/éditer homélie paroisse
+- Voir statistiques (vues, téléchargements, partages)
+- Archiver ancien contenu
+
+**Intégrations Future:**
+- Support multiples API (Vulgate, BreviaryOnline, etc.)
+- Support textes en d'autres langues
+- Textes Vêpres/Laudes (si applicable)
+
+---
+
+### 4.6 Gestion des Groupes/Mouvements
+
+#### 4.6.1 Créer un Groupe
 - Formulaire:
   - Nom du groupe
   - Description
@@ -412,7 +453,7 @@ Formulaire complet avec:
 - Formulaire:
   - Titre
   - Lecture biblique (référence + extrait)
-  - Texte de méditation (��diteur riche)
+  - Texte de méditation (éditeur riche)
   - Auteur
   - Date de publication
   - Audio optionnel (enregistrement de la méditation)
@@ -581,7 +622,7 @@ Formulaire complet avec:
 - Créer un sujet:
   - Titre
   - Description/Contenu initial
-  - Cat��gorie (Spiritualité, Questions pratiques, Événements, Partages, Prières, etc.)
+  - Catégorie (Spiritualité, Questions pratiques, Événements, Partages, Prières, etc.)
   - Image optionnelle
   - Épingle (important = affiché en haut)
   - Verrouillé (fermé au nouvelles réponses)
@@ -916,7 +957,7 @@ Sections (dans l'ordre):
 - Métadonnées: Auteur, date, catégories, temps de lecture
 - Corps du texte avec:
   - Mise en forme riche (gras, italique, listes, etc.)
-  - Images intégrées
+  - Images int��grées
   - Vidéos YouTube (responsive)
   - Audios avec player
   - Liens clickables
