@@ -49,7 +49,7 @@ export async function connectWithFallback() {
     if (!target.uri) continue; // skip empty
     try {
       // eslint-disable-next-line no-console
-      console.log(`[db] Trying ${target.label}: ${target.uri.replace(/:\\/\\/.*@/, '://***@')}`);
+      console.log(`[db] Trying ${target.label}`);
       await connectWithRetries(target.uri, target.label);
       // eslint-disable-next-line no-console
       console.log(`[db] Connected via ${target.label}`);
