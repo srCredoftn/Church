@@ -1488,7 +1488,7 @@ Bande horizontale avec 4 sections cliquables (responsive: grid desktop, stack mo
 - Robots.txt
 - URLs amicales (slugs)
 - Structure hSchema / JSON-LD
-- Open Graph pour r��seaux sociaux
+- Open Graph pour réseaux sociaux
 
 ### 6.5 Sécurité
 - HTTPS obligatoire
@@ -1566,7 +1566,7 @@ project/
 ├── apps/
 │   ├── admin-archdiocese/    (React)
 │   ├── admin-paroisse/       (React)
-���   └── website-public/       (React/Next.js)
+│   └── website-public/       (React/Next.js)
 ├── packages/
 │   ├── api/                  (Express/FastAPI)
 │   ├── shared/               (Types TypeScript, Utils)
