@@ -37,7 +37,7 @@ Archidiocèse (Admin Principal)
     ├── Gestion du contenu
     ├── Articles
     ├── Événements
-    └���─ Pages publiques
+    └── Pages publiques
         ↓
     Paroisse 2 (Admin Paroisse)
     │   ...
@@ -103,7 +103,7 @@ Archidiocèse (Admin Principal)
 
 #### 3.2.1 Créer une Catégorie
 - Formulaire:
-  - Nom de la catégorie (ex: "M��ditations", "Événements", "Communiqués")
+  - Nom de la catégorie (ex: "Méditations", "Événements", "Communiqués")
   - Description
   - Type de contenu associé (Images, Vidéos, Articles, Audios, Texte)
   - Icône/couleur de représentation
@@ -286,7 +286,7 @@ Formulaire complet avec:
   - Partager
   - Signaler problème
 
-**Détails Complets Événement (Modal ou Page d��diée):**
+**Détails Complets Événement (Modal ou Page dédiée):**
 - Titre + description longue
 - Image couverture
 - **Informations temporelles:**
@@ -729,7 +729,7 @@ Formulaire complet avec:
 - **Types d'intentions:**
   - Messe d'intention
   - Dime paroissiale
-  - Qu��te/Offrande
+  - Quête/Offrande
   - Projet spécial (ex: "Rénovation église")
   - Intention libre
   - Charité/Entraide
@@ -957,7 +957,7 @@ Sections (dans l'ordre):
 - Métadonnées: Auteur, date, catégories, temps de lecture
 - Corps du texte avec:
   - Mise en forme riche (gras, italique, listes, etc.)
-  - Images int��grées
+  - Images intégrées
   - Vidéos YouTube (responsive)
   - Audios avec player
   - Liens clickables
@@ -1375,7 +1375,7 @@ Bande horizontale avec 4 sections cliquables (responsive: grid desktop, stack mo
     - Bouton "Répondre" (fil de réponse)
     - Bouton "Signaler" (abus)
     - Emoji réactions (cliquables)
-    - Actions auteur: Éditer (délai limit��), Supprimer
+    - Actions auteur: Éditer (délai limité), Supprimer
 
   - **Réponses imbriquées:**
     - Affichage indentation ou "Répondre à [user]"
@@ -1563,10 +1563,10 @@ Si politique de modération activée:
 **Monorepo possible:**
 ```
 project/
-├��─ apps/
+├── apps/
 │   ├── admin-archdiocese/    (React)
 │   ├── admin-paroisse/       (React)
-���   └── website-public/       (React/Next.js)
+│   └── website-public/       (React/Next.js)
 ├── packages/
 │   ├── api/                  (Express/FastAPI)
 │   ├── shared/               (Types TypeScript, Utils)
@@ -1700,7 +1700,7 @@ Entités principales:
 - `GET /api/moderation/reports` - Lister signalements (mod)
 - `PUT /api/moderation/reports/:id` - Traiter signalement (mod)
 - `POST /api/moderation/hide-content` - Masquer contenu (mod)
-- `GET /api/audit-logs` - Voir logs audit (admin archdiocèse)
+- `GET /api/audit-logs` - Voir logs audit (admin archidiocèse)
 
 **Paroisses (Admin):**
 - `GET /api/parishes` - Lister paroisses (archdiocèse)
@@ -1732,7 +1732,7 @@ Entités principales:
 - **Communauté (Local + Global):**
   - Sujets de discussion
   - Commentaires avec emojis et réactions
-  - Système de modération (paroisse + archdiocèse)
+  - Système de modération (paroisse + archidiocèse)
   - Signalements et modération
   - Profils utilisateurs simples
 
@@ -1816,7 +1816,7 @@ Entités principales:
 
 ### Phase 3: Déploiement & Formation (2 semaines)
 - [ ] Déploiement production
-- [ ] Formation utilisateurs (archdiocèse + paroisses)
+- [ ] Formation utilisateurs (archidiocèse + paroisses)
 - [ ] Support post-lancement
 - [ ] Migration données (si besoin)
 - [ ] Monitoring et alertes
@@ -1880,7 +1880,7 @@ Log immuable pour chaque paiement:
 
 **4. Configuration Frais**
 ```
-Options admin archdiocèse:
+Options admin archidiocèse:
 - Frais fixes: X% sur chaque transaction (ex: 2%)
 - Ou gratuit (0% frais)
 - Frais paiement mobile money séparé (opérateur reprend)
@@ -1919,7 +1919,7 @@ Admin Paroisse peut entrer:
 - Banque
 - Monnaie (EUR, USD, XOF pour Afrique, etc.)
 
-Admin Archdiocèse valide avant activation
+Admin Archidiocèse valide avant activation
 ```
 
 ### Reports Exportables
