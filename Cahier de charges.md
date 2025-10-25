@@ -568,7 +568,7 @@ Formulaire complet avec:
 
   - Affichage:
     - Titre article (auto généré du contenu)
-    - Lien click → va vers article
+    - Lien click ��� va vers article
     - Format: "[📰] Titre Article"
 
 - **Paramètres Généraux Ticker:**
@@ -1700,7 +1700,7 @@ Entités principales:
 - `GET /api/moderation/reports` - Lister signalements (mod)
 - `PUT /api/moderation/reports/:id` - Traiter signalement (mod)
 - `POST /api/moderation/hide-content` - Masquer contenu (mod)
-- `GET /api/audit-logs` - Voir logs audit (admin archdiocèse)
+- `GET /api/audit-logs` - Voir logs audit (admin archidiocèse)
 
 **Paroisses (Admin):**
 - `GET /api/parishes` - Lister paroisses (archdiocèse)
@@ -1732,7 +1732,7 @@ Entités principales:
 - **Communauté (Local + Global):**
   - Sujets de discussion
   - Commentaires avec emojis et réactions
-  - Système de modération (paroisse + archdiocèse)
+  - Système de modération (paroisse + archidiocèse)
   - Signalements et modération
   - Profils utilisateurs simples
 
@@ -1816,7 +1816,7 @@ Entités principales:
 
 ### Phase 3: Déploiement & Formation (2 semaines)
 - [ ] Déploiement production
-- [ ] Formation utilisateurs (archdiocèse + paroisses)
+- [ ] Formation utilisateurs (archidiocèse + paroisses)
 - [ ] Support post-lancement
 - [ ] Migration données (si besoin)
 - [ ] Monitoring et alertes
@@ -1880,7 +1880,7 @@ Log immuable pour chaque paiement:
 
 **4. Configuration Frais**
 ```
-Options admin archdiocèse:
+Options admin archidiocèse:
 - Frais fixes: X% sur chaque transaction (ex: 2%)
 - Ou gratuit (0% frais)
 - Frais paiement mobile money séparé (opérateur reprend)
@@ -1919,7 +1919,7 @@ Admin Paroisse peut entrer:
 - Banque
 - Monnaie (EUR, USD, XOF pour Afrique, etc.)
 
-Admin Archdiocèse valide avant activation
+Admin Archidiocèse valide avant activation
 ```
 
 ### Reports Exportables
