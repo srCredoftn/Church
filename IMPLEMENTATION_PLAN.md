@@ -1,13 +1,37 @@
 # IMPLEMENTATION PLAN: Vatican News Theme → Multi-Parish CMS
 ## Archidiocèse de Cotonou - Local Development with MongoDB Community
 
-**Version:** 1.0  
-**Date:** October 2025  
+**Version:** 2.0
+**Date:** October 2025
 **Environment:** Local (Node.js + MongoDB Community) → Production (Express API + Fallback)
+**Recommended Execution Order:** Phase 1 → Phase 2 → Phase 5 → (Then Phases 3,4,6,7,8,9)
 
 ---
 
-## PHASE 1: PROJECT ARCHITECTURE & SETUP
+## 📋 RECOMMENDED PHASES CHRONOLOGY
+
+**Quick Start Path (Next 30 minutes):**
+1. Phase 1: Setup project structure
+2. Phase 2: Setup MongoDB & create schemas
+3. Phase 5: Create first admin user & parish
+
+**Then Advanced (Next 2 hours):**
+4. Phase 3: Convert static links to dynamic routes
+5. Phase 4: Implement fallback mechanism
+6. Phase 6: Multi-parish preparation
+7. Phase 7: Local development workflow
+8. Phase 8: Production migration strategy
+9. Phase 9: Summary & next steps
+
+---
+
+## ✅ PHASE 1: PROJECT ARCHITECTURE & SETUP
+
+**Execution Order:** 1st (First Priority)
+**Duration:** ~10 minutes
+**Dependencies:** None
+**Deliverables:** Project structure, package.json, config files
+**Success Criteria:** All folders created, npm install runs without errors
 
 ### 1.A: Technology Stack
 
@@ -42,7 +66,7 @@ cotonou-cms/
 │   │   ├── articles.js          # /api/articles/* routes
 │   │   ├── events.js            # /api/events/* routes
 │   │   └── admin.js             # Admin panel routes
-│   ├── middleware/
+│   ├─��� middleware/
 │   │   ├── auth.js              # JWT/session auth
 │   │   ├── errorHandler.js      # Global error handling
 │   │   └── fallbackHandler.js   # Static file fallback
