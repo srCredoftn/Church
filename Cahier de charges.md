@@ -37,7 +37,7 @@ Archidiocèse (Admin Principal)
     ├── Gestion du contenu
     ├── Articles
     ├── Événements
-    └���─ Pages publiques
+    └── Pages publiques
         ↓
     Paroisse 2 (Admin Paroisse)
     │   ...
@@ -103,7 +103,7 @@ Archidiocèse (Admin Principal)
 
 #### 3.2.1 Créer une Catégorie
 - Formulaire:
-  - Nom de la catégorie (ex: "M��ditations", "Événements", "Communiqués")
+  - Nom de la catégorie (ex: "Méditations", "Événements", "Communiqués")
   - Description
   - Type de contenu associé (Images, Vidéos, Articles, Audios, Texte)
   - Icône/couleur de représentation
@@ -286,7 +286,7 @@ Formulaire complet avec:
   - Partager
   - Signaler problème
 
-**Détails Complets Événement (Modal ou Page d��diée):**
+**Détails Complets Événement (Modal ou Page dédiée):**
 - Titre + description longue
 - Image couverture
 - **Informations temporelles:**
@@ -568,7 +568,7 @@ Formulaire complet avec:
 
   - Affichage:
     - Titre article (auto généré du contenu)
-    - Lien click ��� va vers article
+    - Lien click → va vers article
     - Format: "[📰] Titre Article"
 
 - **Paramètres Généraux Ticker:**
@@ -729,7 +729,7 @@ Formulaire complet avec:
 - **Types d'intentions:**
   - Messe d'intention
   - Dime paroissiale
-  - Qu��te/Offrande
+  - Quête/Offrande
   - Projet spécial (ex: "Rénovation église")
   - Intention libre
   - Charité/Entraide
@@ -957,7 +957,7 @@ Sections (dans l'ordre):
 - Métadonnées: Auteur, date, catégories, temps de lecture
 - Corps du texte avec:
   - Mise en forme riche (gras, italique, listes, etc.)
-  - Images int��grées
+  - Images intégrées
   - Vidéos YouTube (responsive)
   - Audios avec player
   - Liens clickables
@@ -1375,7 +1375,7 @@ Bande horizontale avec 4 sections cliquables (responsive: grid desktop, stack mo
     - Bouton "Répondre" (fil de réponse)
     - Bouton "Signaler" (abus)
     - Emoji réactions (cliquables)
-    - Actions auteur: Éditer (délai limit��), Supprimer
+    - Actions auteur: Éditer (délai limité), Supprimer
 
   - **Réponses imbriquées:**
     - Affichage indentation ou "Répondre à [user]"
@@ -1488,7 +1488,7 @@ Bande horizontale avec 4 sections cliquables (responsive: grid desktop, stack mo
 - Robots.txt
 - URLs amicales (slugs)
 - Structure hSchema / JSON-LD
-- Open Graph pour réseaux sociaux
+- Open Graph pour r��seaux sociaux
 
 ### 6.5 Sécurité
 - HTTPS obligatoire
@@ -1563,7 +1563,7 @@ Si politique de modération activée:
 **Monorepo possible:**
 ```
 project/
-├��─ apps/
+├── apps/
 │   ├── admin-archdiocese/    (React)
 │   ├── admin-paroisse/       (React)
 ���   └── website-public/       (React/Next.js)
