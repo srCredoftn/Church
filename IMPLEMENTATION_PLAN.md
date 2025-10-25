@@ -42,7 +42,23 @@ Database:  MongoDB Community (local development)
 Cache:     JSON static files (fallback mechanism)
 ```
 
-### 1.B: Project Structure
+### 1.B: Step 1.1 - Create Project Structure
+
+**Command:**
+```bash
+# Create main project directory
+mkdir cotonou-cms && cd cotonou-cms
+
+# Create folder structure
+mkdir -p server/{config,models,routes,middleware,controllers,utils,fallback/{pages,api,html}}
+mkdir -p public/{html/fr,css,js,assets}
+mkdir -p admin-panel/css
+mkdir -p seeds
+mkdir -p logs
+mkdir -p data
+```
+
+**Folder Structure Created:**
 
 ```
 cotonou-cms/
@@ -66,7 +82,7 @@ cotonou-cms/
 │   │   ├── articles.js          # /api/articles/* routes
 │   │   ├── events.js            # /api/events/* routes
 │   │   └── admin.js             # Admin panel routes
-│   ├─��� middleware/
+│   ├── middleware/
 │   │   ├── auth.js              # JWT/session auth
 │   │   ├── errorHandler.js      # Global error handling
 │   │   └── fallbackHandler.js   # Static file fallback
@@ -519,7 +535,7 @@ async function seedParish() {
     // Get admin
     const admin = await Admin.findOne({ email: 'admin@cotonou.local' });
     if (!admin) {
-      console.error('✗ Admin not found. Run seed-admin.js first');
+      console.error('�� Admin not found. Run seed-admin.js first');
       process.exit(1);
     }
     
