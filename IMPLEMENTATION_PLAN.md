@@ -1,9 +1,9 @@
 # IMPLEMENTATION PLAN: Vatican News Theme → Multi-Parish CMS
 ## Archidiocèse de Cotonou - Local Development with MongoDB Community
 
-**Version:** 2.0
-**Date:** October 2025
-**Environment:** Local (Node.js + MongoDB Community) → Production (Express API + Fallback)
+**Version:** 2.0  
+**Date:** October 2025  
+**Environment:** Local (Node.js + MongoDB Community) → Production (Express API + Fallback)  
 **Recommended Execution Order:** Phase 1 → Phase 2 → Phase 5 → (Then Phases 3,4,6,7,8,9)
 
 ---
@@ -11,26 +11,26 @@
 ## 📋 RECOMMENDED PHASES CHRONOLOGY
 
 **Quick Start Path (Next 30 minutes):**
-1. Phase 1: Setup project structure
-2. Phase 2: Setup MongoDB & create schemas
-3. Phase 5: Create first admin user & parish
+1. ✅ **Phase 1** - Setup project structure
+2. ✅ **Phase 2** - Setup MongoDB & create schemas  
+3. ✅ **Phase 5** - Create first admin user & parish
 
 **Then Advanced (Next 2 hours):**
-4. Phase 3: Convert static links to dynamic routes
-5. Phase 4: Implement fallback mechanism
-6. Phase 6: Multi-parish preparation
-7. Phase 7: Local development workflow
-8. Phase 8: Production migration strategy
-9. Phase 9: Summary & next steps
+4. **Phase 3** - Convert static links to dynamic routes
+5. **Phase 4** - Implement fallback mechanism
+6. **Phase 6** - Multi-parish preparation
+7. **Phase 7** - Local development workflow
+8. **Phase 8** - Production migration strategy
+9. **Phase 9** - Summary & next steps
 
 ---
 
 ## ✅ PHASE 1: PROJECT ARCHITECTURE & SETUP
 
-**Execution Order:** 1st (First Priority)
-**Duration:** ~10 minutes
-**Dependencies:** None
-**Deliverables:** Project structure, package.json, config files
+**Execution Order:** 1️⃣ **FIRST (Do This Now)**  
+**Duration:** ~10 minutes  
+**Dependencies:** None  
+**Deliverables:** Project structure, package.json, config files  
 **Success Criteria:** All folders created, npm install runs without errors
 
 ### 1.A: Technology Stack
@@ -42,14 +42,14 @@ Database:  MongoDB Community (local development)
 Cache:     JSON static files (fallback mechanism)
 ```
 
-### 1.B: Step 1.1 - Create Project Structure
+### 1.B: Step 1.1 - Create Project Directory Structure
 
-**Command:**
+**Command to execute:**
 ```bash
-# Create main project directory
+# 1. Create main project directory
 mkdir cotonou-cms && cd cotonou-cms
 
-# Create folder structure
+# 2. Create all subdirectories
 mkdir -p server/{config,models,routes,middleware,controllers,utils,fallback/{pages,api,html}}
 mkdir -p public/{html/fr,css,js,assets}
 mkdir -p admin-panel/css
@@ -121,395 +121,576 @@ cotonou-cms/
 ├── seeds/
 │   ├── seed-admin.js            # Seed first admin user
 │   └── seed-data.js             # Sample data
+├── logs/                        # Application logs
+├── data/                        # MongoDB local data
 ├── .env.local                   # Local environment variables
 ├── .env.production              # Production env vars
-├── package.json
+├── package.json                 # Dependencies
 ├── server.js                    # App launcher
-└── README.md
+└── IMPLEMENTATION_PLAN.md       # This file
 ```
 
-### 1.C: Environment Configuration
+### 1.C: Step 1.2 - Create package.json
+
+**File: `package.json`**
+
+Create file and paste:
+
+```json
+{
+  "name": "cotonou-cms",
+  "version": "1.0.0",
+  "description": "Archidiocèse de Cotonou - Multi-Parish CMS",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon server/index.js",
+    "start": "node server/index.js",
+    "seed:admin": "node seeds/seed-admin.js",
+    "seed:parish": "node seeds/seed-parish.js",
+    "seed": "npm run seed:admin && npm run seed:parish",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cms",
+    "parish",
+    "multi-tenant",
+    "mongodb"
+  ],
+  "author": "Luc",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^7.0.0",
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^9.0.0",
+    "dotenv": "^16.0.3",
+    "cors": "^2.8.5",
+    "helmet": "^7.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.0"
+  }
+}
+```
+
+### 1.D: Step 1.3 - Create .env.local Configuration
 
 **File: `.env.local`**
-```
+
+Create file and paste:
+
+```env
+# Development Environment
 NODE_ENV=development
 PORT=3000
+
+# MongoDB Local
 MONGO_URI=mongodb://localhost:27017/cotonou-cms
-JWT_SECRET=your-local-secret-key
+
+# JWT Configuration
+JWT_SECRET=your-local-secret-key-change-in-production
+JWT_EXPIRE=7d
+
+# Admin Setup
 ADMIN_EMAIL=admin@cotonou.local
+ADMIN_PASSWORD=ChangeMe123!
+
+# App Configuration
 FALLBACK_MODE=true
 FALLBACK_CACHE_DIR=./server/fallback
+SITE_NAME=Archidiocèse de Cotonou
 ```
+
+### 1.E: Step 1.4 - Install Dependencies
+
+**Command:**
+```bash
+npm install
+```
+
+Expected output:
+```
+added 150 packages
+```
+
+### 1.F: Verification
+
+**Run command:**
+```bash
+npm list
+```
+
+Should show:
+- ✅ express@^4.18.2
+- ✅ mongoose@^7.0.0
+- ✅ bcryptjs@^2.4.3
+- ✅ jsonwebtoken@^9.0.0
+- ✅ nodemon@^3.0.0
 
 ---
 
-## PHASE 2: DATABASE SETUP
+## ✅ PHASE 2: DATABASE SETUP & SCHEMAS
 
-### 2.A: MongoDB Community Installation
+**Execution Order:** 2️⃣ **SECOND (Do This Next)**  
+**Duration:** ~15 minutes  
+**Dependencies:** Phase 1 completed, MongoDB installed locally  
+**Deliverables:** MongoDB connection, all models created  
+**Success Criteria:** Can connect to MongoDB, all schemas created
 
-1. **Install MongoDB Community** (macOS/Linux/Windows)
-   ```bash
-   # macOS (Homebrew)
-   brew tap mongodb/brew
-   brew install mongodb-community
-   brew services start mongodb-community
-   
-   # Linux (Ubuntu)
-   wget -qO - https://www.mongodb.org/static/pgp/server-6.0.asc | apt-key add -
-   apt-get install -y mongodb-org
-   systemctl start mongod
-   
-   # Windows: Download from mongodb.com/try/download/community
-   ```
+### 2.A: Step 2.1 - Install & Start MongoDB Community
 
-2. **Verify MongoDB is running**
-   ```bash
-   mongo --version
-   mongosh localhost:27017/cotonou-cms
-   ```
+**Installation (Choose your OS):**
 
-### 2.B: Database Schema & Collections
+```bash
+# macOS (with Homebrew)
+brew tap mongodb/brew
+brew install mongodb-community
+brew services start mongodb-community
 
-**Collection: `admins`**
-```json
-{
-  "_id": ObjectId,
-  "name": "Luc Admin",
-  "email": "admin@cotonou.local",
-  "password": "hashed_password_bcrypt",
-  "role": "super_admin",
-  "parishes": [ObjectId],  // accessible parishes
-  "createdAt": ISODate,
-  "updatedAt": ISODate,
-  "isActive": true
-}
+# Linux (Ubuntu/Debian)
+wget -qO - https://www.mongodb.org/static/pgp/server-6.0.asc | sudo apt-key add -
+sudo apt-get install -y mongodb-org
+sudo systemctl start mongod
+
+# Windows
+# Download from: https://www.mongodb.com/try/download/community
+# Run installer and start MongoDB service
 ```
 
-**Collection: `parishes`**
-```json
-{
-  "_id": ObjectId,
-  "name": "Archidiocèse de Cotonou",
-  "slug": "cotonou",
-  "description": "...",
-  "address": "...",
-  "phone": "...",
-  "email": "...",
-  "logo": "url",
-  "banner": "url",
-  "languages": ["fr", "en", "de"],
-  "theme": "vatican-news",  // theme name
-  "adminId": ObjectId,      // primary admin
-  "menu": {
-    "primary": [
-      { "label": "Pape", "link": "/fr/pape", "order": 1 },
-      { "label": "Vatican", "link": "/fr/vatican", "order": 2 },
-      { "label": "Église", "link": "/fr/eglise", "order": 3 },
-      { "label": "Monde", "link": "/fr/monde", "order": 4 }
-    ]
-  },
-  "createdAt": ISODate,
-  "isActive": true
-}
+**Verify MongoDB is running:**
+```bash
+mongosh --version
+mongosh localhost:27017/cotonou-cms
+# Should show: test> (you're in MongoDB shell)
+# Type: exit
 ```
 
-**Collection: `pages`**
-```json
-{
-  "_id": ObjectId,
-  "parishId": ObjectId,
-  "title": "Pape",
-  "slug": "pape",
-  "content": "HTML content",
-  "language": "fr",
-  "type": "static",  // static, blog, custom
-  "author": ObjectId,
-  "status": "published",  // draft, published, archived
-  "createdAt": ISODate,
-  "updatedAt": ISODate,
-  "publishedAt": ISODate
-}
-```
-
-**Collection: `articles`**
-```json
-{
-  "_id": ObjectId,
-  "parishId": ObjectId,
-  "title": "Article Title",
-  "slug": "article-slug",
-  "excerpt": "...",
-  "content": "HTML content",
-  "language": "fr",
-  "category": "news",
-  "image": "url",
-  "author": ObjectId,
-  "status": "published",
-  "views": 0,
-  "createdAt": ISODate,
-  "updatedAt": ISODate,
-  "publishedAt": ISODate
-}
-```
-
-**Collection: `events`**
-```json
-{
-  "_id": ObjectId,
-  "parishId": ObjectId,
-  "title": "Event Title",
-  "slug": "event-slug",
-  "description": "...",
-  "startDate": ISODate,
-  "endDate": ISODate,
-  "location": "...",
-  "image": "url",
-  "status": "published",
-  "createdAt": ISODate,
-  "updatedAt": ISODate
-}
-```
-
-### 2.C: Setup Database Script
+### 2.B: Step 2.2 - Create MongoDB Connection File
 
 **File: `server/config/db.js`**
+
+Create and paste:
+
 ```javascript
-// Connection logic and schema initialization
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
 async function connectDB() {
   try {
-    await mongoose.connect(process.env.MONGO_URI, {
+    const conn = await mongoose.connect(process.env.MONGO_URI, {
       useNewUrlParser: true,
       useUnifiedTopology: true
     });
-    console.log('✓ MongoDB connected');
+    console.log(`✓ MongoDB connected: ${conn.connection.host}`);
     return true;
   } catch (error) {
-    console.error('✗ MongoDB connection failed:', error.message);
-    return false;
+    console.error(`✗ MongoDB connection failed: ${error.message}`);
+    process.exit(1);
   }
 }
 
-module.exports = { connectDB };
+export { connectDB };
 ```
 
----
+### 2.C: Step 2.3 - Create Admin Model
 
-## PHASE 3: STATIC-TO-DYNAMIC CONVERSION STRATEGY
+**File: `server/models/Admin.js`**
 
-### 3.A: URL Route Mapping
-
-**Current Static Routes → New Dynamic Routes**
-
-| Static File | New Route | Endpoint | Handler |
-|---|---|---|---|
-| `/fr.html` | `/` | GET / | Render home with parishes |
-| `/fr/pape.html` | `/fr/pages/pape` | GET /api/pages/pape | pageController.getPage('pape') |
-| `/fr/vatican.html` | `/fr/pages/vatican` | GET /api/pages/vatican | pageController.getPage('vatican') |
-| `/fr/eglise.html` | `/fr/pages/eglise` | GET /api/pages/eglise | pageController.getPage('eglise') |
-| `/fr/monde.html` | `/fr/pages/monde` | GET /api/pages/monde | pageController.getPage('monde') |
-| `/fr/articles` | `/api/articles` | GET /api/articles | articleController.listArticles() |
-| `/fr/article/:slug` | `/api/articles/:slug` | GET /api/articles/:slug | articleController.getArticle() |
-| `/fr/events` | `/api/events` | GET /api/events | eventController.listEvents() |
-| `/fr.rss.xml` | `/api/rss` | GET /api/rss | feedController.generateRSS() |
-
-### 3.B: HTML Template Update Strategy
-
-**Step 1: Create Intermediate JS Routing Layer**
-
-Current approach: Static HTML files with hardcoded links  
-New approach: Dynamic template engine (EJS/Handlebars) + API calls
-
-**Example: `/fr.html` conversion**
-
-**Before (Static):**
-```html
-<a href="fr/pape.html">Pape</a>
-<a href="fr/vatican.html">Vatican</a>
-<a href="fr/eglise.html">Église</a>
-```
-
-**After (Dynamic with JS):**
-```html
-<a href="/fr/pages/pape" data-page="pape">Pape</a>
-<a href="/fr/pages/vatican" data-page="vatican">Vatican</a>
-<a href="/fr/pages/eglise" data-page="eglise">Église</a>
-
-<script>
-  document.querySelectorAll('[data-page]').forEach(link => {
-    link.addEventListener('click', (e) => {
-      e.preventDefault();
-      const page = e.target.dataset.page;
-      fetch(`/api/pages/${page}`)
-        .then(r => r.json())
-        .then(data => {
-          document.querySelector('main').innerHTML = data.content;
-          window.history.pushState({}, '', `/fr/pages/${page}`);
-        })
-        .catch(() => window.location.href = `/fr/${page}.html`); // Fallback
-    });
-  });
-</script>
-```
-
-### 3.C: Link Replacement in HTML Files
-
-**Files to update:**
-- `public/html/fr.html` (main navigation links)
-- `public/html/fr/pape.html` → Convert to API response
-- `public/html/fr/vatican.html` → Convert to API response
-- `public/html/fr/eglise.html` → Convert to API response
-- `public/html/fr/monde.html` → Convert to API response
-
-**Step-by-step replacement:**
-
-1. **Extract content from HTML files** → Store in MongoDB `pages` collection
-   ```bash
-   node scripts/migrate-html-to-db.js
-   ```
-
-2. **Replace href attributes** in main template:
-   ```javascript
-   // In fr.html
-   OLD: href="fr/pape.html"
-   NEW: href="/fr/pages/pape" onclick="loadPage(event, 'pape')"
-   ```
-
-3. **Create API wrapper** that serves either DB content or fallback HTML:
-   ```javascript
-   // server/routes/pages.js
-   router.get('/api/pages/:slug', async (req, res) => {
-     try {
-       const page = await Page.findOne({ slug: req.params.slug, status: 'published' });
-       if (!page) return res.status(404).json({ error: 'Not found' });
-       res.json(page);
-     } catch (error) {
-       // Fallback to static HTML
-       res.sendFile(`./public/html/fr/${req.params.slug}.html`);
-     }
-   });
-   ```
-
-### 3.D: Language & Parish Context
-
-**Dynamic routing with language/parish prefix:**
-
-```
-/[paroisse]/[langue]/pages/[slug]
-/cotonou/fr/pages/pape       → GET /api/pages/pape?parish=cotonou&lang=fr
-/cotonou/en/pages/pope       → GET /api/pages/pope?parish=cotonou&lang=en
-```
-
----
-
-## PHASE 4: FALLBACK MECHANISM
-
-### 4.A: Static Fallback Architecture
-
-**Purpose:** If MongoDB is unavailable, serve pre-cached static HTML/JSON
-
-```
-server/fallback/
-├── pages/
-│   ├── pape.json
-│   ├── vatican.json
-│   ├── eglise.json
-│   └── monde.json
-├── articles.json
-├── events.json
-└── html/
-    ├── fr.html
-    ├── fr/pape.html
-    ├── fr/vatican.html
-    └── ...
-```
-
-### 4.B: Fallback Detection & Switching
-
-**File: `server/middleware/fallbackHandler.js`**
+Create and paste:
 
 ```javascript
-const fs = require('fs');
-const path = require('path');
+import mongoose from 'mongoose';
+import bcrypt from 'bcryptjs';
 
-async function withFallback(primaryFn, fallbackFile) {
+const adminSchema = new mongoose.Schema({
+  name: {
+    type: String,
+    required: true
+  },
+  email: {
+    type: String,
+    required: true,
+    unique: true,
+    lowercase: true
+  },
+  password: {
+    type: String,
+    required: true
+  },
+  role: {
+    type: String,
+    enum: ['super_admin', 'admin'],
+    default: 'admin'
+  },
+  parishes: [{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Parish'
+  }],
+  isActive: {
+    type: Boolean,
+    default: true
+  },
+  createdAt: {
+    type: Date,
+    default: Date.now
+  },
+  updatedAt: {
+    type: Date,
+    default: Date.now
+  }
+});
+
+// Hash password before saving
+adminSchema.pre('save', async function(next) {
+  if (!this.isModified('password')) {
+    return next();
+  }
   try {
-    return await primaryFn();  // Try database
+    const salt = await bcrypt.genSalt(10);
+    this.password = await bcrypt.hash(this.password, salt);
+    next();
   } catch (error) {
-    console.warn(`DB error, switching to fallback: ${fallbackFile}`);
-    if (fs.existsSync(fallbackFile)) {
-      return JSON.parse(fs.readFileSync(fallbackFile, 'utf8'));
-    }
-    throw new Error('Both DB and fallback unavailable');
+    next(error);
   }
-}
+});
 
-module.exports = { withFallback };
+// Method to compare passwords
+adminSchema.methods.matchPassword = async function(enteredPassword) {
+  return await bcrypt.compare(enteredPassword, this.password);
+};
+
+const Admin = mongoose.model('Admin', adminSchema);
+
+export default Admin;
 ```
 
-### 4.C: Cache Invalidation & Update
+### 2.D: Step 2.4 - Create Parish Model
 
-**Whenever content changes in admin panel:**
+**File: `server/models/Parish.js`**
 
-1. Update MongoDB
-2. Generate static JSON cache files
-3. Update fallback directory
+Create and paste:
 
 ```javascript
-// In pageController.updatePage()
-await Page.updateOne({ _id }, { ...updateData });
-await generateFallbackCache();  // Update static files
-await clearPageCache();         // Clear in-memory cache
+import mongoose from 'mongoose';
+
+const parishSchema = new mongoose.Schema({
+  name: {
+    type: String,
+    required: true
+  },
+  slug: {
+    type: String,
+    required: true,
+    unique: true,
+    lowercase: true
+  },
+  description: String,
+  address: String,
+  phone: String,
+  email: String,
+  logo: String,
+  banner: String,
+  languages: {
+    type: [String],
+    default: ['fr']
+  },
+  theme: {
+    type: String,
+    default: 'vatican-news'
+  },
+  adminId: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Admin'
+  },
+  menu: {
+    primary: [{
+      label: String,
+      link: String,
+      order: Number
+    }]
+  },
+  isActive: {
+    type: Boolean,
+    default: true
+  },
+  createdAt: {
+    type: Date,
+    default: Date.now
+  },
+  updatedAt: {
+    type: Date,
+    default: Date.now
+  }
+});
+
+const Parish = mongoose.model('Parish', parishSchema);
+
+export default Parish;
+```
+
+### 2.E: Step 2.5 - Create Page Model
+
+**File: `server/models/Page.js`**
+
+Create and paste:
+
+```javascript
+import mongoose from 'mongoose';
+
+const pageSchema = new mongoose.Schema({
+  parishId: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Parish',
+    required: true
+  },
+  title: {
+    type: String,
+    required: true
+  },
+  slug: {
+    type: String,
+    required: true
+  },
+  content: {
+    type: String,
+    required: true
+  },
+  language: {
+    type: String,
+    default: 'fr'
+  },
+  type: {
+    type: String,
+    enum: ['static', 'blog', 'custom'],
+    default: 'static'
+  },
+  author: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Admin'
+  },
+  status: {
+    type: String,
+    enum: ['draft', 'published', 'archived'],
+    default: 'draft'
+  },
+  createdAt: {
+    type: Date,
+    default: Date.now
+  },
+  updatedAt: {
+    type: Date,
+    default: Date.now
+  },
+  publishedAt: Date
+});
+
+const Page = mongoose.model('Page', pageSchema);
+
+export default Page;
+```
+
+### 2.F: Step 2.6 - Create Article Model
+
+**File: `server/models/Article.js`**
+
+Create and paste:
+
+```javascript
+import mongoose from 'mongoose';
+
+const articleSchema = new mongoose.Schema({
+  parishId: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Parish',
+    required: true
+  },
+  title: {
+    type: String,
+    required: true
+  },
+  slug: {
+    type: String,
+    required: true
+  },
+  excerpt: String,
+  content: {
+    type: String,
+    required: true
+  },
+  language: {
+    type: String,
+    default: 'fr'
+  },
+  category: String,
+  image: String,
+  author: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Admin'
+  },
+  status: {
+    type: String,
+    enum: ['draft', 'published', 'archived'],
+    default: 'draft'
+  },
+  views: {
+    type: Number,
+    default: 0
+  },
+  createdAt: {
+    type: Date,
+    default: Date.now
+  },
+  updatedAt: {
+    type: Date,
+    default: Date.now
+  },
+  publishedAt: Date
+});
+
+const Article = mongoose.model('Article', articleSchema);
+
+export default Article;
+```
+
+### 2.G: Step 2.7 - Create Event Model
+
+**File: `server/models/Event.js`**
+
+Create and paste:
+
+```javascript
+import mongoose from 'mongoose';
+
+const eventSchema = new mongoose.Schema({
+  parishId: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Parish',
+    required: true
+  },
+  title: {
+    type: String,
+    required: true
+  },
+  slug: {
+    type: String,
+    required: true
+  },
+  description: String,
+  startDate: {
+    type: Date,
+    required: true
+  },
+  endDate: Date,
+  location: String,
+  image: String,
+  status: {
+    type: String,
+    enum: ['draft', 'published', 'archived'],
+    default: 'draft'
+  },
+  createdAt: {
+    type: Date,
+    default: Date.now
+  },
+  updatedAt: {
+    type: Date,
+    default: Date.now
+  }
+});
+
+const Event = mongoose.model('Event', eventSchema);
+
+export default Event;
+```
+
+### 2.H: Verification - Test MongoDB Connection
+
+**Command:**
+```bash
+# Create temporary test file
+cat > server/test-db.js << 'EOF'
+import { connectDB } from './config/db.js';
+import 'dotenv/config';
+
+connectDB().then(() => {
+  console.log('✓ Database test successful!');
+  process.exit(0);
+}).catch(err => {
+  console.error('✗ Database test failed:', err);
+  process.exit(1);
+});
+EOF
+
+# Run test
+node server/test-db.js
+
+# Clean up
+rm server/test-db.js
+```
+
+Expected output:
+```
+✓ MongoDB connected: localhost
+✓ Database test successful!
 ```
 
 ---
 
-## PHASE 5: ADMIN USER CREATION
+## ✅ PHASE 5: CREATE FIRST ADMIN USER & PARISH
 
-### 5.A: First Admin User Setup
+**Execution Order:** 3️⃣ **THIRD (Do This Right After Phase 2)**  
+**Duration:** ~10 minutes  
+**Dependencies:** Phase 1 & Phase 2 completed, MongoDB running  
+**Deliverables:** First admin user, first parish created  
+**Success Criteria:** Can login with admin@cotonou.local
+
+### 5.A: Step 5.1 - Create Admin Seeding Script
 
 **File: `seeds/seed-admin.js`**
 
+Create and paste:
+
 ```javascript
-const mongoose = require('mongoose');
-const bcrypt = require('bcrypt');
-require('dotenv').config();
+import mongoose from 'mongoose';
+import bcrypt from 'bcryptjs';
+import 'dotenv/config';
+import Admin from '../server/models/Admin.js';
 
 async function seedAdmin() {
   try {
+    // Connect to MongoDB
     await mongoose.connect(process.env.MONGO_URI);
-    
-    const Admin = require('../server/models/Admin');
-    
+    console.log('✓ Connected to MongoDB');
+
     // Check if admin exists
-    const existingAdmin = await Admin.findOne({ email: 'admin@cotonou.local' });
+    const existingAdmin = await Admin.findOne({ email: process.env.ADMIN_EMAIL });
     if (existingAdmin) {
-      console.log('✓ Admin already exists');
+      console.log('ℹ Admin already exists');
       process.exit(0);
     }
-    
-    // Hash password
-    const hashedPassword = await bcrypt.hash('ChangeMe123!', 10);
-    
+
     // Create admin
     const admin = new Admin({
       name: 'Luc Admin',
-      email: 'admin@cotonou.local',
-      password: hashedPassword,
+      email: process.env.ADMIN_EMAIL,
+      password: process.env.ADMIN_PASSWORD,
       role: 'super_admin',
       parishes: [],
       isActive: true
     });
-    
+
     await admin.save();
-    console.log('✓ Admin created:');
-    console.log('  Email: admin@cotonou.local');
-    console.log('  Password: ChangeMe123! (CHANGE THIS!)');
-    
+
+    console.log('✓ Admin user created successfully!');
+    console.log('───────────────────────────────────');
+    console.log('📧 Email: ' + process.env.ADMIN_EMAIL);
+    console.log('🔐 Password: ' + process.env.ADMIN_PASSWORD);
+    console.log('───────────────────────────────────');
+    console.log('⚠️  IMPORTANT: Change password after first login!');
+
     process.exit(0);
   } catch (error) {
-    console.error('✗ Seed failed:', error.message);
+    console.error('✗ Error:', error.message);
     process.exit(1);
   }
 }
@@ -517,28 +698,38 @@ async function seedAdmin() {
 seedAdmin();
 ```
 
-### 5.B: Create First Parish
+### 5.B: Step 5.2 - Create Parish Seeding Script
 
 **File: `seeds/seed-parish.js`**
 
+Create and paste:
+
 ```javascript
-const mongoose = require('mongoose');
-require('dotenv').config();
+import mongoose from 'mongoose';
+import 'dotenv/config';
+import Admin from '../server/models/Admin.js';
+import Parish from '../server/models/Parish.js';
 
 async function seedParish() {
   try {
+    // Connect to MongoDB
     await mongoose.connect(process.env.MONGO_URI);
-    
-    const Admin = require('../server/models/Admin');
-    const Parish = require('../server/models/Parish');
-    
+    console.log('✓ Connected to MongoDB');
+
     // Get admin
-    const admin = await Admin.findOne({ email: 'admin@cotonou.local' });
+    const admin = await Admin.findOne({ email: process.env.ADMIN_EMAIL });
     if (!admin) {
-      console.error('�� Admin not found. Run seed-admin.js first');
+      console.error('✗ Admin not found. Run seed-admin.js first');
       process.exit(1);
     }
-    
+
+    // Check if parish exists
+    const existingParish = await Parish.findOne({ slug: 'cotonou' });
+    if (existingParish) {
+      console.log('ℹ Parish already exists');
+      process.exit(0);
+    }
+
     // Create parish
     const parish = new Parish({
       name: 'Archidiocèse de Cotonou',
@@ -552,22 +743,33 @@ async function seedParish() {
       languages: ['fr'],
       theme: 'vatican-news',
       adminId: admin._id,
+      menu: {
+        primary: [
+          { label: 'Pape', link: '/fr/pages/pape', order: 1 },
+          { label: 'Vatican', link: '/fr/pages/vatican', order: 2 },
+          { label: 'Église', link: '/fr/pages/eglise', order: 3 },
+          { label: 'Monde', link: '/fr/pages/monde', order: 4 }
+        ]
+      },
       isActive: true
     });
-    
+
     await parish.save();
-    
+
     // Link admin to parish
     admin.parishes.push(parish._id);
     await admin.save();
-    
-    console.log('✓ Parish created:');
-    console.log('  Name:', parish.name);
-    console.log('  Slug:', parish.slug);
-    
+
+    console.log('✓ Parish created successfully!');
+    console.log('───────────────────────────────────');
+    console.log('🏛️  Name: ' + parish.name);
+    console.log('📍 Slug: ' + parish.slug);
+    console.log('🌍 Languages: ' + parish.languages.join(', '));
+    console.log('───────────────────────────────────');
+
     process.exit(0);
   } catch (error) {
-    console.error('✗ Seed failed:', error.message);
+    console.error('✗ Error:', error.message);
     process.exit(1);
   }
 }
@@ -575,225 +777,137 @@ async function seedParish() {
 seedParish();
 ```
 
-### 5.C: Runbook - First Setup
+### 5.C: Step 5.3 - Run Seeding Scripts
+
+**Commands:**
 
 ```bash
-# 1. Install dependencies
-npm install
+# 1. Seed admin user
+npm run seed:admin
 
-# 2. Start MongoDB
-mongod --dbpath ./data
+# Expected output:
+# ✓ Admin user created successfully!
+# ───────────────────────────────────
+# 📧 Email: admin@cotonou.local
+# 🔐 Password: ChangeMe123!
+# ───────────────────────────────────
 
-# 3. Create admin user
-node seeds/seed-admin.js
-# Output: admin@cotonou.local / ChangeMe123!
+# 2. Seed parish
+npm run seed:parish
 
-# 4. Create parish
-node seeds/seed-parish.js
-# Output: Archidiocèse de Cotonou created
-
-# 5. Start server
-npm run dev
-# Server running on http://localhost:3000
-
-# 6. Login to admin panel
-# URL: http://localhost:3000/admin
-# Email: admin@cotonou.local
-# Password: ChangeMe123!
+# Expected output:
+# ✓ Parish created successfully!
+# ───────────────────────────────────
+# 🏛️  Name: Archidiocèse de Cotonou
+# 📍 Slug: cotonou
+# 🌍 Languages: fr
+# ───────────────────────────────────
 ```
 
----
+### 5.D: Verification - Check MongoDB Data
 
-## PHASE 6: MULTI-PARISH SYSTEM PREPARATION
-
-### 6.A: Multi-Parish Architecture
-
-**Each parish has:**
-- Unique domain or subdomain (`cotonou.local`, `porto-novo.local`, etc.)
-- Separate admin users
-- Own content (articles, pages, events)
-- Shared theme (Vatican News template)
-
-**Routes structure:**
-```
-/cotonou/fr/pages/pape           → Cotonou archdiocese content
-/porto-novo/fr/pages/pape        → Porto-Novo parish content
+**Command:**
+```bash
+mongosh localhost:27017/cotonou-cms
 ```
 
-### 6.B: Parish Detection Middleware
-
-**File: `server/middleware/parishDetector.js`**
-
+**In MongoDB shell:**
 ```javascript
-async function detectParish(req, res, next) {
-  // Extract from subdomain or path
-  let parishSlug = req.subdomains[0] || req.params.parish || 'cotonou';
-  
-  const Parish = require('../models/Parish');
-  const parish = await Parish.findOne({ slug: parishSlug, isActive: true });
-  
-  if (!parish) {
-    return res.status(404).json({ error: 'Parish not found' });
-  }
-  
-  req.parish = parish;
-  next();
-}
+// Check admin
+db.admins.findOne({ email: 'admin@cotonou.local' })
 
-module.exports = { detectParish };
+// Check parish
+db.parishes.findOne({ slug: 'cotonou' })
+
+// Exit
+exit
 ```
 
-### 6.C: Adding New Parishes
-
-**Admin panel UI:**
-1. Super admin logs in
-2. Click "Add Parish"
-3. Fill form: Name, Slug, Description, etc.
-4. System creates new parish + default admin user
-5. New admin receives invitation email with credentials
-
-**Database:**
+Expected output:
 ```javascript
-// Adding a new parish
-const newParish = new Parish({
-  name: 'Paroisse de Port-Novo',
-  slug: 'porto-novo',
-  adminId: newAdminId,
+{
+  _id: ObjectId("..."),
+  name: 'Luc Admin',
+  email: 'admin@cotonou.local',
+  role: 'super_admin',
+  isActive: true,
   ...
-});
-```
+}
 
----
-
-## PHASE 7: LOCAL DEVELOPMENT WORKFLOW
-
-### 7.A: Development Tools Setup
-
-```bash
-# Install dev dependencies
-npm install --save-dev nodemon concurrently
-
-# package.json scripts
-"scripts": {
-  "dev": "concurrently \"npm run server\" \"npm run client\"",
-  "server": "nodemon server/index.js",
-  "client": "node scripts/watch-html.js",
-  "seed": "node seeds/seed-admin.js && node seeds/seed-parish.js",
-  "build": "node scripts/migrate-html-to-db.js",
-  "start": "node server/index.js"
+{
+  _id: ObjectId("..."),
+  name: 'Archidiocèse de Cotonou',
+  slug: 'cotonou',
+  adminId: ObjectId("..."),
+  ...
 }
 ```
 
-### 7.B: Testing & Validation
+---
 
-**Manual testing checklist:**
+## ✅ COMPLETION CHECKLIST - PHASES 1, 2, 5
 
-- [ ] MongoDB running locally
-- [ ] Admin user created
-- [ ] Parish created
-- [ ] `/api/pages/pape` returns data
-- [ ] Fallback works when DB offline
-- [ ] Links in HTML render correctly
-- [ ] Admin panel loads
-- [ ] Can create/edit pages in admin
+After completing all three phases, verify:
 
-**API endpoints to test:**
+- [ ] Phase 1: All folders created (`cotonou-cms/` structure)
+- [ ] Phase 1: `npm install` completed successfully
+- [ ] Phase 1: `.env.local` file created with correct values
+- [ ] Phase 2: MongoDB installed and running locally
+- [ ] Phase 2: All 5 models created (Admin, Parish, Page, Article, Event)
+- [ ] Phase 2: Database connection test passed (`✓ MongoDB connected`)
+- [ ] Phase 5: Admin user created (`admin@cotonou.local`)
+- [ ] Phase 5: Parish created (`Archidiocèse de Cotonou`)
+- [ ] Phase 5: Can verify data in MongoDB shell
+
+**🎉 If all checked: Ready for Phase 3 (Dynamic Routes)**
+
+---
+
+## NEXT STEPS (After Phases 1, 2, 5)
+
+Once completed, proceed to:
+
+1. **Phase 3** - Convert static links to dynamic routes
+2. **Phase 4** - Implement fallback mechanism
+3. **Phase 6** - Multi-parish preparation
+4. **Phase 7** - Local development workflow
+5. **Phase 8** - Production migration strategy
+6. **Phase 9** - Summary & next steps
+
+---
+
+## 🆘 TROUBLESHOOTING
+
+**MongoDB not starting?**
 ```bash
-# Test pages API
-curl http://localhost:3000/api/pages/pape
+# Check if already running
+lsof -i :27017
 
-# Test articles API
-curl http://localhost:3000/api/articles
+# Kill existing process if needed
+pkill -f mongod
 
-# Test fallback (stop MongoDB first)
-curl http://localhost:3000/api/pages/pape
-# Should serve cached version
-```
-
-### 7.C: Debugging & Logs
-
-```javascript
-// Enable debugging
-DEBUG=cotonou-cms:* npm run dev
-
-// Check logs
-tail -f logs/app.log
-```
-
----
-
-## PHASE 8: NEXT STEPS → PRODUCTION
-
-### 8.A: Migration Strategy
-
-1. **Keep current setup running** on localhost:3000
-2. **Set up staging environment** (test before production)
-3. **Choose production DB:**
-   - Option 1: MongoDB Atlas (cloud)
-   - Option 2: MongoDB on separate server
-4. **Deploy Express server** to Fly.io or similar
-5. **Configure environment variables** for production
-
-### 8.B: Production Deployment Checklist
-
-- [ ] Environment variables set (.env.production)
-- [ ] MongoDB Atlas cluster created & connected
-- [ ] Fallback cache updated
-- [ ] Admin credentials changed
-- [ ] SSL/HTTPS enabled
-- [ ] Backup strategy in place
-- [ ] Monitoring & logging configured
-- [ ] DNS records updated
-
----
-
-## PHASE 9: SUMMARY OF FILES TO CREATE
-
-**Core Backend Files:**
-1. `server/index.js` - Express app
-2. `server/config/db.js` - MongoDB connection
-3. `server/models/Admin.js` - Admin schema
-4. `server/models/Parish.js` - Parish schema
-5. `server/models/Page.js` - Page schema
-6. `server/routes/pages.js` - Page routes
-7. `server/middleware/fallbackHandler.js` - Fallback logic
-8. `server/controllers/pageController.js` - Page logic
-9. `seeds/seed-admin.js` - Admin seeding
-
-**Frontend Files:**
-1. `public/html/fr.html` - Updated with dynamic links
-2. `public/js/app.js` - Client-side routing
-
-**Configuration Files:**
-1. `.env.local` - Local env vars
-2. `package.json` - Dependencies
-
-**Total: ~15-20 files to create**
-
----
-
-## QUICK START COMMAND
-
-```bash
-# 1. Clone repo
-cd cotonou-cms
-
-# 2. Install deps
-npm install
-
-# 3. Start MongoDB
+# Start fresh
 mongod --dbpath ./data
+```
 
-# 4. Seed database
-npm run seed
+**npm dependencies conflict?**
+```bash
+rm package-lock.json
+npm cache clean --force
+npm install
+```
 
-# 5. Start server
-npm run dev
+**Port 3000 already in use?**
+```bash
+# Change PORT in .env.local
+PORT=3001
 
-# 6. Open browser
-http://localhost:3000/admin
+# Or kill the process
+lsof -i :3000
+kill -9 <PID>
 ```
 
 ---
 
-**Next Step:** Start with Phase 1 (Project Structure) → Phase 2 (Database) → Test → Production
+**Status: Ready for implementation** ✅  
+**Last Updated:** October 2025
