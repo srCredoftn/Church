@@ -1,0 +1,23 @@
+{
+  "name": "vaticannews-theme",
+  "version": "1.0.0",
+  "menu": [
+    { "id": "pape", "label": "Pape", "href": "/fr/pape.html", "enabled": true },
+    { "id": "vatican", "label": "Vatican", "href": "/fr/vatican.html", "enabled": false },
+    { "id": "eglise", "label": "Eglise", "href": "/fr/eglise.html", "enabled": false },
+    { "id": "monde", "label": "Monde", "href": "/fr/monde.html", "enabled": false }
+  ],
+  "language": {
+    "default": "fr",
+    "available": ["fr","en","it","de","es","pt"]
+  },
+  "assetsPath": "/etc/designs/vatican-news/release/library/",
+  "icons": {
+    "facebook": "https://www.facebook.com/vaticannews.fr/?brand_redir=DISABLE",
+    "twitter": "https://x.com/vaticannews_fr",
+    "youtube": "https://www.youtube.com/c/VaticanNewsFR",
+    "instagram": "https://www.instagram.com/vaticannews_fr/"
+  },
+  "preserveDom": true,
+  "notes": "Set enabled=true to show a menu item. Keep classes and attributes identical in React components to preserve design."
+}
