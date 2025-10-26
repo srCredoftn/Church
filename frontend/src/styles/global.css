@@ -1,0 +1,12 @@
+/* Global CSS loader: original site CSS is imported in index.html to preserve exact design.
+   Use this file for small overrides or component-specific rules if necessary. */
+
+.app-root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#main-content {
+  flex: 1 0 auto;
+}
