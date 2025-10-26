@@ -1,0 +1,38 @@
+name: Capture screenshots
+
+on:
+  workflow_dispatch:
+
+jobs:
+  capture:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install Playwright
+        run: |
+          npm init -y
+          npm i -D playwright@^1.39.0
+          npx playwright install --with-deps
+
+      - name: Run screenshot script
+        env:
+          BASE_URL: ${{ inputs.base_url || 'https://d855d14888714c2c9fa6ae03d508aa34-cf48ac884cbd40c9981a5a7ab.fly.dev' }}
+          PAGE_PATH: ${{ inputs.page_path || '/www.vaticannews.va/fr.html' }}
+        run: node tools/capture_screenshots.js
+
+      - name: Commit screenshots
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add migration_plan/screenshots || true
+          git commit -m "chore(screenshots): add/update captured screenshots" || echo "No changes to commit"
+          git push || echo "Push failed"
