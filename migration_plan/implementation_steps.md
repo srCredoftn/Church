@@ -54,8 +54,72 @@ Dépendances & outils recommandés
 Prochaine action (immédiate)
 - Terminer Visual QA: je vais générer screenshots du scaffold React (si vous autorisez) et préparer le script de comparaison.
 
-Si vous autorisez, je lance maintenant :
-- npm install && npm run build dans frontend (générer dist)
-- Capturer screenshots de la page d'accueil scaffold
+Actions réalisées par l'équipe/assistant (journal des opérations)
+- Ajout d'un dossier "theme" contenant :
+  - theme/config.json (manifest du menu et options de thème)
+  - theme/README.md (instructions)
+- Ajout d'un script de backup frontend : scripts/backup_frontend.sh
+- Création du scaffold frontend (React + Vite) dans frontend/ :
+  - frontend/package.json
+  - frontend/index.html (importe CSS original pour conserver design)
+  - frontend/src/ (App.jsx, main.jsx, styles/global.css)
+  - frontend/src/components/Header/Header.jsx (lit /api/theme et theme/config.json)
+  - frontend/src/components/Footer/Footer.jsx
+- Création du backend Express minimal dans backend/ :
+  - backend/package.json
+  - backend/src/app.js (sert /api/theme et sert certains assets)
+- Ajout d'un script pour capturer des screenshots automatiquement : tools/capture_screenshots.js
+- Ajout d'un workflow GitHub Actions .github/workflows/capture-screenshots.yml qui :
+  - installe Playwright, capture desktop + mobile screenshots de la page (BASE_URL + PAGE_PATH)
+  - commit/ pousse les images dans migration_plan/screenshots quand il y a des modifications
+- Captures manuelles réalisées (attachées à la conversation) :
+  - migration_plan/screenshots/screenshot_home_desktop.png (documenté)
+  - migration_plan/screenshots/screenshot_home_mobile.png (documenté)
 
-Dites "OK build" pour que je lance le build et capture/sortie des screenshots, ou "non" pour d'abord exécuter la sauvegarde manuelle.
+Où trouver chaque artefact
+- Config & thème: theme/config.json, theme/README.md
+- Backup script: scripts/backup_frontend.sh
+- Frontend scaffold: frontend/
+- Backend scaffold: backend/
+- Screenshots + documentation: migration_plan/screenshots/ README.md
+- Playwright script: tools/capture_screenshots.js
+- GitHub workflow: .github/workflows/capture-screenshots.yml
+
+Comment reproduire localement (récapitulatif pas-à-pas)
+1) Sauvegarde du frontend (important)
+   - sh ./scripts/backup_frontend.sh www.vaticannews.va backups
+2) Lancer le frontend en local
+   - cd frontend
+   - npm install
+   - npm run dev (ou npm run build && npm run preview)
+3) Lancer le backend local (optionnel pour /api/theme)
+   - cd backend
+   - npm install
+   - npm run dev
+4) Capturer screenshots localement (si vous ne voulez pas utiliser GitHub Actions)
+   - npm i -D playwright
+   - npx playwright install --with-deps
+   - node tools/capture_screenshots.js (assurez-vous d'avoir BASE_URL et PAGE_PATH si nécessaire)
+5) Pour exécuter via CI (GitHub Actions)
+   - Aller sur Actions > Capture screenshots > Run workflow
+   - Entrer BASE_URL et PAGE_PATH si vous souhaitez override
+
+Étapes à suivre par la suite (prioritaires)
+- (A) Finaliser la migration de la page d'accueil : convertir chaque bloc (teaser, cards) en composants React en respectant la structure DOM et en important le CSS original.
+- (B) Mettre en place visual regression (Playwright comparant screenshots actuelles vs nouvelles) et automatiser fail on diff above threshold.
+- (C) Implémenter MongoDB + endpoints (backend/src) et remplacer le contenu statique par fetchs API étape par étape.
+- (D) Planifier la bascule finale (redirects, SEO, monitoring)
+
+Notes importantes pour l'équipe
+- Toujours préserver les classes CSS et variables (ne pas renommer). Toute modification CSS doit être minimale et documentée.
+- Conserver les media queries et breakpoints intacts pour préserver le rendu responsive.
+- Les auteurs successifs peuvent retrouver les artefacts et scripts aux chemins listés ci-dessus.
+
+Prochaine étape immédiate automatique (si vous confirmez)
+- Activer le workflow GitHub Actions pour capturer périodiquement les screenshots et committer les changements.
+
+---
+
+Si vous voulez, je peux maintenant :
+- activer et lancer le workflow (vous devrez déclencher manuellement depuis Actions ou me dire d'ajouter schedule),
+- ou continuer à convertir la page d'accueil (commencer la migration des teasers en composants React).
